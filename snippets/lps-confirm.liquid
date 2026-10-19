@@ -1,0 +1,9 @@
+{%- doc -%}
+  Shows a note to the store owner, only inside the theme editor, flagging a
+  business detail that must be confirmed before publishing. Never rendered to customers.
+
+  @param {string} [note] - What needs confirming
+{%- enddoc -%}
+{%- if request.design_mode and note != blank -%}
+  <span class="lps-confirm"><strong>To confirm before publishing:</strong> {{ note }}</span>
+{%- endif -%}

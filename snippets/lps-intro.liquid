@@ -1,0 +1,32 @@
+{%- doc -%}
+  Eyebrow, heading and body copy used at the top of most `lps-*` sections.
+
+  @param {string} [index] - Small section number, e.g. '01'
+  @param {string} [eyebrow] - Small uppercase label
+  @param {string} [heading] - Heading text
+  @param {string} [heading_tag] - 'h1' | 'h2' | 'h3' (default 'h2')
+  @param {string} [heading_size] - 'xl' | 'lg' | 'md' | 'sm' (default 'lg')
+  @param {string} [text] - Rich text
+  @param {string} [align] - 'start' | 'center'
+  @param {string} [class] - Extra classes
+{%- enddoc -%}
+{%- liquid
+  assign heading_tag = heading_tag | default: 'h2'
+  assign heading_size = heading_size | default: 'lg'
+-%}
+{%- if index != blank or eyebrow != blank or heading != blank or text != blank -%}
+  <div class="lps-intro{% if align == 'center' %} lps-intro--center{% endif %}{% if class != blank %} {{ class }}{% endif %}" data-lps-reveal>
+    {%- if index != blank or eyebrow != blank -%}
+      <p class="lps-eyebrow">
+        {%- if index != blank -%}<span class="lps-eyebrow__index">{{ index }}</span>{%- endif -%}
+        {%- if eyebrow != blank -%}<span>{{ eyebrow }}</span>{%- endif -%}
+      </p>
+    {%- endif -%}
+    {%- if heading != blank -%}
+      <{{ heading_tag }} class="lps-heading lps-heading--{{ heading_size }}">{{ heading }}</{{ heading_tag }}>
+    {%- endif -%}
+    {%- if text != blank -%}
+      <div class="lps-rte">{{ text }}</div>
+    {%- endif -%}
+  </div>
+{%- endif -%}

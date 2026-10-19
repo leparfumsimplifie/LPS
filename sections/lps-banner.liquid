@@ -1,0 +1,203 @@
+{%- render 'lps-assets' -%}
+{%- liquid
+  assign s = section.settings
+  assign anchor = s.anchor | default: section.id | handleize
+-%}
+<section
+  id="{{ anchor }}"
+  class="lps lps-banner{% if s.boxed %} lps-banner--boxed{% endif %} lps-tone--{{ s.tone }}"
+  style="--lps-overlay: {{ s.overlay_opacity | divided_by: 100.0 }}; --lps-banner-h: {{ s.height }}svh;"
+>
+  <div class="lps-banner__inner">
+    <div class="lps-banner__media">
+      {% render 'lps-media', image: s.image, alt: s.image_alt, brief: s.image_brief, sizes: '100vw' %}
+    </div>
+    <div class="lps-banner__content lps-container">
+      <div class="lps-intro{% if s.align == 'center' %} lps-intro--center{% endif %}" data-lps-reveal>
+        {%- if s.eyebrow != blank -%}
+          <p class="lps-eyebrow">{{ s.eyebrow }}</p>
+        {%- endif -%}
+        {%- if s.heading != blank -%}
+          <h2 class="lps-heading lps-heading--lg">{{ s.heading }}</h2>
+        {%- endif -%}
+        {%- if s.text != blank -%}
+          <div class="lps-rte">{{ s.text }}</div>
+        {%- endif -%}
+        {%- if s.product != blank and s.show_price -%}
+          <p class="lps-eyebrow" style="margin: 0;">
+            {{ s.product.price | money }}
+            {%- if s.product.selling_plan_groups.size == 0 %} · {{ s.one_time_label }}{% endif -%}
+          </p>
+        {%- endif -%}
+        {%- if s.button_label != blank or s.button_2_label != blank -%}
+          <div class="lps-actions">
+            {%- if s.button_label != blank -%}
+              <a class="lps-btn" href="{{ s.button_link | default: s.product.url | default: '#' }}">{{ s.button_label }}</a>
+            {%- endif -%}
+            {%- if s.button_2_label != blank -%}
+              <a class="lps-btn lps-btn--secondary" href="{{ s.button_2_link | default: '#' }}">{{ s.button_2_label }}</a>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+        {% render 'lps-confirm', note: s.confirm_note %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "LPS · Image banner",
+  "tag": "div",
+  "class": "lps-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Alt text"
+    },
+    {
+      "type": "textarea",
+      "id": "image_brief",
+      "label": "Photography brief (shown until an image is added)"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Image shading",
+      "min": 0,
+      "max": 90,
+      "step": 5,
+      "unit": "%",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "height",
+      "label": "Minimum height",
+      "min": 40,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 70
+    },
+    {
+      "type": "checkbox",
+      "id": "boxed",
+      "label": "Contain to page width",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "align",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Centre"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Image banner"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product (optional)",
+      "info": "Shows the live price and is used as the button link if none is set."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_price",
+      "label": "Show product price",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "one_time_label",
+      "label": "Label shown when the product has no subscription option",
+      "default": "One-time payment"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Primary button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Primary button link"
+    },
+    {
+      "type": "text",
+      "id": "button_2_label",
+      "label": "Secondary button label"
+    },
+    {
+      "type": "url",
+      "id": "button_2_link",
+      "label": "Secondary button link"
+    },
+    {
+      "type": "textarea",
+      "id": "confirm_note",
+      "label": "Editor note (never shown to customers)"
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "select",
+      "id": "tone",
+      "label": "Background (behind the image)",
+      "options": [
+        {
+          "value": "charcoal",
+          "label": "Charcoal"
+        },
+        {
+          "value": "sand",
+          "label": "Sand"
+        }
+      ],
+      "default": "charcoal"
+    },
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "Anchor ID",
+      "info": "Optional. Lets buttons link to this section, e.g. #membership"
+    }
+  ],
+  "presets": [
+    {
+      "name": "LPS · Image banner"
+    }
+  ]
+}
+{% endschema %}

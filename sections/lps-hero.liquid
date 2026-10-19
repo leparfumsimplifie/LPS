@@ -1,0 +1,348 @@
+{%- render 'lps-assets' -%}
+{%- liquid
+  assign s = section.settings
+  assign anchor = s.anchor | default: section.id | handleize
+  assign heading_tag = s.heading_tag | default: 'h1'
+-%}
+<section
+  id="{{ anchor }}"
+  class="lps lps-hero lps-hero--{{ s.layout }} lps-hero--{{ s.content_alignment }} lps-hero--media-{{ s.media_position }} lps-tone--{{ s.tone }}"
+  style="--lps-pt: {{ s.padding_top }}px; --lps-pb: {{ s.padding_bottom }}px; --lps-overlay: {{ s.overlay_opacity | divided_by: 100.0 }}; --lps-hero-h: {{ s.height }}svh; --lps-hero-h-mobile: {{ s.height | times: 0.92 | round }}svh;"
+>
+  {%- capture media -%}
+    {%- if s.image_mobile != blank -%}
+      <div class="lps-hero__desktop-only">
+        {% render 'lps-media', image: s.image, alt: s.image_alt, brief: s.image_brief, ratio: s.ratio, sizes: '100vw', priority: true %}
+      </div>
+      <div class="lps-hero__mobile-only">
+        {% render 'lps-media', image: s.image_mobile, alt: s.image_alt, brief: s.image_brief, ratio: s.ratio, sizes: '100vw' %}
+      </div>
+    {%- else -%}
+      {%- liquid
+        assign sizes = '100vw'
+        if s.layout == 'split'
+          assign sizes = '(min-width: 990px) 55vw, 100vw'
+        endif
+      -%}
+      {% render 'lps-media', image: s.image, alt: s.image_alt, brief: s.image_brief, ratio: s.ratio, sizes: sizes, priority: true %}
+    {%- endif -%}
+  {%- endcapture -%}
+
+  {%- capture content -%}
+    <div class="lps-intro{% if s.content_alignment == 'center' %} lps-intro--center{% endif %}">
+      {%- if s.eyebrow != blank -%}
+        <p class="lps-eyebrow">{{ s.eyebrow }}</p>
+      {%- endif -%}
+      {%- if s.heading != blank -%}
+        <{{ heading_tag }} class="lps-heading lps-heading--xl">{{ s.heading }}</{{ heading_tag }}>
+      {%- endif -%}
+      {%- if s.text != blank -%}
+        <div class="lps-rte lps-hero__lede">{{ s.text }}</div>
+      {%- endif -%}
+      {%- if s.button_label != blank or s.button_2_label != blank -%}
+        <div class="lps-actions">
+          {%- if s.button_label != blank -%}
+            <a class="lps-btn" href="{{ s.button_link | default: '#' }}">{{ s.button_label }}</a>
+          {%- endif -%}
+          {%- if s.button_2_label != blank -%}
+            <a class="lps-btn lps-btn--secondary" href="{{ s.button_2_link | default: '#' }}">{{ s.button_2_label }}</a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+      {%- if section.blocks.size > 0 -%}
+        <ul class="lps-hero__meta" role="list">
+          {%- for block in section.blocks -%}
+            <li {{ block.shopify_attributes }}>{{ block.settings.text }}</li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+      {% render 'lps-confirm', note: s.confirm_note %}
+    </div>
+  {%- endcapture -%}
+
+  {%- if s.layout == 'overlay' -%}
+    <div class="lps-hero__media">{{ media }}</div>
+    <div class="lps-hero__content lps-container">{{ content }}</div>
+  {%- else -%}
+    <div class="lps-container">
+      <div class="lps-hero__grid">
+        <div class="lps-hero__content">{{ content }}</div>
+        <div class="lps-hero__media">{{ media }}</div>
+      </div>
+    </div>
+  {%- endif -%}
+</section>
+
+{% stylesheet %}
+  .lps-hero__mobile-only { display: none; }
+  @media (max-width: 749px) {
+    .lps-hero__desktop-only { display: none; }
+    .lps-hero__mobile-only { display: contents; }
+  }
+  .lps-hero--overlay .lps-hero__desktop-only,
+  .lps-hero--overlay .lps-hero__mobile-only { height: 100%; }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "LPS · Editorial hero",
+  "tag": "div",
+  "class": "lps-section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "overlay",
+          "label": "Full-width photograph, text over image"
+        },
+        {
+          "value": "split",
+          "label": "Split — photograph beside text"
+        }
+      ],
+      "default": "overlay"
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Centre"
+        }
+      ],
+      "default": "start"
+    },
+    {
+      "type": "select",
+      "id": "media_position",
+      "label": "Photograph position (split layout)",
+      "options": [
+        {
+          "value": "right",
+          "label": "Right"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "range",
+      "id": "height",
+      "label": "Height (full-width layout)",
+      "min": 50,
+      "max": 100,
+      "step": 2,
+      "unit": "%",
+      "default": 88
+    },
+    {
+      "type": "header",
+      "content": "Photography"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Mobile image (optional)",
+      "info": "A portrait crop for phones. Recommended 1080 × 1500px."
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Alt text",
+      "info": "Describe the photograph for screen readers. Leave blank to use the alt text saved with the image."
+    },
+    {
+      "type": "select",
+      "id": "ratio",
+      "label": "Image shape (split layout)",
+      "options": [
+        {
+          "value": "5 / 6",
+          "label": "Portrait"
+        },
+        {
+          "value": "1 / 1",
+          "label": "Square"
+        },
+        {
+          "value": "4 / 3",
+          "label": "Landscape"
+        }
+      ],
+      "default": "5 / 6"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Image shading",
+      "min": 0,
+      "max": 90,
+      "step": 5,
+      "unit": "%",
+      "default": 55
+    },
+    {
+      "type": "textarea",
+      "id": "image_brief",
+      "label": "Photography brief (shown until an image is added)"
+    },
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Understand fragrance. Master formulation."
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading level",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1 (main page heading)"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Primary button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Primary button link"
+    },
+    {
+      "type": "text",
+      "id": "button_2_label",
+      "label": "Secondary button label"
+    },
+    {
+      "type": "url",
+      "id": "button_2_link",
+      "label": "Secondary button link"
+    },
+    {
+      "type": "textarea",
+      "id": "confirm_note",
+      "label": "Editor note (never shown to customers)",
+      "info": "Visible only inside the theme editor. Use it to flag details awaiting confirmation."
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "select",
+      "id": "tone",
+      "label": "Background",
+      "options": [
+        {
+          "value": "ivory",
+          "label": "Ivory"
+        },
+        {
+          "value": "cream",
+          "label": "Cream"
+        },
+        {
+          "value": "sand",
+          "label": "Sand"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "charcoal",
+          "label": "Charcoal"
+        }
+      ],
+      "default": "ivory"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 200,
+      "step": 8,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 200,
+      "step": 8,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "Anchor ID",
+      "info": "Optional. Lets buttons link to this section, e.g. #curriculum"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "meta",
+      "name": "Detail",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Structured video lessons"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LPS · Editorial hero"
+    }
+  ]
+}
+{% endschema %}

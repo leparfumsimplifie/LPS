@@ -1,0 +1,314 @@
+{%- render 'lps-assets' -%}
+{%- liquid
+  assign s = section.settings
+  assign anchor = s.anchor | default: section.id | handleize
+  assign product = s.product
+  assign has_media = false
+  if s.image != blank or s.image_brief != blank
+    assign has_media = true
+  endif
+  assign one_time = false
+  if product != blank and product.selling_plan_groups.size == 0
+    assign one_time = true
+  endif
+-%}
+<section
+  id="{{ anchor }}"
+  class="lps lps-purchase{% unless has_media %} lps-purchase--no-media{% endunless %} lps-tone--{{ s.tone }}"
+  style="--lps-pt: {{ s.padding_top }}px; --lps-pb: {{ s.padding_bottom }}px;"
+>
+  <div class="lps-container">
+    <div class="lps-purchase__grid">
+      {%- if has_media -%}
+        <div class="lps-purchase__media" data-lps-reveal>
+          {% render 'lps-media', image: s.image, alt: s.image_alt, brief: s.image_brief, label: s.placeholder_label, ratio: s.image_ratio, sizes: '(min-width: 990px) 55vw, 100vw' %}
+        </div>
+      {%- endif -%}
+
+      <div class="lps-purchase__card" data-lps-reveal>
+        {% render 'lps-intro', eyebrow: s.eyebrow, heading: s.heading, heading_size: 'md', text: s.text %}
+
+        {%- if product != blank -%}
+          <div class="lps-price">
+            <span class="lps-price__amount">{{ product.selected_or_first_available_variant.price | money }}</span>
+            <span class="lps-price__terms">
+              {%- if one_time -%}{{ s.one_time_label }}{%- endif -%}
+              {%- if s.terms_text != blank -%}{% if one_time %} · {% endif %}{{ s.terms_text }}{%- endif -%}
+            </span>
+          </div>
+        {%- elsif request.design_mode -%}
+          {% render 'lps-confirm', note: 'Choose the membership product in this section so the live price is shown.' %}
+        {%- endif -%}
+
+        {%- if section.blocks.size > 0 -%}
+          <ul class="lps-checks" role="list">
+            {%- for block in section.blocks -%}
+              <li {{ block.shopify_attributes }}>{% render 'lps-icon', icon: 'check' %}<span>{{ block.settings.text }}</span></li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+
+        {%- if product != blank -%}
+          {%- assign variant = product.selected_or_first_available_variant -%}
+          {%- if s.button_action == 'product' -%}
+            <a class="lps-btn lps-btn--block" href="{{ product.url }}">{{ s.button_label }}</a>
+          {%- else -%}
+            {%- form 'product', product, class: 'lps-purchase__form' -%}
+              <input type="hidden" name="id" value="{{ variant.id }}">
+              <input type="hidden" name="quantity" value="1">
+              {%- if s.button_action == 'checkout' -%}
+                <input type="hidden" name="return_to" value="/checkout">
+              {%- endif -%}
+              <button type="submit" class="lps-btn lps-btn--block" {% unless variant.available %}disabled{% endunless %}>
+                {%- if variant.available -%}{{ s.button_label }}{%- else -%}Currently unavailable{%- endif -%}
+              </button>
+            {%- endform -%}
+          {%- endif -%}
+        {%- elsif s.button_label != blank -%}
+          <a class="lps-btn lps-btn--block" href="{{ s.fallback_link | default: '#' }}">{{ s.button_label }}</a>
+        {%- endif -%}
+
+        {%- if s.secondary_label != blank -%}
+          <a class="lps-link" href="{{ s.secondary_link | default: '#' }}" style="justify-self: center;">{{ s.secondary_label }}{% render 'lps-icon', icon: 'arrow' %}</a>
+        {%- endif -%}
+
+        {%- if s.support_text != blank -%}
+          <div class="lps-purchase__support lps-rte lps-rte--sm">{{ s.support_text }}</div>
+        {%- endif -%}
+        {% render 'lps-confirm', note: s.confirm_note %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "LPS · Purchase invitation",
+  "tag": "div",
+  "class": "lps-section",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Membership product",
+      "info": "Price, availability and checkout come from this product."
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Premium Learning"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "one_time_label",
+      "label": "Label shown when the product has no subscription option",
+      "default": "One-time payment"
+    },
+    {
+      "type": "text",
+      "id": "terms_text",
+      "label": "Additional price note"
+    },
+    {
+      "type": "select",
+      "id": "button_action",
+      "label": "Button action",
+      "options": [
+        {
+          "value": "product",
+          "label": "Go to the product page"
+        },
+        {
+          "value": "cart",
+          "label": "Add to cart"
+        },
+        {
+          "value": "checkout",
+          "label": "Add to cart and go to checkout"
+        }
+      ],
+      "default": "product"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Get Premium access"
+    },
+    {
+      "type": "url",
+      "id": "fallback_link",
+      "label": "Button link if no product is selected"
+    },
+    {
+      "type": "text",
+      "id": "secondary_label",
+      "label": "Secondary link label"
+    },
+    {
+      "type": "url",
+      "id": "secondary_link",
+      "label": "Secondary link"
+    },
+    {
+      "type": "richtext",
+      "id": "support_text",
+      "label": "Support and refund text"
+    },
+    {
+      "type": "header",
+      "content": "Photography"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image (optional)"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Alt text"
+    },
+    {
+      "type": "textarea",
+      "id": "image_brief",
+      "label": "Image brief (shown until an image is added)"
+    },
+    {
+      "type": "text",
+      "id": "placeholder_label",
+      "label": "Placeholder label",
+      "default": "Photography required"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Image shape",
+      "options": [
+        {
+          "value": "4 / 5",
+          "label": "Portrait"
+        },
+        {
+          "value": "1 / 1",
+          "label": "Square"
+        },
+        {
+          "value": "4 / 3",
+          "label": "Landscape"
+        },
+        {
+          "value": "16 / 10",
+          "label": "Wide"
+        }
+      ],
+      "default": "4 / 5"
+    },
+    {
+      "type": "textarea",
+      "id": "confirm_note",
+      "label": "Editor note (never shown to customers)"
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "select",
+      "id": "tone",
+      "label": "Background",
+      "options": [
+        {
+          "value": "ivory",
+          "label": "Ivory"
+        },
+        {
+          "value": "cream",
+          "label": "Cream"
+        },
+        {
+          "value": "sand",
+          "label": "Sand"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "charcoal",
+          "label": "Charcoal"
+        }
+      ],
+      "default": "ivory"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 200,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 200,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "Anchor ID",
+      "info": "Optional. Lets buttons link to this section, e.g. #curriculum"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Benefit"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LPS · Purchase invitation",
+      "blocks": [
+        {
+          "type": "benefit"
+        },
+        {
+          "type": "benefit"
+        },
+        {
+          "type": "benefit"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

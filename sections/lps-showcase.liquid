@@ -1,0 +1,336 @@
+{%- render 'lps-assets' -%}
+{%- liquid
+  assign s = section.settings
+  assign anchor = s.anchor | default: section.id | handleize
+-%}
+<section
+  id="{{ anchor }}"
+  class="lps lps-showcase lps-showcase--{{ s.layout }} lps-tone--{{ s.tone }}"
+  style="--lps-pt: {{ s.padding_top }}px; --lps-pb: {{ s.padding_bottom }}px;"
+>
+  <div class="lps-container">
+    <div class="lps-section-head{% if s.align == 'center' %} lps-section-head--center{% endif %}">
+      {% render 'lps-intro', index: s.index, eyebrow: s.eyebrow, heading: s.heading, text: s.text, align: s.align %}
+    </div>
+
+    {%- if s.layout == 'grid' -%}
+      <div class="lps-showcase__grid">
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign b = block.settings
+            assign sizes = '(min-width: 750px) 50vw, 100vw'
+            if b.wide
+              assign sizes = '(min-width: 750px) 100vw, 100vw'
+            endif
+          -%}
+          <figure class="lps-shot{% if b.wide %} lps-shot--wide{% endif %}" data-lps-reveal {{ block.shopify_attributes }}>
+            <div class="lps-frame lps-frame--{{ b.frame }}">
+              {% render 'lps-media', image: b.image, alt: b.image_alt, brief: b.image_brief, label: b.placeholder_label, ratio: b.ratio, sizes: sizes, zoom: true %}
+            </div>
+            {%- if b.title != blank or b.text != blank -%}
+              <figcaption>
+                {%- if b.title != blank -%}<p class="lps-shot__title">{{ b.title }}</p>{%- endif -%}
+                {%- if b.text != blank -%}<div class="lps-rte lps-rte--sm">{{ b.text }}</div>{%- endif -%}
+                {% render 'lps-confirm', note: b.confirm_note %}
+              </figcaption>
+            {%- endif -%}
+          </figure>
+        {%- endfor -%}
+      </div>
+    {%- else -%}
+      <div class="lps-showcase__rows">
+        {%- assign side_count = 0 -%}
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign b = block.settings
+            if b.wide
+              assign row = 'full'
+              assign sizes = '100vw'
+            else
+              assign side_count = side_count | plus: 1
+              assign mod = side_count | modulo: 2
+              if mod == 1
+                assign row = 'left'
+              else
+                assign row = 'right'
+              endif
+              assign sizes = '(min-width: 990px) 62vw, 100vw'
+            endif
+          -%}
+          <div class="lps-showcase__row lps-showcase__row--{{ row }}" {{ block.shopify_attributes }}>
+            <div class="lps-showcase__visual" data-lps-reveal>
+              <div class="lps-frame lps-frame--{{ b.frame }}">
+                {% render 'lps-media', image: b.image, alt: b.image_alt, brief: b.image_brief, label: b.placeholder_label, ratio: b.ratio, sizes: sizes, zoom: true %}
+              </div>
+            </div>
+            <div class="lps-showcase__text">
+              {% render 'lps-intro', eyebrow: b.eyebrow, heading: b.title, heading_tag: 'h3', heading_size: 'md' %}
+              <div>
+                {%- if b.text != blank -%}
+                  <div class="lps-rte" data-lps-reveal>{{ b.text }}</div>
+                {%- endif -%}
+                {% render 'lps-confirm', note: b.confirm_note %}
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+    {%- if s.footnote != blank -%}
+      <p class="lps-note" style="margin-top: 2.5rem;">{{ s.footnote }}</p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "LPS · Platform showcase",
+  "tag": "div",
+  "class": "lps-section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "alternating",
+          "label": "Alternating image and text"
+        },
+        {
+          "value": "grid",
+          "label": "Screenshot gallery"
+        }
+      ],
+      "default": "alternating"
+    },
+    {
+      "type": "text",
+      "id": "index",
+      "label": "Section number"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Inside the platform"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "select",
+      "id": "align",
+      "label": "Heading alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Centre"
+        }
+      ],
+      "default": "start"
+    },
+    {
+      "type": "text",
+      "id": "footnote",
+      "label": "Footnote"
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "select",
+      "id": "tone",
+      "label": "Background",
+      "options": [
+        {
+          "value": "ivory",
+          "label": "Ivory"
+        },
+        {
+          "value": "cream",
+          "label": "Cream"
+        },
+        {
+          "value": "sand",
+          "label": "Sand"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "charcoal",
+          "label": "Charcoal"
+        }
+      ],
+      "default": "ivory"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 200,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 200,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "Anchor ID",
+      "info": "Optional. Lets buttons link to this section, e.g. #curriculum"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "shot",
+      "name": "Screenshot",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Screenshot or photograph",
+          "info": "Use genuine screenshots of the platform. Crop out personal details of community members."
+        },
+        {
+          "type": "text",
+          "id": "image_alt",
+          "label": "Alt text"
+        },
+        {
+          "type": "textarea",
+          "id": "image_brief",
+          "label": "Brief (shown until an image is added)"
+        },
+        {
+          "type": "text",
+          "id": "placeholder_label",
+          "label": "Placeholder label",
+          "default": "Screenshot required"
+        },
+        {
+          "type": "select",
+          "id": "frame",
+          "label": "Frame",
+          "options": [
+            {
+              "value": "browser",
+              "label": "Browser window"
+            },
+            {
+              "value": "laptop",
+              "label": "Laptop"
+            },
+            {
+              "value": "phone",
+              "label": "Phone"
+            },
+            {
+              "value": "none",
+              "label": "None (photograph)"
+            }
+          ],
+          "default": "browser"
+        },
+        {
+          "type": "select",
+          "id": "ratio",
+          "label": "Image shape",
+          "options": [
+            {
+              "value": "16 / 10",
+              "label": "Desktop screenshot"
+            },
+            {
+              "value": "16 / 9",
+              "label": "Video"
+            },
+            {
+              "value": "9 / 19.5",
+              "label": "Phone screenshot"
+            },
+            {
+              "value": "4 / 3",
+              "label": "Landscape photograph"
+            },
+            {
+              "value": "4 / 5",
+              "label": "Portrait photograph"
+            },
+            {
+              "value": "natural",
+              "label": "Original shape"
+            }
+          ],
+          "default": "16 / 10"
+        },
+        {
+          "type": "checkbox",
+          "id": "wide",
+          "label": "Full width",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Eyebrow"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Screenshot title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Description"
+        },
+        {
+          "type": "textarea",
+          "id": "confirm_note",
+          "label": "Editor note (never shown to customers)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LPS · Platform showcase",
+      "blocks": [
+        {
+          "type": "shot"
+        },
+        {
+          "type": "shot"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

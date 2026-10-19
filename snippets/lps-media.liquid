@@ -1,0 +1,72 @@
+{%- doc -%}
+  Renders a responsive, lazy-loaded image, or — when no image is chosen — a
+  tonal placeholder that describes the exact photograph or screenshot needed.
+
+  @param {image} [image] - Image from the theme editor
+  @param {string} [alt] - Alt text override (falls back to the image's own alt text)
+  @param {string} [brief] - Description of the photograph required, shown in the placeholder
+  @param {string} [label] - Placeholder label, e.g. 'Photography required'
+  @param {string} [ratio] - CSS aspect ratio, e.g. '4 / 5', or 'natural' to use the image's own ratio
+  @param {string} [sizes] - The `sizes` attribute for the srcset
+  @param {string} [loading] - 'lazy' (default) or 'eager'
+  @param {boolean} [priority] - Adds fetchpriority="high" (use for the first, above-the-fold image)
+  @param {boolean} [zoom] - Lets visitors open the image full size (screenshots)
+  @param {boolean} [contain] - Use object-fit: contain instead of cover
+  @param {string} [class] - Extra classes on the figure
+{%- enddoc -%}
+{%- liquid
+  assign loading = loading | default: 'lazy'
+  assign sizes = sizes | default: '(min-width: 990px) 50vw, 100vw'
+  assign label = label | default: 'Photography required'
+  assign media_class = 'lps-media'
+  if ratio == 'natural' and image != blank
+    assign media_class = media_class | append: ' lps-media--natural'
+  endif
+  if contain
+    assign media_class = media_class | append: ' lps-media--contain'
+  endif
+  if class != blank
+    assign media_class = media_class | append: ' ' | append: class
+  endif
+  if image != blank
+    assign alt_text = alt | default: image.alt
+  endif
+-%}
+<div
+  class="{{ media_class }}"
+  {% if ratio != blank and ratio != 'natural' %}
+    style="--lps-ratio: {{ ratio }};{% if image.presentation.focal_point %} --lps-focal: {{ image.presentation.focal_point }};{% endif %}"
+  {% elsif image.presentation.focal_point %}
+    style="--lps-focal: {{ image.presentation.focal_point }};"
+  {% endif %}
+>
+  {%- if image != blank -%}
+    {%- capture img -%}
+      {%- if priority -%}
+        {{- image | image_url: width: 3000 | image_tag: widths: '480, 720, 960, 1280, 1600, 2000, 2400, 3000', sizes: sizes, loading: 'eager', fetchpriority: 'high', alt: alt_text, class: 'lps-media__img' -}}
+      {%- else -%}
+        {{- image | image_url: width: 2400 | image_tag: widths: '480, 720, 960, 1280, 1600, 2000, 2400', sizes: sizes, loading: loading, alt: alt_text, class: 'lps-media__img' -}}
+      {%- endif -%}
+    {%- endcapture -%}
+    {%- if zoom -%}
+      <a
+        class="lps-zoom"
+        href="{{ image | image_url: width: 2400 }}"
+        data-lps-zoom-src="{{ image | image_url: width: 2400 }}"
+        data-lps-zoom-alt="{{ alt_text | escape }}"
+        aria-label="Enlarge image{% if alt_text != blank %}: {{ alt_text | escape }}{% endif %}"
+      >
+        {{- img -}}
+      </a>
+    {%- else -%}
+      {{- img -}}
+    {%- endif -%}
+  {%- else -%}
+    <div class="lps-ph" role="img" aria-label="{{ label | escape }}: {{ brief | escape }}">
+      <span class="lps-ph__label">{{ label }}</span>
+      {%- if brief != blank -%}
+        <p class="lps-ph__brief">{{ brief }}</p>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+</div>

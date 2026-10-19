@@ -1,0 +1,836 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "product-information",
+      "blocks": {
+        "media-gallery": {
+          "type": "_product-media-gallery",
+          "static": true,
+          "settings": {
+            "media_presentation": "carousel",
+            "media_columns": "one",
+            "image_gap": 4,
+            "large_first_image": true,
+            "icons_style": "arrow",
+            "slideshow_controls_style": "counter",
+            "slideshow_mobile_controls_style": "dots",
+            "thumbnail_position": "right",
+            "thumbnail_width": 44,
+            "aspect_ratio": "adapt",
+            "constrain_to_viewport": true,
+            "media_fit": "contain",
+            "media_radius": 0,
+            "extend_media": false,
+            "zoom": true,
+            "video_loop": false,
+            "hide_variants": true,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "product-details": {
+          "type": "_product-details",
+          "static": true,
+          "settings": {
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "details_position": "flex-start",
+            "gap": 28,
+            "sticky_details_desktop": true,
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 24,
+            "padding-block-end": 24,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "group_icgrde": {
+              "type": "group",
+              "name": "t:names.header",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "text_eyebrow": {
+                  "type": "text",
+                  "name": "Eyebrow",
+                  "settings": {
+                    "text": "<p>Premium Learning membership</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.75rem",
+                    "line_height": "normal",
+                    "letter_spacing": "loose",
+                    "case": "uppercase",
+                    "wrap": "pretty",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_xpVMaM": {
+                  "type": "text",
+                  "name": "t:names.title",
+                  "settings": {
+                    "text": "<h1>{{ closest.product.title }}</h1>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h2",
+                    "font": "var(--font-heading--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "price_tVjtKg": {
+                  "type": "price",
+                  "settings": {
+                    "show_sale_price_first": true,
+                    "show_installments": true,
+                    "show_tax_info": true,
+                    "type_preset": "paragraph",
+                    "width": "100%",
+                    "alignment": "left",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "padding-block-start": 4,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_eyebrow",
+                "text_xpVMaM",
+                "price_tVjtKg"
+              ]
+            },
+            "divider_VJhene": {
+              "type": "_divider",
+              "name": "t:names.divider",
+              "settings": {
+                "thickness": 1,
+                "corner_radius": "square",
+                "divider_color": "{{ settings.color_palette.color3 }}",
+                "width_percent": 100,
+                "padding-block-start": 0,
+                "padding-block-end": 0
+              },
+              "blocks": {}
+            },
+            "variant_picker_R3rGDr": {
+              "type": "variant-picker",
+              "settings": {
+                "variant_style": "buttons",
+                "show_swatches": false,
+                "alignment": "left",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "buy_buttons_eYQEYi": {
+              "type": "buy-buttons",
+              "settings": {
+                "stacking": true,
+                "show_pickup_availability": false,
+                "gift_card_form": true,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "quantity": {
+                  "type": "quantity",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                },
+                "add-to-cart": {
+                  "type": "add-to-cart",
+                  "static": true,
+                  "settings": {
+                    "style_class": "button"
+                  },
+                  "blocks": {}
+                },
+                "accelerated-checkout": {
+                  "type": "accelerated-checkout",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            },
+            "text_aEtTtq": {
+              "type": "text",
+              "name": "Product description",
+              "settings": {
+                "text": "{{ closest.product.description }}",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_intro": {
+              "type": "text",
+              "name": "Introduction",
+              "settings": {
+                "text": "<p>A structured education in perfumery — from understanding individual raw materials to composing, evaluating and refining your own formulas.</p><p>Membership brings together video lessons, an educational formula library, practical exercises, a premium learning community and live learning sessions.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "lps_benefits": {
+              "type": "lps-benefits",
+              "settings": {
+                "title": "Your membership includes",
+                "benefits": "Approximately 10 hours of structured video lessons\nThe educational formula library\nGuided practical exercises and formula studies\nThe premium learning community on Discord\nLive learning sessions, according to the published schedule",
+                "show_terms": true,
+                "one_time_label": "One-time payment — no recurring charge.",
+                "terms_text": "<p>Immediate access to digital content. See our <a href=\"/pages/refund-policy\">refund policy</a> · <a href=\"/pages/contact\">Questions?</a></p>",
+                "hide_quantity": true
+              }
+            }
+          },
+          "block_order": [
+            "group_icgrde",
+            "divider_VJhene",
+            "text_intro",
+            "lps_benefits",
+            "variant_picker_R3rGDr",
+            "buy_buttons_eYQEYi",
+            "text_aEtTtq"
+          ]
+        },
+        "disclosures": {
+          "type": "disclosures",
+          "settings": {
+            "padding-block-start": 0,
+            "padding-block-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "disclosures"
+      ],
+      "settings": {
+        "content_width": "content-center-aligned",
+        "desktop_media_position": "left",
+        "equal_columns": false,
+        "limit_details_width": false,
+        "gap": 48,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "intro": {
+      "type": "lps-split",
+      "settings": {
+        "eyebrow": "About the membership",
+        "heading": "Learn the principles, not just the recipes.",
+        "heading_size": "md",
+        "text": "<p>Premium Learning is designed for people who want to understand how fragrance works. You will study raw materials individually and in combination, learn the laboratory habits that make results accurate and repeatable, and develop the judgement to compose and refine your own formulas.</p><p>Lessons are recorded, so you can learn at your own pace and return to any topic as your practice develops. Alongside them, formula studies, exercises, live sessions and a focused community help you put each idea into practice.</p>",
+        "list_style": "plain",
+        "button_label": "Read the full learning overview",
+        "button_link": "shopify://pages/premium-learning",
+        "button_style": "link",
+        "image_brief": "Editorial photograph: a student at a bench evaluating a smelling strip, a laptop showing a lesson beside a rack of amber dilutions. Portrait.",
+        "image_alt": "A student evaluating a smelling strip beside a laptop lesson",
+        "media_position": "left",
+        "media_width": "equal",
+        "tone": "ivory",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "included": {
+      "type": "lps-features",
+      "settings": {
+        "eyebrow": "Everything included",
+        "heading": "What your membership gives you.",
+        "style": "cards",
+        "columns": 3,
+        "show_index": false,
+        "footnote": "<p>Badges show what is available today. Anything marked ‘In development’ is planned and not part of the current offer.</p>",
+        "tone": "cream",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "feature_01": {
+          "type": "feature",
+          "settings": {
+            "title": "Video education",
+            "text": "<p>Approximately ten hours of structured lessons covering foundations, raw materials, dilution, accords, formula construction and evaluation.</p>",
+            "status": "available",
+            "image_brief": "Close-up of a laptop playing a lesson on a perfumery bench.",
+            "image_alt": "A lesson playing on a laptop"
+          }
+        },
+        "feature_02": {
+          "type": "feature",
+          "settings": {
+            "title": "Formula library",
+            "text": "<p>Educational formula studies to examine, compare and rebuild — the clearest way to understand how compositions are structured.</p>",
+            "status": "available",
+            "image_brief": "Overhead: formula sheets, pencil and smelling strips.",
+            "image_alt": "Formula sheets on a bench",
+            "confirm_note": "Confirm the number of formulas available."
+          }
+        },
+        "feature_03": {
+          "type": "feature",
+          "settings": {
+            "title": "Practical exercises",
+            "text": "<p>Guided exercises that move from evaluating single materials to building accords and modifying complete formulas.</p>",
+            "status": "available",
+            "image_brief": "Hands pipetting into a beaker on a balance.",
+            "image_alt": "Pipetting material into a beaker"
+          }
+        },
+        "feature_04": {
+          "type": "feature",
+          "settings": {
+            "title": "Premium community",
+            "text": "<p>Access to the premium learning community on Discord to ask questions and discuss your work.</p>",
+            "status": "available",
+            "image_brief": "Cropped Discord screenshot of premium channels (no personal details).",
+            "image_alt": "Premium channels on Discord",
+            "placeholder_label": "Screenshot required"
+          }
+        },
+        "feature_05": {
+          "type": "feature",
+          "settings": {
+            "title": "Live sessions",
+            "text": "<p>Live learning sessions, according to the published schedule.</p>",
+            "status": "available",
+            "image_brief": "Presenter at the bench during a live session.",
+            "image_alt": "A live learning session"
+          }
+        },
+        "feature_06": {
+          "type": "feature",
+          "settings": {
+            "title": "Educational resources",
+            "text": "<p>Selected bases and raw-material learning resources, subject to the published membership terms.</p>",
+            "status": "available",
+            "image_brief": "Macro of natural and synthetic raw materials on stone.",
+            "image_alt": "Raw materials on a stone surface",
+            "confirm_note": "Clarify what is included here and link the membership terms."
+          }
+        }
+      },
+      "block_order": [
+        "feature_01",
+        "feature_02",
+        "feature_03",
+        "feature_04",
+        "feature_05",
+        "feature_06"
+      ]
+    },
+    "gallery": {
+      "type": "lps-showcase",
+      "settings": {
+        "layout": "grid",
+        "eyebrow": "The learning experience",
+        "heading": "A look inside Premium Learning.",
+        "text": "<p>Select any image to view it full size.</p>",
+        "footnote": "Screenshots show the platform as it is today. Community members’ details are obscured for privacy.",
+        "tone": "ivory",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "shot_01": {
+          "type": "shot",
+          "settings": {
+            "frame": "browser",
+            "ratio": "16 / 10",
+            "wide": true,
+            "title": "Course modules",
+            "text": "<p>The numbered module structure, from foundations to finished fragrances.</p>",
+            "image_brief": "Genuine screenshot of the course module list. 2400 × 1500px.",
+            "image_alt": "The course module list"
+          }
+        },
+        "shot_02": {
+          "type": "shot",
+          "settings": {
+            "frame": "browser",
+            "ratio": "16 / 9",
+            "title": "Video lessons",
+            "text": "<p>Recorded lessons you can pause, replay and revisit.</p>",
+            "image_brief": "Genuine screenshot of a lesson mid-playback.",
+            "image_alt": "A video lesson in progress"
+          }
+        },
+        "shot_03": {
+          "type": "shot",
+          "settings": {
+            "frame": "browser",
+            "ratio": "16 / 10",
+            "title": "Formula studies",
+            "text": "<p>Formula resources as students see them (quantities hidden here).</p>",
+            "image_brief": "Genuine screenshot of a formula study with quantities blurred.",
+            "image_alt": "A formula study with quantities hidden"
+          }
+        },
+        "shot_04": {
+          "type": "shot",
+          "settings": {
+            "frame": "browser",
+            "ratio": "16 / 10",
+            "title": "Learning resources",
+            "text": "<p>Written notes and raw-material resources that support the lessons.</p>",
+            "image_brief": "Genuine screenshot of a written learning resource.",
+            "image_alt": "A written learning resource"
+          }
+        },
+        "shot_05": {
+          "type": "shot",
+          "settings": {
+            "frame": "browser",
+            "ratio": "16 / 10",
+            "title": "The premium community",
+            "text": "<p>Discussion and support on Discord.</p>",
+            "image_brief": "Genuine Discord screenshot of a premium channel, usernames blurred.",
+            "image_alt": "A premium Discord channel"
+          }
+        }
+      },
+      "block_order": [
+        "shot_01",
+        "shot_02",
+        "shot_03",
+        "shot_04",
+        "shot_05"
+      ]
+    },
+    "access": {
+      "type": "lps-steps",
+      "settings": {
+        "eyebrow": "How access works",
+        "heading": "From checkout to your first lesson.",
+        "footnote": "<p>If you have not received your access details, check your spam folder, then <a href=\"/pages/contact\">contact us</a> with the email address used for your order.</p>",
+        "tone": "sand",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "step_01": {
+          "type": "step",
+          "settings": {
+            "title": "Complete your purchase",
+            "text": "<p>Add the membership to your cart and check out securely through Shopify. You will be asked to confirm that you want immediate access to digital content.</p>"
+          }
+        },
+        "step_02": {
+          "type": "step",
+          "settings": {
+            "title": "Receive your confirmation",
+            "text": "<p>An order confirmation is sent to the email address you used at checkout.</p>"
+          }
+        },
+        "step_03": {
+          "type": "step",
+          "settings": {
+            "title": "Access the lessons",
+            "text": "<p>Follow the access instructions to reach the Premium Learning lessons and resources.</p>",
+            "confirm_note": "Describe the real step: the platform used, whether an account is created automatically, and how quickly access is granted."
+          }
+        },
+        "step_04": {
+          "type": "step",
+          "settings": {
+            "title": "Join the premium community",
+            "text": "<p>Connect your Discord account to join the premium learning community and hear about live sessions.</p>",
+            "confirm_note": "Confirm how the premium Discord role is granted after purchase."
+          }
+        }
+      },
+      "block_order": [
+        "step_01",
+        "step_02",
+        "step_03",
+        "step_04"
+      ]
+    },
+    "compare": {
+      "type": "lps-comparison",
+      "settings": {
+        "eyebrow": "Free and Premium",
+        "heading": "What Premium adds.",
+        "text": "<p>Anyone can join our free Discord community. Premium Learning adds the structured course and its resources.</p>",
+        "free_title": "Free community",
+        "free_subtitle": "No charge",
+        "premium_title": "Premium Learning",
+        "product": "le-parfum-simplifie-membership",
+        "premium_subtitle": "One-time payment",
+        "button_label": "Get Premium access",
+        "button_link": "/products/le-parfum-simplifie-membership#membership",
+        "confirm_note": "Check every row against what free members can actually access today.",
+        "tone": "ivory",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "row_01": {
+          "type": "row",
+          "settings": {
+            "feature": "Discord community",
+            "free": "yes",
+            "free_note": "Open community",
+            "premium": "yes",
+            "premium_note": "Plus the premium learning community"
+          }
+        },
+        "row_02": {
+          "type": "row",
+          "settings": {
+            "feature": "Structured video course",
+            "free": "no",
+            "premium": "yes",
+            "premium_note": "Approx. 10 hours"
+          }
+        },
+        "row_03": {
+          "type": "row",
+          "settings": {
+            "feature": "Educational formula library",
+            "free": "no",
+            "premium": "yes"
+          }
+        },
+        "row_04": {
+          "type": "row",
+          "settings": {
+            "feature": "Practical exercises and formula studies",
+            "free": "no",
+            "premium": "yes"
+          }
+        },
+        "row_05": {
+          "type": "row",
+          "settings": {
+            "feature": "Live learning sessions",
+            "free": "no",
+            "premium": "yes",
+            "premium_note": "Per the published schedule"
+          }
+        },
+        "row_06": {
+          "type": "row",
+          "settings": {
+            "feature": "Bases and raw-material learning resources",
+            "free": "no",
+            "premium": "yes",
+            "premium_note": "Selected resources"
+          }
+        }
+      },
+      "block_order": [
+        "row_01",
+        "row_02",
+        "row_03",
+        "row_04",
+        "row_05",
+        "row_06"
+      ]
+    },
+    "purchase": {
+      "type": "lps-purchase",
+      "settings": {
+        "product": "le-parfum-simplifie-membership",
+        "eyebrow": "Premium Learning",
+        "heading": "Ready to begin?",
+        "text": "<p>Everything above, in a single membership.</p>",
+        "one_time_label": "One-time payment",
+        "button_action": "cart",
+        "button_label": "Add membership to cart",
+        "support_text": "<p><a href=\"/pages/refund-policy\">Refund policy</a> · <a href=\"/pages/contact\">Contact us</a></p>",
+        "tone": "cream",
+        "padding_top": 96,
+        "padding_bottom": 96,
+        "anchor": "membership"
+      },
+      "blocks": {
+        "benefit_01": {
+          "type": "benefit",
+          "settings": {
+            "text": "Approximately 10 hours of structured video lessons"
+          }
+        },
+        "benefit_02": {
+          "type": "benefit",
+          "settings": {
+            "text": "The educational formula library"
+          }
+        },
+        "benefit_03": {
+          "type": "benefit",
+          "settings": {
+            "text": "Guided practical exercises and formula studies"
+          }
+        },
+        "benefit_04": {
+          "type": "benefit",
+          "settings": {
+            "text": "The premium learning community on Discord"
+          }
+        },
+        "benefit_05": {
+          "type": "benefit",
+          "settings": {
+            "text": "Live learning sessions, according to the published schedule"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_01",
+        "benefit_02",
+        "benefit_03",
+        "benefit_04",
+        "benefit_05"
+      ]
+    },
+    "faq": {
+      "type": "lps-faq",
+      "settings": {
+        "eyebrow": "Questions",
+        "heading": "Before you buy",
+        "support_text": "<p>For help with an order, membership or access, contact us with the email address associated with your order.</p>",
+        "button_label": "Contact us",
+        "button_link": "shopify://pages/contact",
+        "structured_data": true,
+        "tone": "ivory",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "question_01": {
+          "type": "question",
+          "settings": {
+            "question": "Do I need prior experience?",
+            "answer": "<p>No. The course starts from the foundations and builds gradually.</p>",
+            "include_in_search": true
+          }
+        },
+        "question_02": {
+          "type": "question",
+          "settings": {
+            "question": "Is this a subscription?",
+            "answer": "<p>No. Premium Learning is a one-time payment, with no recurring charge at checkout.</p>",
+            "include_in_search": true,
+            "confirm_note": "Confirm there are no renewal fees for continued access."
+          }
+        },
+        "question_03": {
+          "type": "question",
+          "settings": {
+            "question": "How long will I have access?",
+            "answer": "<p>Please see the membership terms for details of access.</p>",
+            "include_in_search": false,
+            "confirm_note": "Add the confirmed access duration and link the membership terms."
+          }
+        },
+        "question_04": {
+          "type": "question",
+          "settings": {
+            "question": "How do I access the lessons after buying?",
+            "answer": "<p>Access details are sent to the email address used for your order. See ‘How access works’ above.</p>",
+            "include_in_search": false,
+            "confirm_note": "Describe the real access process."
+          }
+        },
+        "question_05": {
+          "type": "question",
+          "settings": {
+            "question": "Do I need my own raw materials?",
+            "answer": "<p>You can start the lessons without them, but practical work is central to learning perfumery. The course includes guidance on equipment and a first collection of materials.</p>",
+            "include_in_search": false,
+            "confirm_note": "Confirm whether any materials are supplied."
+          }
+        },
+        "question_06": {
+          "type": "question",
+          "settings": {
+            "question": "Are the formulas commercially usable?",
+            "answer": "<p>The formulas included are educational formula studies, distinct from commercially validated, production-ready fragrance formulas.</p>",
+            "include_in_search": true,
+            "confirm_note": "Confirm any licence terms for adapting formulas."
+          }
+        },
+        "question_07": {
+          "type": "question",
+          "settings": {
+            "question": "What is your refund policy?",
+            "answer": "<p>Membership gives immediate access to digital content. Where you request immediate access and give the required consent at checkout, refunds are generally not available once access has begun. If a technical problem prevents access, contact us and we will help. Your statutory rights are not affected. <a href=\"/pages/refund-policy\">Read the full refund policy</a>.</p>",
+            "include_in_search": true
+          }
+        },
+        "question_08": {
+          "type": "question",
+          "settings": {
+            "question": "Who can I contact with questions?",
+            "answer": "<p>Use our <a href=\"/pages/contact\">contact page</a> and include the email address associated with your order or account.</p>",
+            "include_in_search": true
+          }
+        }
+      },
+      "block_order": [
+        "question_01",
+        "question_02",
+        "question_03",
+        "question_04",
+        "question_05",
+        "question_06",
+        "question_07",
+        "question_08"
+      ]
+    },
+    "banner": {
+      "type": "lps-banner",
+      "settings": {
+        "image_brief": "Atmospheric wide photograph of the studio bench at dusk: amber bottles back-lit by a window, a balance and glassware in silhouette. Landscape, minimum 2400px wide.",
+        "image_alt": "Amber bottles and glassware on a perfumery bench at dusk",
+        "overlay_opacity": 50,
+        "height": 60,
+        "align": "center",
+        "eyebrow": "Le Parfum Simplifié",
+        "heading": "Understand fragrance. Master formulation.",
+        "product": "le-parfum-simplifie-membership",
+        "show_price": true,
+        "one_time_label": "One-time payment",
+        "button_label": "Get Premium access",
+        "button_link": "/products/le-parfum-simplifie-membership#membership",
+        "tone": "charcoal"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "intro",
+    "included",
+    "gallery",
+    "access",
+    "compare",
+    "purchase",
+    "faq",
+    "banner"
+  ]
+}

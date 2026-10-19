@@ -1,0 +1,341 @@
+{%- render 'lps-assets' -%}
+{%- liquid
+  assign s = section.settings
+  assign anchor = s.anchor | default: section.id | handleize
+  assign rows = section.blocks | where: 'type', 'row'
+  assign stats = section.blocks | where: 'type', 'stat'
+-%}
+<section
+  id="{{ anchor }}"
+  class="lps lps-formula{% if s.sheet_position == 'left' %} lps-formula--sheet-left{% endif %} lps-tone--{{ s.tone }}"
+  style="--lps-pt: {{ s.padding_top }}px; --lps-pb: {{ s.padding_bottom }}px;"
+>
+  <div class="lps-container">
+    <div class="lps-formula__grid">
+      <div class="lps-split__body">
+        {% render 'lps-intro', index: s.index, eyebrow: s.eyebrow, heading: s.heading, text: s.text %}
+
+        {%- if stats.size > 0 -%}
+          <ul class="lps-stats" role="list" data-lps-reveal>
+            {%- for block in stats -%}
+              <li {{ block.shopify_attributes }}>
+                <span class="lps-stat__value">{{ block.settings.value }}</span>
+                <span class="lps-stat__label">{{ block.settings.label }}</span>
+                {% render 'lps-confirm', note: block.settings.confirm_note %}
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+
+        {%- if s.note != blank -%}
+          <div class="lps-rte lps-rte--sm" data-lps-reveal>{{ s.note }}</div>
+        {%- endif -%}
+
+        {%- if s.button_label != blank -%}
+          <div class="lps-actions">
+            <a class="lps-link" href="{{ s.button_link | default: '#' }}">{{ s.button_label }}{% render 'lps-icon', icon: 'arrow' %}</a>
+          </div>
+        {%- endif -%}
+        {% render 'lps-confirm', note: s.confirm_note %}
+      </div>
+
+      <div class="lps-formula__visual" data-lps-reveal>
+        {%- if s.sheet_image != blank -%}
+          <figure class="lps-figure lps-frame lps-frame--none">
+            {% render 'lps-media', image: s.sheet_image, alt: s.sheet_image_alt, ratio: 'natural', sizes: '(min-width: 990px) 50vw, 100vw', zoom: true %}
+          </figure>
+        {%- elsif rows.size > 0 -%}
+          <figure class="lps-sheet" aria-label="{{ s.sheet_title | escape }} — formula sheet preview with quantities withheld">
+            <div class="lps-sheet__head">
+              <p class="lps-sheet__title">{{ s.sheet_title }}</p>
+              <span class="lps-sheet__meta">{{ s.sheet_meta }}</span>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Material</th>
+                  <th scope="col" class="lps-sheet__col-role">Role in the formula</th>
+                  <th scope="col">Parts</th>
+                </tr>
+              </thead>
+              <tbody>
+                {%- for block in rows -%}
+                  <tr {{ block.shopify_attributes }}>
+                    <td>
+                      {{ block.settings.material }}
+                      {%- if block.settings.family != blank -%}
+                        <br><span class="lps-sheet__family">{{ block.settings.family }}</span>
+                      {%- endif -%}
+                    </td>
+                    <td class="lps-sheet__col-role">{{ block.settings.role }}</td>
+                    <td>
+                      {%- if block.settings.amount != blank -%}
+                        {{ block.settings.amount }}
+                      {%- else -%}
+                        <span class="lps-sheet__redacted" aria-hidden="true"></span>
+                        <span class="lps-visually-hidden">Withheld</span>
+                      {%- endif -%}
+                    </td>
+                  </tr>
+                {%- endfor -%}
+              </tbody>
+            </table>
+            <figcaption class="lps-sheet__foot">
+              <span>{{ s.sheet_footer }}</span>
+              <span>Quantities withheld</span>
+            </figcaption>
+          </figure>
+        {%- else -%}
+          {% render 'lps-media', brief: s.sheet_brief, label: 'Screenshot required', ratio: '4 / 5' %}
+        {%- endif -%}
+
+        {%- if s.detail_image != blank or s.detail_brief != blank -%}
+          <div class="lps-figure">
+            {% render 'lps-media', image: s.detail_image, alt: s.detail_image_alt, brief: s.detail_brief, ratio: '4 / 3', sizes: '(min-width: 990px) 30vw, 60vw' %}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "LPS · Formula library",
+  "tag": "div",
+  "class": "lps-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "index",
+      "label": "Section number"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The formula library"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "richtext",
+      "id": "note",
+      "label": "Note"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Link label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Formula sheet preview"
+    },
+    {
+      "type": "paragraph",
+      "content": "Upload a screenshot of a real formula sheet (with quantities hidden), or build a preview from the 'Formula row' blocks. Leave a row's amount blank to show it as withheld."
+    },
+    {
+      "type": "image_picker",
+      "id": "sheet_image",
+      "label": "Formula sheet screenshot"
+    },
+    {
+      "type": "text",
+      "id": "sheet_image_alt",
+      "label": "Screenshot alt text"
+    },
+    {
+      "type": "text",
+      "id": "sheet_title",
+      "label": "Sheet title",
+      "default": "Formula study"
+    },
+    {
+      "type": "text",
+      "id": "sheet_meta",
+      "label": "Sheet label",
+      "default": "Educational study"
+    },
+    {
+      "type": "text",
+      "id": "sheet_footer",
+      "label": "Sheet footer",
+      "default": "From the Premium formula library"
+    },
+    {
+      "type": "textarea",
+      "id": "sheet_brief",
+      "label": "Brief shown when no sheet is set up"
+    },
+    {
+      "type": "select",
+      "id": "sheet_position",
+      "label": "Sheet position on desktop",
+      "options": [
+        {
+          "value": "right",
+          "label": "Right"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "image_picker",
+      "id": "detail_image",
+      "label": "Detail photograph (optional)"
+    },
+    {
+      "type": "text",
+      "id": "detail_image_alt",
+      "label": "Detail photograph alt text"
+    },
+    {
+      "type": "textarea",
+      "id": "detail_brief",
+      "label": "Detail photograph brief"
+    },
+    {
+      "type": "textarea",
+      "id": "confirm_note",
+      "label": "Editor note (never shown to customers)"
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "select",
+      "id": "tone",
+      "label": "Background",
+      "options": [
+        {
+          "value": "ivory",
+          "label": "Ivory"
+        },
+        {
+          "value": "cream",
+          "label": "Cream"
+        },
+        {
+          "value": "sand",
+          "label": "Sand"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "charcoal",
+          "label": "Charcoal"
+        }
+      ],
+      "default": "ivory"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 200,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 200,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "Anchor ID",
+      "info": "Optional. Lets buttons link to this section, e.g. #curriculum"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Figure",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Value",
+          "default": "100+"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Educational formulas"
+        },
+        {
+          "type": "textarea",
+          "id": "confirm_note",
+          "label": "Editor note (never shown to customers)"
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "name": "Formula row",
+      "limit": 14,
+      "settings": [
+        {
+          "type": "text",
+          "id": "material",
+          "label": "Material",
+          "default": "Material"
+        },
+        {
+          "type": "text",
+          "id": "family",
+          "label": "Family or descriptor"
+        },
+        {
+          "type": "text",
+          "id": "role",
+          "label": "Role in the formula"
+        },
+        {
+          "type": "text",
+          "id": "amount",
+          "label": "Amount",
+          "info": "Leave blank to show as withheld."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LPS · Formula library"
+    }
+  ]
+}
+{% endschema %}

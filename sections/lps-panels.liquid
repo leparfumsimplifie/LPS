@@ -1,0 +1,329 @@
+{%- render 'lps-assets' -%}
+{%- liquid
+  assign s = section.settings
+  assign anchor = s.anchor | default: section.id | handleize
+  assign columns = s.columns | append: ''
+  case s.columns
+    when 2
+      assign sizes = '(min-width: 750px) 50vw, 85vw'
+    when 4
+      assign sizes = '(min-width: 990px) 25vw, (min-width: 750px) 50vw, 85vw'
+    else
+      assign sizes = '(min-width: 990px) 33vw, (min-width: 750px) 50vw, 85vw'
+  endcase
+-%}
+<section
+  id="{{ anchor }}"
+  class="lps lps-panels{% if s.stagger %} lps-panels--stagger{% endif %}{% if s.scroll_mobile %} lps-panels--scroll-mobile{% endif %} lps-tone--{{ s.tone }}"
+  style="--lps-pt: {{ s.padding_top }}px; --lps-pb: {{ s.padding_bottom }}px; --lps-panel-ratio: {{ s.image_ratio }};"
+>
+  <div class="lps-container">
+    <div class="lps-section-head{% if s.align == 'center' %} lps-section-head--center{% endif %}">
+      {% render 'lps-intro',
+        index: s.index,
+        eyebrow: s.eyebrow,
+        heading: s.heading,
+        text: s.text,
+        align: s.align
+      %}
+      {%- if s.link_label != blank and s.align != 'center' -%}
+        <a class="lps-link" href="{{ s.link | default: '#' }}">{{ s.link_label }}{% render 'lps-icon', icon: 'arrow' %}</a>
+      {%- endif -%}
+    </div>
+
+    <div class="lps-panels__grid lps-panels__grid--{{ columns }}" role="list">
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign b = block.settings
+          assign link = b.link
+          if link == blank and b.product != blank
+            assign link = b.product.url
+          endif
+        -%}
+        <article class="lps-panel" role="listitem" data-lps-reveal {{ block.shopify_attributes }}>
+          {% render 'lps-media', image: b.image, alt: b.image_alt, brief: b.image_brief, label: b.placeholder_label, sizes: sizes %}
+          <div class="lps-panel__body">
+            {%- if s.show_index -%}
+              <span class="lps-panel__index">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+            {%- endif -%}
+            <h3 class="lps-heading lps-heading--sm">
+              {%- if link != blank -%}
+                <a class="lps-panel__link" href="{{ link }}">{{ b.title }}</a>
+              {%- else -%}
+                {{ b.title }}
+              {%- endif -%}
+            </h3>
+            {%- if b.text != blank -%}
+              <div class="lps-rte lps-rte--sm">{{ b.text }}</div>
+            {%- endif -%}
+            {%- if b.link_label != blank or b.product != blank -%}
+              <div class="lps-panel__meta">
+                {%- if b.link_label != blank -%}
+                  <span class="lps-link" aria-hidden="true">{{ b.link_label }}{% render 'lps-icon', icon: 'arrow' %}</span>
+                {%- endif -%}
+                {%- if b.product != blank and b.show_price -%}
+                  <span class="lps-panel__price">{{ b.product.price | money }}</span>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+            {% render 'lps-confirm', note: b.confirm_note %}
+          </div>
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "LPS · Editorial panels",
+  "tag": "div",
+  "class": "lps-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "index",
+      "label": "Section number"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Editorial panels"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "select",
+      "id": "align",
+      "label": "Heading alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Centre"
+        }
+      ],
+      "default": "start"
+    },
+    {
+      "type": "text",
+      "id": "link_label",
+      "label": "Heading link label"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Heading link"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "Columns on desktop",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Image shape",
+      "options": [
+        {
+          "value": "4 / 5",
+          "label": "Portrait"
+        },
+        {
+          "value": "2 / 3",
+          "label": "Tall portrait"
+        },
+        {
+          "value": "1 / 1",
+          "label": "Square"
+        },
+        {
+          "value": "4 / 3",
+          "label": "Landscape"
+        }
+      ],
+      "default": "4 / 5"
+    },
+    {
+      "type": "checkbox",
+      "id": "stagger",
+      "label": "Offset the middle panel",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_index",
+      "label": "Show panel numbers",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "scroll_mobile",
+      "label": "Swipe panels sideways on mobile",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "select",
+      "id": "tone",
+      "label": "Background",
+      "options": [
+        {
+          "value": "ivory",
+          "label": "Ivory"
+        },
+        {
+          "value": "cream",
+          "label": "Cream"
+        },
+        {
+          "value": "sand",
+          "label": "Sand"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "charcoal",
+          "label": "Charcoal"
+        }
+      ],
+      "default": "ivory"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 200,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 200,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "Anchor ID",
+      "info": "Optional. Lets buttons link to this section, e.g. #curriculum"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "panel",
+      "name": "Panel",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "image_alt",
+          "label": "Alt text"
+        },
+        {
+          "type": "textarea",
+          "id": "image_brief",
+          "label": "Photography brief (shown until an image is added)"
+        },
+        {
+          "type": "text",
+          "id": "placeholder_label",
+          "label": "Placeholder label",
+          "default": "Photography required"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Panel title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "label": "Link label"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link",
+          "info": "Leave blank to link to the product below."
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product (optional)",
+          "info": "Shows the live Shopify price."
+        },
+        {
+          "type": "checkbox",
+          "id": "show_price",
+          "label": "Show product price",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "id": "confirm_note",
+          "label": "Editor note (never shown to customers)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LPS · Editorial panels",
+      "blocks": [
+        {
+          "type": "panel"
+        },
+        {
+          "type": "panel"
+        },
+        {
+          "type": "panel"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

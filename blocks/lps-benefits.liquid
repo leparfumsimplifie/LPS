@@ -1,0 +1,90 @@
+{%- doc -%}
+  Membership benefits summary for the product page purchase panel.
+  Sits beside the buy buttons inside Horizon's product details, so the
+  purchase interface keeps a single primary action.
+{%- enddoc -%}
+{%- liquid
+  assign s = block.settings
+  assign product = closest.product
+  assign benefits = s.benefits | newline_to_br | split: '<br />'
+-%}
+{{ 'lps.css' | asset_url | stylesheet_tag }}
+<div
+  class="lps lps-benefits"
+  style="--lps-pt: 0px; --lps-pb: 0px;"
+  {% if s.hide_quantity %}data-hide-quantity{% endif %}
+  {{ block.shopify_attributes }}
+>
+  {%- if s.title != blank -%}
+    <p class="lps-benefits__title">{{ s.title }}</p>
+  {%- endif -%}
+  <ul class="lps-checks" role="list">
+    {%- for benefit in benefits -%}
+      {%- assign benefit = benefit | strip -%}
+      {%- if benefit != blank -%}
+        <li>{% render 'lps-icon', icon: 'check' %}<span>{{ benefit }}</span></li>
+      {%- endif -%}
+    {%- endfor -%}
+  </ul>
+  {%- if s.show_terms -%}
+    <div class="lps-benefits__terms">
+      {%- if product != blank and product.selling_plan_groups.size == 0 -%}
+        <span>{{ s.one_time_label }}</span>
+      {%- endif -%}
+      {%- if s.terms_text != blank -%}
+        <div>{{ s.terms_text }}</div>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "LPS · Membership benefits",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Your membership includes"
+    },
+    {
+      "type": "textarea",
+      "id": "benefits",
+      "label": "Benefits",
+      "info": "One benefit per line.",
+      "default": "Structured video lessons\nThe educational formula library\nPractical formulation exercises\nThe Premium learning community\nLive learning sessions"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_terms",
+      "label": "Show payment and access notes",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "one_time_label",
+      "label": "Label shown when the product has no subscription option",
+      "default": "One-time payment — no recurring charge."
+    },
+    {
+      "type": "richtext",
+      "id": "terms_text",
+      "label": "Additional note"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_quantity",
+      "label": "Hide the quantity selector",
+      "info": "Recommended for memberships, which are bought one at a time.",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "LPS · Membership benefits"
+    }
+  ]
+}
+{% endschema %}

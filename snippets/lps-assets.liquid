@@ -1,0 +1,7 @@
+{%- doc -%}
+  Loads the shared stylesheet and script for `lps-*` sections.
+  Rendered by every lps section; the module script executes once per page and
+  repeated stylesheet links resolve to the same cached file.
+{%- enddoc -%}
+{{ 'lps.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'lps.js' | asset_url }}" type="module" defer></script>

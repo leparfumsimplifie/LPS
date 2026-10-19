@@ -1,0 +1,257 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "lps-hero",
+      "settings": {
+        "layout": "overlay",
+        "content_alignment": "start",
+        "height": 92,
+        "overlay_opacity": 55,
+        "image": "shopify://shop_images/Minimalist_Precision_Laboratory_Scale.png",
+        "image_alt": "An analytical balance on a warm neutral perfumery bench",
+        "image_brief": "Immersive landscape photograph of a professional formulation workspace.",
+        "eyebrow": "Le Parfum Simplifié",
+        "heading": "Understand fragrance. Master formulation.",
+        "heading_tag": "h1",
+        "text": "<p>Explore the art and science of perfumery through structured education, practical formulation and a community of independent creators.</p>",
+        "button_label": "Explore Learning",
+        "button_link": "shopify://pages/premium-learning",
+        "button_2_label": "Discover Our Story",
+        "button_2_link": "shopify://pages/about-1",
+        "confirm_note": "Uses the current balance photograph. For the strongest first impression, replace it with a wide photograph of a full formulation workspace (balance, amber dilutions, pipettes, smelling strips, notebook) — landscape, minimum 2800px wide — plus an optional portrait crop for mobile.",
+        "tone": "charcoal",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "intro": {
+      "type": "lps-split",
+      "settings": {
+        "eyebrow": "About us",
+        "heading": "Perfumery, made easier to understand.",
+        "text": "<p>Le Parfum Simplifié was created by Harvey and Kristan with one simple goal: to make perfumery easier to understand.</p><p>Information about fragrance is often scattered, overly complicated or difficult to apply in practice. We wanted to create a place where people can learn perfumery clearly, practically and at their own pace — bringing together education, formulas, raw-material knowledge, practical tools and a community of people learning the craft together.</p><p>Our approach focuses on explaining <em>why</em> things work, not just telling you what to use.</p>",
+        "button_label": "Discover our story",
+        "button_link": "shopify://pages/about-1",
+        "button_style": "link",
+        "image_brief": "Laboratory photograph: the studio bench seen from above — a balance, rows of labelled amber bottles, glass beakers and an open notebook. Portrait.",
+        "image_alt": "The Le Parfum Simplifié studio bench",
+        "image_2_brief": "Portrait of Harvey and Kristan at the bench, or a close detail of their hands evaluating smelling strips.",
+        "image_2_alt": "Harvey and Kristan, founders of Le Parfum Simplifié",
+        "media_position": "left",
+        "media_width": "equal",
+        "tone": "ivory",
+        "padding_top": 120,
+        "padding_bottom": 120
+      }
+    },
+    "learning": {
+      "type": "lps-panels",
+      "settings": {
+        "eyebrow": "The learning experience",
+        "heading": "Learn perfumery from the materials up.",
+        "text": "<p>A structured path from your first smelling strip to formulas of your own.</p>",
+        "link_label": "Explore Learning",
+        "link": "shopify://pages/premium-learning",
+        "columns": 3,
+        "image_ratio": "4 / 5",
+        "stagger": true,
+        "show_index": true,
+        "scroll_mobile": true,
+        "tone": "cream",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "panel_01": {
+          "type": "panel",
+          "settings": {
+            "title": "Understand raw materials",
+            "text": "<p>Learn how natural and synthetic materials smell, how they behave in dilution and over time, and the roles they play in a composition.</p>",
+            "link_label": "Learn more",
+            "link": "shopify://pages/premium-learning",
+            "image_brief": "Macro of raw materials on pale stone: resin tears, a vial of essential oil, aroma-chemical crystals and a dipped smelling strip.",
+            "image_alt": "Natural and synthetic perfumery raw materials"
+          }
+        },
+        "panel_02": {
+          "type": "panel",
+          "settings": {
+            "title": "Learn fragrance composition",
+            "text": "<p>Discover how materials interact, how accords are built and how a fragrance is structured from opening to dry-down.</p>",
+            "link_label": "Learn more",
+            "link": "/pages/premium-learning#curriculum",
+            "image_brief": "Fan of labelled smelling strips held over a row of amber bottles, soft side light.",
+            "image_alt": "Labelled smelling strips over amber bottles"
+          }
+        },
+        "panel_03": {
+          "type": "panel",
+          "settings": {
+            "title": "Develop your own formulas",
+            "text": "<p>Put principles into practice: weigh, evaluate and refine your own formulas with confidence and intention.</p>",
+            "link_label": "Learn more",
+            "link": "shopify://pages/premium-learning",
+            "image_brief": "Hands pipetting a material into a beaker on an analytical balance, notebook open beside it.",
+            "image_alt": "Weighing a formula on an analytical balance"
+          }
+        }
+      },
+      "block_order": [
+        "panel_01",
+        "panel_02",
+        "panel_03"
+      ]
+    },
+    "platform": {
+      "type": "lps-showcase",
+      "settings": {
+        "layout": "alternating",
+        "eyebrow": "Inside the platform",
+        "heading": "What students see and learn.",
+        "text": "<p>Premium Learning brings together recorded lessons, formula studies and a community of fellow students.</p>",
+        "tone": "ivory",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "shot_01": {
+          "type": "shot",
+          "settings": {
+            "frame": "none",
+            "ratio": "natural",
+            "eyebrow": "Course modules",
+            "title": "A structured course, module by module",
+            "text": "<p>From perfumery basics, equipment and raw materials through dilution, accords and formula construction to evaluation and development — approximately ten hours of video lessons, taken at your own pace.</p>",
+            "image": "shopify://shop_images/PerfumeryCourseLaptopStillLife_40f908b4-a4a3-4965-ad6c-e3bf3fbd401b.png",
+            "image_alt": "The Premium Learning course roadmap on a laptop",
+            "confirm_note": "If this roadmap image is a mock-up, replace it with a genuine screenshot of the course."
+          }
+        },
+        "shot_02": {
+          "type": "shot",
+          "settings": {
+            "frame": "browser",
+            "ratio": "16 / 10",
+            "eyebrow": "Formula library",
+            "title": "Formula studies to learn from",
+            "text": "<p>A library of educational formula studies shows how materials are combined, so you can trace the structure of a composition and rebuild it at the bench.</p>",
+            "image_brief": "Genuine screenshot of a formula in the library, quantities blurred.",
+            "image_alt": "A formula study in the library"
+          }
+        },
+        "shot_03": {
+          "type": "shot",
+          "settings": {
+            "frame": "laptop",
+            "ratio": "16 / 10",
+            "eyebrow": "Community",
+            "title": "A community of independent creators",
+            "text": "<p>Ask questions, share your work and learn alongside others in our Discord community — with a dedicated premium learning space for members.</p>",
+            "image_brief": "Genuine Discord screenshot of a community discussion, usernames blurred.",
+            "image_alt": "A discussion in the Discord community"
+          }
+        }
+      },
+      "block_order": [
+        "shot_01",
+        "shot_02",
+        "shot_03"
+      ]
+    },
+    "services": {
+      "type": "lps-panels",
+      "settings": {
+        "eyebrow": "Our services",
+        "heading": "Ways to work with us.",
+        "columns": 3,
+        "image_ratio": "4 / 3",
+        "stagger": false,
+        "show_index": false,
+        "scroll_mobile": true,
+        "tone": "sand",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "panel_01": {
+          "type": "panel",
+          "settings": {
+            "title": "Premium Learning",
+            "text": "<p>Structured lessons, a formula library, practical exercises and a focused community.</p>",
+            "link_label": "View learning",
+            "link": "shopify://pages/premium-learning",
+            "product": "le-parfum-simplifie-membership",
+            "show_price": true,
+            "image_brief": "Still life: open laptop showing a lesson beside amber bottles and smelling strips on a stone surface.",
+            "image_alt": "A Premium Learning lesson beside perfumery materials"
+          }
+        },
+        "panel_02": {
+          "type": "panel",
+          "settings": {
+            "title": "Perfumery Software",
+            "text": "<p>Manage formulas, materials and dilutions in one workspace.</p>",
+            "link_label": "View the software",
+            "link": "shopify://pages/software",
+            "product": "perfumery-software",
+            "show_price": true,
+            "image": "shopify://shop_images/Minimalist_Laptop_Fragrance_Dashboard.png",
+            "image_alt": "The Le Parfum Simplifié perfumery software dashboard on a laptop"
+          }
+        },
+        "panel_03": {
+          "type": "panel",
+          "settings": {
+            "title": "Bespoke fragrance development",
+            "text": "<p>Develop a fragrance with us. Share your concept and we will reply with how we could approach it.</p>",
+            "link_label": "Send a brief",
+            "link": "shopify://pages/perfume-development",
+            "show_price": false,
+            "image_brief": "A finished fragrance in an unlabelled glass bottle beside a brief, mood swatches and smelling strips.",
+            "image_alt": "A bespoke fragrance in development"
+          }
+        }
+      },
+      "block_order": [
+        "panel_01",
+        "panel_02",
+        "panel_03"
+      ]
+    },
+    "cta": {
+      "type": "lps-banner",
+      "settings": {
+        "image_brief": "Atmospheric wide photograph of the studio at dusk: amber bottles back-lit by a window, glassware in silhouette. Landscape, minimum 2800px wide.",
+        "image_alt": "Amber bottles back-lit on a perfumery bench",
+        "overlay_opacity": 50,
+        "height": 70,
+        "align": "center",
+        "eyebrow": "Premium Learning",
+        "heading": "Begin your study of perfumery.",
+        "text": "<p>Structured video lessons, an educational formula library, practical exercises, live sessions and a premium community.</p>",
+        "product": "le-parfum-simplifie-membership",
+        "show_price": false,
+        "button_label": "Explore Learning",
+        "button_link": "shopify://pages/premium-learning",
+        "tone": "charcoal"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "intro",
+    "learning",
+    "platform",
+    "services",
+    "cta"
+  ]
+}
