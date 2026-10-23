@@ -254,11 +254,92 @@
         "tone": "charcoal",
         "image_stock": "overhead-bottles"
       }
+    },
+    "craft": {
+      "type": "lps-gallery",
+      "settings": {
+        "layout": "mosaic",
+        "eyebrow": "The craft",
+        "heading": "The materials and tools of perfumery.",
+        "align": "start",
+        "tone": "cream",
+        "padding_top": 96,
+        "padding_bottom": 96,
+        "text": "<p>Glassware, balances, notebooks and hundreds of raw materials: perfumery is a practical discipline, learned one material at a time.</p>"
+      },
+      "blocks": {
+        "photo_01": {
+          "type": "photo",
+          "settings": {
+            "image_stock": "tray-flatlay",
+            "image_alt": "Amber dropper bottles and dried grasses on a wooden tray",
+            "shape": "large"
+          }
+        },
+        "photo_02": {
+          "type": "photo",
+          "settings": {
+            "image_stock": "workbench-jars",
+            "image_alt": "A workbench with a mortar, jars of botanicals and a notebook",
+            "shape": "tall"
+          }
+        },
+        "photo_03": {
+          "type": "photo",
+          "settings": {
+            "image_stock": "spices-white",
+            "image_alt": "Cinnamon sticks and star anise",
+            "shape": "small"
+          }
+        },
+        "photo_04": {
+          "type": "photo",
+          "settings": {
+            "image_stock": "lavender-vial",
+            "image_alt": "A glass vial beside dried lavender",
+            "shape": "small"
+          }
+        },
+        "photo_05": {
+          "type": "photo",
+          "settings": {
+            "image_stock": "amber-set-linen",
+            "image_alt": "A set of amber bottles on linen",
+            "shape": "wide"
+          }
+        },
+        "photo_06": {
+          "type": "photo",
+          "settings": {
+            "image_stock": "rose-buds",
+            "image_alt": "Dried rose buds",
+            "shape": "small"
+          }
+        },
+        "photo_07": {
+          "type": "photo",
+          "settings": {
+            "image_stock": "sphere-bottle",
+            "image_alt": "An amber bottle beside a stone sphere",
+            "shape": "small"
+          }
+        }
+      },
+      "block_order": [
+        "photo_01",
+        "photo_02",
+        "photo_03",
+        "photo_04",
+        "photo_05",
+        "photo_06",
+        "photo_07"
+      ]
     }
   },
   "order": [
     "hero",
     "intro",
+    "craft",
     "learning",
     "platform",
     "services",

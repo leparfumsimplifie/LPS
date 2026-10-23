@@ -243,3 +243,12 @@ To replace the placeholders, the theme now ships with 23 photographs from a sing
 Still worth doing in Shopify admin:
 - Rename the store from "LeParfumSimplifié" to "Le Parfum Simplifié" (Settings → Store details), or upload a logo. The header shows the store name.
 - Replace the included photographs with your own studio photography over time.
+
+### Update: more photography (23 Oct 2026)
+- 13 more Pexels photographs were added, **36 in total**. They include raw materials (cinnamon and star anise, spices, rose buds, lavender) and minimal amber-bottle still lifes in the brand palette.
+- **New section, LPS · Photo gallery** (`sections/lps-gallery.liquid`): an editorial mosaic, or a row of photographs that swipes on phones. Each photo has its own image picker, "Included photograph" dropdown, alt text and caption.
+  - Homepage: "The craft", a mosaic of 7 photographs.
+  - Premium Learning page: "The materials you will study", 5 captioned photographs.
+  - Product page: "Real materials, real technique", 4 photographs.
+- The "Is this right for you?" section now uses photo cards.
+- `docs/upload/le-parfum-simplifie-photos.zip` holds every photograph at 2400px with a source list, for Shopify Files, social posts or emails.

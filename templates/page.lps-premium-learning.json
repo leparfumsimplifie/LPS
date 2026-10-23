@@ -774,7 +774,7 @@
         "eyebrow": "Is this right for you?",
         "heading": "Written for anyone who wants to understand fragrance.",
         "text": "<p>The course starts from first principles and goes deep, so it suits a wide range of experience.</p>",
-        "style": "lines",
+        "style": "cards",
         "columns": 3,
         "show_index": true,
         "tone": "ivory",
@@ -786,42 +786,54 @@
           "type": "feature",
           "settings": {
             "title": "Complete beginners",
-            "text": "<p>No prior knowledge is assumed. The course begins with how fragrance is structured and how to work safely and accurately.</p>"
+            "text": "<p>No prior knowledge is assumed. The course begins with how fragrance is structured and how to work safely and accurately.</p>",
+            "image_stock": "oil-bottle-flowers",
+            "image_alt": "A scent bottle with dried flowers"
           }
         },
         "feature_02": {
           "type": "feature",
           "settings": {
             "title": "Fragrance enthusiasts",
-            "text": "<p>For those who love perfume and want to understand what they are smelling and how it was made.</p>"
+            "text": "<p>For those who love perfume and want to understand what they are smelling and how it was made.</p>",
+            "image_stock": "amber-mirror",
+            "image_alt": "An amber bottle on a mirror"
           }
         },
         "feature_03": {
           "type": "feature",
           "settings": {
             "title": "Hobbyist formulators",
-            "text": "<p>For people already mixing at home who want structure, method and a deeper understanding of their materials.</p>"
+            "text": "<p>For people already mixing at home who want structure, method and a deeper understanding of their materials.</p>",
+            "image_stock": "dropper-ceramic",
+            "image_alt": "A dropper bottle on ceramic"
           }
         },
         "feature_04": {
           "type": "feature",
           "settings": {
             "title": "Independent perfume creators",
-            "text": "<p>For creators developing their own fragrances who want to strengthen their technique and evaluation.</p>"
+            "text": "<p>For creators developing their own fragrances who want to strengthen their technique and evaluation.</p>",
+            "image_stock": "tray-flatlay",
+            "image_alt": "Bottles on a wooden tray"
           }
         },
         "feature_05": {
           "type": "feature",
           "settings": {
             "title": "Aspiring professional perfumers",
-            "text": "<p>For those considering perfumery more seriously and looking for a thorough grounding in the craft.</p>"
+            "text": "<p>For those considering perfumery more seriously and looking for a thorough grounding in the craft.</p>",
+            "image_stock": "workbench-jars",
+            "image_alt": "A perfumer’s workbench"
           }
         },
         "feature_06": {
           "type": "feature",
           "settings": {
             "title": "What it is not",
-            "text": "<p>Premium Learning is an educational course. It does not award a professional qualification or accreditation, and it cannot promise employment or commercial success.</p>"
+            "text": "<p>Premium Learning is an educational course. It does not award a professional qualification or accreditation, and it cannot promise employment or commercial success.</p>",
+            "image_stock": "sphere-bottle",
+            "image_alt": "An amber bottle beside a stone sphere"
           }
         }
       },
@@ -1010,6 +1022,74 @@
         "benefit_04",
         "benefit_05"
       ]
+    },
+    "materials": {
+      "type": "lps-gallery",
+      "settings": {
+        "layout": "strip",
+        "eyebrow": "Raw materials",
+        "heading": "The materials you will study.",
+        "align": "start",
+        "tone": "ivory",
+        "padding_top": 24,
+        "padding_bottom": 96,
+        "text": "<p>From spices and florals to resins and aroma chemicals, you learn each material on its own before combining it with others.</p>",
+        "footnote": "Photographs are illustrative."
+      },
+      "blocks": {
+        "photo_01": {
+          "type": "photo",
+          "settings": {
+            "image_stock": "spices-white",
+            "image_alt": "Cinnamon sticks and star anise",
+            "shape": "small",
+            "caption": "Spices: cinnamon and star anise"
+          }
+        },
+        "photo_02": {
+          "type": "photo",
+          "settings": {
+            "image_stock": "rose-buds",
+            "image_alt": "Dried rose buds",
+            "shape": "small",
+            "caption": "Florals: rose"
+          }
+        },
+        "photo_03": {
+          "type": "photo",
+          "settings": {
+            "image_stock": "lavender-vial",
+            "image_alt": "Lavender beside a glass vial",
+            "shape": "small",
+            "caption": "Aromatics: lavender"
+          }
+        },
+        "photo_04": {
+          "type": "photo",
+          "settings": {
+            "image_stock": "spices-bowls",
+            "image_alt": "Spices and seeds in small bowls",
+            "shape": "small",
+            "caption": "Seeds, roots and resins"
+          }
+        },
+        "photo_05": {
+          "type": "photo",
+          "settings": {
+            "image_stock": "mortar-petals",
+            "image_alt": "Rose petals in a mortar",
+            "shape": "small",
+            "caption": "Preparing natural materials"
+          }
+        }
+      },
+      "block_order": [
+        "photo_01",
+        "photo_02",
+        "photo_03",
+        "photo_04",
+        "photo_05"
+      ]
     }
   },
   "order": [
@@ -1019,6 +1099,7 @@
     "classroom",
     "formulas",
     "practice",
+    "materials",
     "community",
     "live",
     "included",

@@ -49,12 +49,12 @@
     assign stock_w = 1800
     assign stock_h = 1200
     case stock
+      when 'amber-mirror', 'dropper-dried-flowers', 'label-bottle', 'notebook-formula', 'notebook-writing', 'oil-bottle-flowers', 'rose-buds', 'sphere-bottle', 'spices-white', 'workbench-jars'
+        assign stock_w = 1800
+        assign stock_h = 2700
       when 'bench-still-life', 'overhead-bottles', 'studio-overhead'
         assign stock_w = 2400
         assign stock_h = 1600
-      when 'label-bottle', 'notebook-formula', 'notebook-writing'
-        assign stock_w = 1800
-        assign stock_h = 2700
       when 'raw-materials'
         assign stock_w = 1800
         assign stock_h = 1231
