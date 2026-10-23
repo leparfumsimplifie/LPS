@@ -5,11 +5,12 @@ Page text lives in Shopify admin (Online Store → Pages); the design comes from
 Pick the template shown below for each page. The templates appear in the dropdown once the
 new theme is published (or preview them first via Customize → top dropdown → Pages).
 
-BEFORE PUBLISHING ANY DRAFT TEXT
-  • Replace every [BRACKETED PLACEHOLDER] with your real details.
+ABOUT THE TEXT
+  • All details are filled in (business name: Leparfumsimplifie, trading as Le Parfum Simplifié).
   • The terms are plain-English drafts based on what your site already says. They are not
-    legal advice. Ask a solicitor or a service such as a legal template provider to check
-    them, especially the Terms of Service and Membership Terms.
+    legal advice; it is worth having them checked.
+  • New pages automatically use the information-page layout (it is now the default page
+    template), so you do not need to pick a template for them.
 
 ------------------------------------------------------------------
 PAGES THAT ALREADY EXIST: just change the template
@@ -38,20 +39,20 @@ Under "Search engine listing", check the URL handle matches the one below exactl
 8. Title: Delivery and access
    URL handle: delivery-and-access
    Content: delivery-and-access.html
-   Template: lps-policy
+   Template: (default, nothing to choose)
 
 9. Title: Membership terms
    URL handle: membership-terms
    Content: membership-terms.html
-   Template: lps-policy
+   Template: (default, nothing to choose)
 
-------------------------------------------------------------------
-TERMS OF SERVICE: goes in Settings, not Pages
-------------------------------------------------------------------
-10. Settings → Policies → Terms of service → paste terms-of-service.html (use the HTML view)
-    → Save. Shopify then shows it at /policies/terms-of-service and links it at checkout.
-    While there, also fill in "Contact information" (your business name, address, email):
-    UK law expects online sellers to show this.
+10. Title: Terms of service
+    URL handle: terms-of-service
+    Content: terms-of-service.html
+    Template: (default, nothing to choose)
+    Optional: also paste the same text into Settings → Policies → Terms of service so it is
+    linked at checkout. While there, fill in "Contact information" with your business
+    address: UK law expects online sellers to show a postal address.
 
 ------------------------------------------------------------------
 PRODUCTS: Products → choose product → Theme template

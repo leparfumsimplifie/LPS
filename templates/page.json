@@ -1,0 +1,88 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "content": {
+      "type": "lps-page-content",
+      "settings": {
+        "eyebrow": "Information",
+        "show_title": true,
+        "nav_heading": "Information",
+        "help_text": "<p>Questions about an order, membership or the software? <a href=\"/pages/contact\">Contact us</a> and include the email address associated with your order.</p>",
+        "tone": "ivory",
+        "padding_top": 72,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "link_01": {
+          "type": "link",
+          "settings": {
+            "label": "FAQ",
+            "link": "/pages/faq"
+          }
+        },
+        "link_02": {
+          "type": "link",
+          "settings": {
+            "label": "Delivery and access",
+            "link": "/pages/delivery-and-access"
+          }
+        },
+        "link_03": {
+          "type": "link",
+          "settings": {
+            "label": "Refund policy",
+            "link": "/pages/refund-policy"
+          }
+        },
+        "link_04": {
+          "type": "link",
+          "settings": {
+            "label": "Membership terms",
+            "link": "/pages/membership-terms"
+          }
+        },
+        "link_05": {
+          "type": "link",
+          "settings": {
+            "label": "Terms of service",
+            "link": "/pages/terms-of-service"
+          }
+        },
+        "link_06": {
+          "type": "link",
+          "settings": {
+            "label": "Privacy policy",
+            "link": "/policies/privacy-policy"
+          }
+        },
+        "link_07": {
+          "type": "link",
+          "settings": {
+            "label": "Contact",
+            "link": "/pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "link_01",
+        "link_02",
+        "link_03",
+        "link_04",
+        "link_05",
+        "link_06",
+        "link_07"
+      ]
+    }
+  },
+  "order": [
+    "content"
+  ]
+}
