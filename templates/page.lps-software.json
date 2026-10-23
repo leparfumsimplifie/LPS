@@ -82,7 +82,7 @@
         "eyebrow": "Features",
         "heading": "Everything in one workspace.",
         "style": "cards",
-        "columns": 3,
+        "columns": "3",
         "show_index": false,
         "tone": "ivory",
         "padding_top": 96,

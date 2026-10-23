@@ -62,7 +62,7 @@
         "eyebrow": "What it can cover",
         "heading": "From first idea to a refined formula.",
         "style": "cards",
-        "columns": 3,
+        "columns": "3",
         "show_index": false,
         "tone": "cream",
         "padding_top": 96,

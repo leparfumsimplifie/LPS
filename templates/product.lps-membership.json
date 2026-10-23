@@ -363,7 +363,7 @@
         "eyebrow": "Everything included",
         "heading": "What your membership gives you.",
         "style": "cards",
-        "columns": 3,
+        "columns": "3",
         "show_index": false,
         "footnote": "<p>Badges show what is available today. Anything marked ‘In development’ is planned and not part of the current offer.</p>",
         "tone": "cream",

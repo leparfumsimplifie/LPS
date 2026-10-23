@@ -274,3 +274,6 @@ Cross-sell cards ("Tools and services for your practice") were added to the Prem
 - There are four steps, shown one at a time with a progress line: **About you** · **Your brand and launch** · **The scent** · **Next steps**. Required answers are checked before moving on. Without JavaScript, all questions show on one page.
 - Every question is a block in the theme editor. You can add, remove, reorder or reword questions, and choose the answer type: short text, long text, dropdown, choose one, choose any, scale, email, phone or link.
 - **To confirm:** the budget ranges (under £500 to more than £5,000) and production quantities are suggested ranges only. Edit them to match how you actually price and produce.
+
+### Fix (23 Oct 2026): page and product templates missing after upload
+Shopify rejected `sections/lps-features.liquid` during the zip upload. Its "Columns" slider (2–3) offered only two values, and Shopify requires sliders to offer at least three. Theme Check does not flag this. Because every page and product template uses that section, Shopify rejected those templates as well; only the homepage imported. "Columns" is now a dropdown, and all sliders were checked against the rule.

@@ -3,7 +3,7 @@
   assign s = section.settings
   assign anchor = s.anchor | default: section.id | handleize
   assign sizes = '(min-width: 990px) 33vw, (min-width: 750px) 50vw, 100vw'
-  if s.columns == 2
+  if s.columns == '2'
     assign sizes = '(min-width: 750px) 50vw, 100vw'
   endif
 -%}
@@ -122,13 +122,20 @@
       "default": "lines"
     },
     {
-      "type": "range",
+      "type": "select",
       "id": "columns",
       "label": "Columns on desktop",
-      "min": 2,
-      "max": 3,
-      "step": 1,
-      "default": 3
+      "options": [
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        }
+      ],
+      "default": "3"
     },
     {
       "type": "checkbox",
