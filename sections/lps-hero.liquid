@@ -12,7 +12,7 @@
   {%- capture media -%}
     {%- if s.image_mobile != blank -%}
       <div class="lps-hero__desktop-only">
-        {% render 'lps-media', image: s.image, alt: s.image_alt, brief: s.image_brief, ratio: s.ratio, sizes: '100vw', priority: true %}
+        {% render 'lps-media', image: s.image, stock: s.image_stock, alt: s.image_alt, brief: s.image_brief, ratio: s.ratio, sizes: '100vw', priority: true %}
       </div>
       <div class="lps-hero__mobile-only">
         {% render 'lps-media', image: s.image_mobile, alt: s.image_alt, brief: s.image_brief, ratio: s.ratio, sizes: '100vw' %}
@@ -24,7 +24,7 @@
           assign sizes = '(min-width: 990px) 55vw, 100vw'
         endif
       -%}
-      {% render 'lps-media', image: s.image, alt: s.image_alt, brief: s.image_brief, ratio: s.ratio, sizes: sizes, priority: true %}
+      {% render 'lps-media', image: s.image, stock: s.image_stock, alt: s.image_alt, brief: s.image_brief, ratio: s.ratio, sizes: sizes, priority: true %}
     {%- endif -%}
   {%- endcapture -%}
 
@@ -155,6 +155,111 @@
       "type": "image_picker",
       "id": "image",
       "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "image_stock",
+      "label": "Included photograph",
+      "info": "Used when no image is chosen above.",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "studio-overhead",
+          "label": "Studio bench from above"
+        },
+        {
+          "value": "bench-still-life",
+          "label": "Bench still life: amber bottles and jars"
+        },
+        {
+          "value": "pipette-hand",
+          "label": "Pipette in hand"
+        },
+        {
+          "value": "tagged-bottles",
+          "label": "Labelled amber bottles"
+        },
+        {
+          "value": "vials-botanicals",
+          "label": "Vials with botanicals"
+        },
+        {
+          "value": "raw-materials",
+          "label": "Raw materials in glass jars"
+        },
+        {
+          "value": "mortar-petals",
+          "label": "Mortar with rose petals"
+        },
+        {
+          "value": "notebook-formula",
+          "label": "Formula notebook (portrait)"
+        },
+        {
+          "value": "notebook-writing",
+          "label": "Writing in a lab notebook (portrait)"
+        },
+        {
+          "value": "beaker-pour",
+          "label": "Beaker and bottle with glass rod"
+        },
+        {
+          "value": "scale-weighing",
+          "label": "Weighing on a digital scale"
+        },
+        {
+          "value": "funnel-bottle",
+          "label": "Funnel and amber bottle"
+        },
+        {
+          "value": "overhead-bottles",
+          "label": "Tagged bottles from above"
+        },
+        {
+          "value": "tags-twine",
+          "label": "Handwritten tags and twine"
+        },
+        {
+          "value": "label-bottle",
+          "label": "Labelling a bottle (portrait)"
+        },
+        {
+          "value": "marble-vials",
+          "label": "Vials on marble"
+        },
+        {
+          "value": "study-magnifier",
+          "label": "Studying at the bench"
+        },
+        {
+          "value": "tagged-row",
+          "label": "Row of tagged bottles"
+        },
+        {
+          "value": "pipette-vials",
+          "label": "Pipette above vials"
+        },
+        {
+          "value": "skin-test",
+          "label": "Testing on skin"
+        },
+        {
+          "value": "workspace-tags",
+          "label": "Workspace with tags and vials"
+        },
+        {
+          "value": "amber-tag",
+          "label": "Amber bottle with tag"
+        },
+        {
+          "value": "gloves-bottle",
+          "label": "Gloved hand with bottle"
+        }
+      ],
+      "default": "none"
     },
     {
       "type": "image_picker",

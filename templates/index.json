@@ -16,8 +16,7 @@
         "content_alignment": "start",
         "height": 92,
         "overlay_opacity": 55,
-        "image": "shopify://shop_images/Minimalist_Precision_Laboratory_Scale.png",
-        "image_alt": "An analytical balance on a warm neutral perfumery bench",
+        "image_alt": "A perfumer’s bench from above: labelled amber bottles, vials, botanicals and glassware",
         "image_brief": "Immersive landscape photograph of a professional formulation workspace.",
         "eyebrow": "Le Parfum Simplifié",
         "heading": "Understand fragrance. Master formulation.",
@@ -27,10 +26,11 @@
         "button_link": "shopify://pages/premium-learning",
         "button_2_label": "Discover Our Story",
         "button_2_link": "shopify://pages/about-1",
-        "confirm_note": "Uses the current balance photograph. For the strongest first impression, replace it with a wide photograph of a full formulation workspace (balance, amber dilutions, pipettes, smelling strips, notebook) — landscape, minimum 2800px wide — plus an optional portrait crop for mobile.",
+        "confirm_note": "Uses an included licensed photograph. Replace it with a photograph of your own studio when you have one.",
         "tone": "charcoal",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 0,
+        "image_stock": "studio-overhead"
       }
     },
     "intro": {
@@ -43,14 +43,16 @@
         "button_link": "shopify://pages/about-1",
         "button_style": "link",
         "image_brief": "Laboratory photograph: the studio bench seen from above — a balance, rows of labelled amber bottles, glass beakers and an open notebook. Portrait.",
-        "image_alt": "The Le Parfum Simplifié studio bench",
+        "image_alt": "Labelled bottles, vials and glassware on a perfumery bench",
         "image_2_brief": "Portrait of Harvey and Kristan at the bench, or a close detail of their hands evaluating smelling strips.",
-        "image_2_alt": "Harvey and Kristan, founders of Le Parfum Simplifié",
+        "image_2_alt": "Notes being written in a lab notebook",
         "media_position": "left",
         "media_width": "equal",
         "tone": "ivory",
         "padding_top": 120,
-        "padding_bottom": 120
+        "padding_bottom": 120,
+        "image_stock": "workspace-tags",
+        "image_2_stock": "notebook-writing"
       }
     },
     "learning": {
@@ -79,7 +81,8 @@
             "link_label": "Learn more",
             "link": "shopify://pages/premium-learning",
             "image_brief": "Macro of raw materials on pale stone: resin tears, a vial of essential oil, aroma-chemical crystals and a dipped smelling strip.",
-            "image_alt": "Natural and synthetic perfumery raw materials"
+            "image_alt": "Natural raw materials in glass jars",
+            "image_stock": "raw-materials"
           }
         },
         "panel_02": {
@@ -90,7 +93,8 @@
             "link_label": "Learn more",
             "link": "/pages/premium-learning#curriculum",
             "image_brief": "Fan of labelled smelling strips held over a row of amber bottles, soft side light.",
-            "image_alt": "Labelled smelling strips over amber bottles"
+            "image_alt": "Vials of fragrance materials with botanicals",
+            "image_stock": "marble-vials"
           }
         },
         "panel_03": {
@@ -101,7 +105,8 @@
             "link_label": "Learn more",
             "link": "shopify://pages/premium-learning",
             "image_brief": "Hands pipetting a material into a beaker on an analytical balance, notebook open beside it.",
-            "image_alt": "Weighing a formula on an analytical balance"
+            "image_alt": "Weighing a formula on a digital scale",
+            "image_stock": "scale-weighing"
           }
         }
       },
@@ -115,8 +120,8 @@
       "type": "lps-showcase",
       "settings": {
         "layout": "alternating",
-        "eyebrow": "Inside the platform",
-        "heading": "What students see and learn.",
+        "eyebrow": "Inside the course",
+        "heading": "What you will learn, and how.",
         "text": "<p>Premium Learning brings together recorded lessons, formula studies and a community of fellow students.</p>",
         "tone": "ivory",
         "padding_top": 96,
@@ -139,25 +144,27 @@
         "shot_02": {
           "type": "shot",
           "settings": {
-            "frame": "browser",
-            "ratio": "16 / 10",
+            "frame": "none",
+            "ratio": "4 / 3",
             "eyebrow": "Formula library",
             "title": "Formula studies to learn from",
             "text": "<p>A library of educational formula studies shows how materials are combined, so you can trace the structure of a composition and rebuild it at the bench.</p>",
             "image_brief": "Genuine screenshot of a formula in the library, quantities blurred.",
-            "image_alt": "A formula study in the library"
+            "image_alt": "A formula written in a perfumer’s notebook",
+            "image_stock": "notebook-formula"
           }
         },
         "shot_03": {
           "type": "shot",
           "settings": {
-            "frame": "laptop",
-            "ratio": "16 / 10",
+            "frame": "none",
+            "ratio": "4 / 3",
             "eyebrow": "Community",
             "title": "A community of independent creators",
             "text": "<p>Ask questions, share your work and learn alongside others in our Discord community — with a dedicated premium learning space for members.</p>",
             "image_brief": "Genuine Discord screenshot of a community discussion, usernames blurred.",
-            "image_alt": "A discussion in the Discord community"
+            "image_alt": "A row of labelled amber bottles",
+            "image_stock": "tagged-row"
           }
         }
       },
@@ -192,7 +199,8 @@
             "product": "le-parfum-simplifie-membership",
             "show_price": true,
             "image_brief": "Still life: open laptop showing a lesson beside amber bottles and smelling strips on a stone surface.",
-            "image_alt": "A Premium Learning lesson beside perfumery materials"
+            "image_alt": "A pipette above vials of fragrance materials",
+            "image_stock": "pipette-vials"
           }
         },
         "panel_02": {
@@ -217,7 +225,8 @@
             "link": "shopify://pages/perfume-development",
             "show_price": false,
             "image_brief": "A finished fragrance in an unlabelled glass bottle beside a brief, mood swatches and smelling strips.",
-            "image_alt": "A bespoke fragrance in development"
+            "image_alt": "Handwritten fragrance tags and twine",
+            "image_stock": "tags-twine"
           }
         }
       },
@@ -231,7 +240,7 @@
       "type": "lps-banner",
       "settings": {
         "image_brief": "Atmospheric wide photograph of the studio at dusk: amber bottles back-lit by a window, glassware in silhouette. Landscape, minimum 2800px wide.",
-        "image_alt": "Amber bottles back-lit on a perfumery bench",
+        "image_alt": "Tagged amber bottles seen from above",
         "overlay_opacity": 50,
         "height": 70,
         "align": "center",
@@ -242,7 +251,8 @@
         "show_price": false,
         "button_label": "Explore Learning",
         "button_link": "shopify://pages/premium-learning",
-        "tone": "charcoal"
+        "tone": "charcoal",
+        "image_stock": "overhead-bottles"
       }
     }
   },

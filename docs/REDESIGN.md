@@ -217,3 +217,29 @@ Still to test in Shopify (needs your store):
 - [ ] Safari and iOS: scroll reveals are progressive enhancement (Safari 26+ and Chromium); older browsers show content immediately.
 - [ ] Remove every "To confirm before publishing" note (clear the *Editor note* field) once resolved. Turn on *Include in search results* for FAQs once their answers are confirmed.
 - [ ] After publishing: assign both templates (section 2, step 5) and spot-check the live URLs.
+
+---
+
+## 7. Included photography (added 23 Oct 2026)
+
+To replace the placeholders, the theme now ships with 23 photographs from a single shoot in a working perfumer's studio: amber bottles, pipettes, scale, notebook and botanicals. They are stored as `assets/lps-photo-<name>.jpg`, at 1800px (heroes 2400px) plus a 900px version for phones.
+
+- **Source and licence:** [Pexels](https://www.pexels.com/license/), photo IDs 8450346–8450519 (one photographer's perfume-making series). The Pexels licence allows free commercial use with no attribution required. Photos must not be resold as-is, or used to imply that the people shown endorse the business. The images were chosen to show hands and details rather than faces, so nobody pictured can be mistaken for Harvey or Kristan.
+- **How it works:** every image slot has an **Included photograph** dropdown in the theme editor. Choose your own image in the image picker above it and that image is used instead.
+- **Placeholders** ("Photography required") now appear **only inside the theme editor**. Customers never see them; an empty slot is simply hidden.
+- **Honesty safeguards:**
+  - The classroom section is retitled "How you will learn" and notes that the photographs are illustrative.
+  - The homepage section is retitled "What you will learn, and how".
+  - The product page's screenshot gallery is **hidden** until genuine screenshots are added. Turn it back on in the customiser.
+
+### Branding fixes in the full-theme zip
+- Fonts match the live site: Playfair Display for headings, Inter for body text.
+- Palette: ivory `#F7F3EA`, charcoal `#1E293B`, cream `#EFE8DA`. Buttons are now charcoal; on the live site they are bright blue `#0066FF`.
+- Square corners throughout.
+- The favicon is your "Le parfum simplifié" wordmark.
+- The generic "Welcome to our store" announcement bar is turned off.
+- The footer now reads **"Notes from the studio — Occasional updates on new lessons, formula studies and live learning sessions"** instead of "exclusive deals", and the columns are headed **Community** and **Explore**.
+
+Still worth doing in Shopify admin:
+- Rename the store from "LeParfumSimplifié" to "Le Parfum Simplifié" (Settings → Store details), or upload a logo. The header shows the store name.
+- Replace the included photographs with your own studio photography over time.

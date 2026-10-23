@@ -1491,3 +1491,14 @@
   clip: rect(0 0 0 0);
   white-space: nowrap;
 }
+
+/* A media slot with nothing to show stays out of the customer's way
+   (placeholders render only inside the theme editor). */
+.lps-media--empty { display: none; }
+
+/* Phones: text sits over the middle of the photograph, so shade it evenly. */
+@media (max-width: 749px) {
+  .lps-hero--overlay .lps-hero__media::after {
+    background: linear-gradient(to top, rgb(20 19 17 / calc(var(--lps-overlay, 0.55) + 0.2)) 0%, rgb(20 19 17 / var(--lps-overlay, 0.55)) 100%);
+  }
+}

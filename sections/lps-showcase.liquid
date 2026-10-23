@@ -25,7 +25,7 @@
           -%}
           <figure class="lps-shot{% if b.wide %} lps-shot--wide{% endif %}" data-lps-reveal {{ block.shopify_attributes }}>
             <div class="lps-frame lps-frame--{{ b.frame }}">
-              {% render 'lps-media', image: b.image, alt: b.image_alt, brief: b.image_brief, label: b.placeholder_label, ratio: b.ratio, sizes: sizes, zoom: true %}
+              {% render 'lps-media', image: b.image, stock: b.image_stock, alt: b.image_alt, brief: b.image_brief, label: b.placeholder_label, ratio: b.ratio, sizes: sizes, zoom: true %}
             </div>
             {%- if b.title != blank or b.text != blank -%}
               <figcaption>
@@ -60,7 +60,7 @@
           <div class="lps-showcase__row lps-showcase__row--{{ row }}" {{ block.shopify_attributes }}>
             <div class="lps-showcase__visual" data-lps-reveal>
               <div class="lps-frame lps-frame--{{ b.frame }}">
-                {% render 'lps-media', image: b.image, alt: b.image_alt, brief: b.image_brief, label: b.placeholder_label, ratio: b.ratio, sizes: sizes, zoom: true %}
+                {% render 'lps-media', image: b.image, stock: b.image_stock, alt: b.image_alt, brief: b.image_brief, label: b.placeholder_label, ratio: b.ratio, sizes: sizes, zoom: true %}
               </div>
             </div>
             <div class="lps-showcase__text">
@@ -216,6 +216,111 @@
           "id": "image",
           "label": "Screenshot or photograph",
           "info": "Use genuine screenshots of the platform. Crop out personal details of community members."
+        },
+        {
+          "type": "select",
+          "id": "image_stock",
+          "label": "Included photograph",
+          "info": "Used when no image is chosen above.",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "studio-overhead",
+              "label": "Studio bench from above"
+            },
+            {
+              "value": "bench-still-life",
+              "label": "Bench still life: amber bottles and jars"
+            },
+            {
+              "value": "pipette-hand",
+              "label": "Pipette in hand"
+            },
+            {
+              "value": "tagged-bottles",
+              "label": "Labelled amber bottles"
+            },
+            {
+              "value": "vials-botanicals",
+              "label": "Vials with botanicals"
+            },
+            {
+              "value": "raw-materials",
+              "label": "Raw materials in glass jars"
+            },
+            {
+              "value": "mortar-petals",
+              "label": "Mortar with rose petals"
+            },
+            {
+              "value": "notebook-formula",
+              "label": "Formula notebook (portrait)"
+            },
+            {
+              "value": "notebook-writing",
+              "label": "Writing in a lab notebook (portrait)"
+            },
+            {
+              "value": "beaker-pour",
+              "label": "Beaker and bottle with glass rod"
+            },
+            {
+              "value": "scale-weighing",
+              "label": "Weighing on a digital scale"
+            },
+            {
+              "value": "funnel-bottle",
+              "label": "Funnel and amber bottle"
+            },
+            {
+              "value": "overhead-bottles",
+              "label": "Tagged bottles from above"
+            },
+            {
+              "value": "tags-twine",
+              "label": "Handwritten tags and twine"
+            },
+            {
+              "value": "label-bottle",
+              "label": "Labelling a bottle (portrait)"
+            },
+            {
+              "value": "marble-vials",
+              "label": "Vials on marble"
+            },
+            {
+              "value": "study-magnifier",
+              "label": "Studying at the bench"
+            },
+            {
+              "value": "tagged-row",
+              "label": "Row of tagged bottles"
+            },
+            {
+              "value": "pipette-vials",
+              "label": "Pipette above vials"
+            },
+            {
+              "value": "skin-test",
+              "label": "Testing on skin"
+            },
+            {
+              "value": "workspace-tags",
+              "label": "Workspace with tags and vials"
+            },
+            {
+              "value": "amber-tag",
+              "label": "Amber bottle with tag"
+            },
+            {
+              "value": "gloves-bottle",
+              "label": "Gloved hand with bottle"
+            }
+          ],
+          "default": "none"
         },
         {
           "type": "text",

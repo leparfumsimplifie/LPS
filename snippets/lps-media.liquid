@@ -1,8 +1,11 @@
 {%- doc -%}
-  Renders a responsive, lazy-loaded image, or — when no image is chosen — a
-  tonal placeholder that describes the exact photograph or screenshot needed.
+  Renders a responsive, lazy-loaded image. If no image is chosen in the theme editor it
+  falls back to one of the photographs included with the theme (`stock`). If neither is
+  set, it shows a placeholder describing the photograph needed, inside the theme editor
+  only; customers never see a placeholder.
 
   @param {image} [image] - Image from the theme editor
+  @param {string} [stock] - Included photograph slug (assets/lps-photo-<slug>.jpg), or 'none'
   @param {string} [alt] - Alt text override (falls back to the image's own alt text)
   @param {string} [brief] - Description of the photograph required, shown in the placeholder
   @param {string} [label] - Placeholder label, e.g. 'Photography required'
@@ -18,6 +21,11 @@
   assign loading = loading | default: 'lazy'
   assign sizes = sizes | default: '(min-width: 990px) 50vw, 100vw'
   assign label = label | default: 'Photography required'
+  assign use_stock = false
+  if image == blank and stock != blank and stock != 'none'
+    assign use_stock = true
+  endif
+
   assign media_class = 'lps-media'
   if ratio == 'natural' and image != blank
     assign media_class = media_class | append: ' lps-media--natural'
@@ -25,11 +33,32 @@
   if contain
     assign media_class = media_class | append: ' lps-media--contain'
   endif
+  if image == blank and use_stock == false and request.design_mode == false
+    assign media_class = media_class | append: ' lps-media--empty'
+  endif
   if class != blank
     assign media_class = media_class | append: ' ' | append: class
   endif
+
   if image != blank
     assign alt_text = alt | default: image.alt
+  elsif use_stock
+    assign alt_text = alt
+    assign stock_large = 'lps-photo-' | append: stock | append: '.jpg' | asset_url
+    assign stock_small = 'lps-photo-' | append: stock | append: '-900.jpg' | asset_url
+    assign stock_w = 1800
+    assign stock_h = 1200
+    case stock
+      when 'bench-still-life', 'overhead-bottles', 'studio-overhead'
+        assign stock_w = 2400
+        assign stock_h = 1600
+      when 'label-bottle', 'notebook-formula', 'notebook-writing'
+        assign stock_w = 1800
+        assign stock_h = 2700
+      when 'raw-materials'
+        assign stock_w = 1800
+        assign stock_h = 1231
+    endcase
   endif
 -%}
 <div
@@ -40,19 +69,42 @@
     style="--lps-focal: {{ image.presentation.focal_point }};"
   {% endif %}
 >
-  {%- if image != blank -%}
+  {%- if image != blank or use_stock -%}
     {%- capture img -%}
-      {%- if priority -%}
+      {%- if use_stock -%}
+        <img
+          src="{{ stock_large }}"
+          srcset="{{ stock_small }} 900w, {{ stock_large }} {{ stock_w }}w"
+          sizes="{{ sizes }}"
+          width="{{ stock_w }}"
+          height="{{ stock_h }}"
+          alt="{{ alt_text | escape }}"
+          class="lps-media__img"
+          {% if priority %}
+            loading="eager" fetchpriority="high"
+          {% else %}
+            loading="{{ loading }}"
+          {% endif %}
+          decoding="async"
+        >
+      {%- elsif priority -%}
         {{- image | image_url: width: 3000 | image_tag: widths: '480, 720, 960, 1280, 1600, 2000, 2400, 3000', sizes: sizes, loading: 'eager', fetchpriority: 'high', alt: alt_text, class: 'lps-media__img' -}}
       {%- else -%}
         {{- image | image_url: width: 2400 | image_tag: widths: '480, 720, 960, 1280, 1600, 2000, 2400', sizes: sizes, loading: loading, alt: alt_text, class: 'lps-media__img' -}}
       {%- endif -%}
     {%- endcapture -%}
     {%- if zoom -%}
+      {%- liquid
+        if use_stock
+          assign zoom_src = stock_large
+        else
+          assign zoom_src = image | image_url: width: 2400
+        endif
+      -%}
       <a
         class="lps-zoom"
-        href="{{ image | image_url: width: 2400 }}"
-        data-lps-zoom-src="{{ image | image_url: width: 2400 }}"
+        href="{{ zoom_src }}"
+        data-lps-zoom-src="{{ zoom_src }}"
         data-lps-zoom-alt="{{ alt_text | escape }}"
         aria-label="Enlarge image{% if alt_text != blank %}: {{ alt_text | escape }}{% endif %}"
       >
@@ -61,7 +113,7 @@
     {%- else -%}
       {{- img -}}
     {%- endif -%}
-  {%- else -%}
+  {%- elsif request.design_mode -%}
     <div class="lps-ph" role="img" aria-label="{{ label | escape }}: {{ brief | escape }}">
       <span class="lps-ph__label">{{ label }}</span>
       {%- if brief != blank -%}

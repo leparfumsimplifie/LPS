@@ -89,9 +89,9 @@
           {% render 'lps-media', brief: s.sheet_brief, label: 'Screenshot required', ratio: '4 / 5' %}
         {%- endif -%}
 
-        {%- if s.detail_image != blank or s.detail_brief != blank -%}
+        {%- if s.detail_image != blank or s.detail_image_stock != 'none' or request.design_mode and s.detail_brief != blank -%}
           <div class="lps-figure">
-            {% render 'lps-media', image: s.detail_image, alt: s.detail_image_alt, brief: s.detail_brief, ratio: '4 / 3', sizes: '(min-width: 990px) 30vw, 60vw' %}
+            {% render 'lps-media', image: s.detail_image, stock: s.detail_image_stock, alt: s.detail_image_alt, brief: s.detail_brief, ratio: '4 / 3', sizes: '(min-width: 990px) 30vw, 60vw' %}
           </div>
         {%- endif -%}
       </div>
@@ -202,6 +202,111 @@
       "type": "image_picker",
       "id": "detail_image",
       "label": "Detail photograph (optional)"
+    },
+    {
+      "type": "select",
+      "id": "detail_image_stock",
+      "label": "Included photograph",
+      "info": "Used when no image is chosen above.",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "studio-overhead",
+          "label": "Studio bench from above"
+        },
+        {
+          "value": "bench-still-life",
+          "label": "Bench still life: amber bottles and jars"
+        },
+        {
+          "value": "pipette-hand",
+          "label": "Pipette in hand"
+        },
+        {
+          "value": "tagged-bottles",
+          "label": "Labelled amber bottles"
+        },
+        {
+          "value": "vials-botanicals",
+          "label": "Vials with botanicals"
+        },
+        {
+          "value": "raw-materials",
+          "label": "Raw materials in glass jars"
+        },
+        {
+          "value": "mortar-petals",
+          "label": "Mortar with rose petals"
+        },
+        {
+          "value": "notebook-formula",
+          "label": "Formula notebook (portrait)"
+        },
+        {
+          "value": "notebook-writing",
+          "label": "Writing in a lab notebook (portrait)"
+        },
+        {
+          "value": "beaker-pour",
+          "label": "Beaker and bottle with glass rod"
+        },
+        {
+          "value": "scale-weighing",
+          "label": "Weighing on a digital scale"
+        },
+        {
+          "value": "funnel-bottle",
+          "label": "Funnel and amber bottle"
+        },
+        {
+          "value": "overhead-bottles",
+          "label": "Tagged bottles from above"
+        },
+        {
+          "value": "tags-twine",
+          "label": "Handwritten tags and twine"
+        },
+        {
+          "value": "label-bottle",
+          "label": "Labelling a bottle (portrait)"
+        },
+        {
+          "value": "marble-vials",
+          "label": "Vials on marble"
+        },
+        {
+          "value": "study-magnifier",
+          "label": "Studying at the bench"
+        },
+        {
+          "value": "tagged-row",
+          "label": "Row of tagged bottles"
+        },
+        {
+          "value": "pipette-vials",
+          "label": "Pipette above vials"
+        },
+        {
+          "value": "skin-test",
+          "label": "Testing on skin"
+        },
+        {
+          "value": "workspace-tags",
+          "label": "Workspace with tags and vials"
+        },
+        {
+          "value": "amber-tag",
+          "label": "Amber bottle with tag"
+        },
+        {
+          "value": "gloves-bottle",
+          "label": "Gloved hand with bottle"
+        }
+      ],
+      "default": "none"
     },
     {
       "type": "text",

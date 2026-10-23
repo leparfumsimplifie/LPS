@@ -348,12 +348,13 @@
         "button_link": "shopify://pages/premium-learning",
         "button_style": "link",
         "image_brief": "Editorial photograph: a student at a bench evaluating a smelling strip, a laptop showing a lesson beside a rack of amber dilutions. Portrait.",
-        "image_alt": "A student evaluating a smelling strip beside a laptop lesson",
+        "image_alt": "A perfumery bench with amber bottles and jars of raw materials",
         "media_position": "left",
         "media_width": "equal",
         "tone": "ivory",
         "padding_top": 96,
-        "padding_bottom": 96
+        "padding_bottom": 96,
+        "image_stock": "bench-still-life"
       }
     },
     "included": {
@@ -377,7 +378,8 @@
             "text": "<p>Approximately ten hours of structured lessons covering foundations, raw materials, dilution, accords, formula construction and evaluation.</p>",
             "status": "available",
             "image_brief": "Close-up of a laptop playing a lesson on a perfumery bench.",
-            "image_alt": "A lesson playing on a laptop"
+            "image_alt": "Vials of fragrance materials",
+            "image_stock": "marble-vials"
           }
         },
         "feature_02": {
@@ -387,8 +389,9 @@
             "text": "<p>Educational formula studies to examine, compare and rebuild — the clearest way to understand how compositions are structured.</p>",
             "status": "available",
             "image_brief": "Overhead: formula sheets, pencil and smelling strips.",
-            "image_alt": "Formula sheets on a bench",
-            "confirm_note": "Confirm the number of formulas available."
+            "image_alt": "An amber bottle with a handwritten tag",
+            "confirm_note": "Confirm the number of formulas available.",
+            "image_stock": "amber-tag"
           }
         },
         "feature_03": {
@@ -398,7 +401,8 @@
             "text": "<p>Guided exercises that move from evaluating single materials to building accords and modifying complete formulas.</p>",
             "status": "available",
             "image_brief": "Hands pipetting into a beaker on a balance.",
-            "image_alt": "Pipetting material into a beaker"
+            "image_alt": "Weighing on a digital scale",
+            "image_stock": "scale-weighing"
           }
         },
         "feature_04": {
@@ -408,8 +412,9 @@
             "text": "<p>Access to the premium learning community on Discord to ask questions and discuss your work.</p>",
             "status": "available",
             "image_brief": "Cropped Discord screenshot of premium channels (no personal details).",
-            "image_alt": "Premium channels on Discord",
-            "placeholder_label": "Screenshot required"
+            "image_alt": "A gloved hand holding a labelled bottle",
+            "placeholder_label": "Screenshot required",
+            "image_stock": "gloves-bottle"
           }
         },
         "feature_05": {
@@ -419,7 +424,8 @@
             "text": "<p>Live learning sessions, according to the published schedule.</p>",
             "status": "available",
             "image_brief": "Presenter at the bench during a live session.",
-            "image_alt": "A live learning session"
+            "image_alt": "Studying at the bench",
+            "image_stock": "study-magnifier"
           }
         },
         "feature_06": {
@@ -429,8 +435,9 @@
             "text": "<p>Selected bases and raw-material learning resources, subject to the published membership terms.</p>",
             "status": "available",
             "image_brief": "Macro of natural and synthetic raw materials on stone.",
-            "image_alt": "Raw materials on a stone surface",
-            "confirm_note": "Clarify what is included here and link the membership terms."
+            "image_alt": "Rose petals in a mortar",
+            "confirm_note": "Clarify what is included here and link the membership terms.",
+            "image_stock": "mortar-petals"
           }
         }
       },
@@ -519,7 +526,8 @@
         "shot_03",
         "shot_04",
         "shot_05"
-      ]
+      ],
+      "disabled": true
     },
     "access": {
       "type": "lps-steps",
@@ -807,7 +815,7 @@
       "type": "lps-banner",
       "settings": {
         "image_brief": "Atmospheric wide photograph of the studio bench at dusk: amber bottles back-lit by a window, a balance and glassware in silhouette. Landscape, minimum 2400px wide.",
-        "image_alt": "Amber bottles and glassware on a perfumery bench at dusk",
+        "image_alt": "A perfumer’s bench from above",
         "overlay_opacity": 50,
         "height": 60,
         "align": "center",
@@ -818,7 +826,8 @@
         "one_time_label": "One-time payment",
         "button_label": "Get Premium access",
         "button_link": "/products/le-parfum-simplifie-membership#membership",
-        "tone": "charcoal"
+        "tone": "charcoal",
+        "image_stock": "studio-overhead"
       }
     }
   },

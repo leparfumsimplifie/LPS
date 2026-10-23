@@ -5,7 +5,7 @@
   assign items = section.blocks | where: 'type', 'item'
   assign annotations = section.blocks | where: 'type', 'annotation'
   assign has_pair = false
-  if s.image_2 != blank or s.image_2_brief != blank
+  if s.image_2 != blank or s.image_2_stock != 'none' or request.design_mode and s.image_2_brief != blank
     assign has_pair = true
   endif
   assign sizes = '(min-width: 990px) 50vw, 100vw'
@@ -24,7 +24,7 @@
         <figure class="lps-figure">
           <div class="lps-split__media-stack{% if has_pair %} lps-split__media-stack--pair{% endif %}">
             <div class="lps-annotated">
-              {% render 'lps-media', image: s.image, alt: s.image_alt, brief: s.image_brief, label: s.placeholder_label, ratio: s.image_ratio, sizes: sizes, zoom: s.zoom %}
+              {% render 'lps-media', image: s.image, stock: s.image_stock, alt: s.image_alt, brief: s.image_brief, label: s.placeholder_label, ratio: s.image_ratio, sizes: sizes, zoom: s.zoom %}
               {%- for block in annotations -%}
                 <span
                   class="lps-annotation"
@@ -37,7 +37,7 @@
               {%- endfor -%}
             </div>
             {%- if has_pair -%}
-              {% render 'lps-media', image: s.image_2, alt: s.image_2_alt, brief: s.image_2_brief, label: s.placeholder_label, ratio: '3 / 4', sizes: '(min-width: 990px) 20vw, 40vw' %}
+              {% render 'lps-media', image: s.image_2, stock: s.image_2_stock, alt: s.image_2_alt, brief: s.image_2_brief, label: s.placeholder_label, ratio: '3 / 4', sizes: '(min-width: 990px) 20vw, 40vw' %}
             {%- endif -%}
           </div>
           {%- if annotations.size > 0 -%}
@@ -207,6 +207,111 @@
       "label": "Main image"
     },
     {
+      "type": "select",
+      "id": "image_stock",
+      "label": "Included photograph",
+      "info": "Used when no image is chosen above.",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "studio-overhead",
+          "label": "Studio bench from above"
+        },
+        {
+          "value": "bench-still-life",
+          "label": "Bench still life: amber bottles and jars"
+        },
+        {
+          "value": "pipette-hand",
+          "label": "Pipette in hand"
+        },
+        {
+          "value": "tagged-bottles",
+          "label": "Labelled amber bottles"
+        },
+        {
+          "value": "vials-botanicals",
+          "label": "Vials with botanicals"
+        },
+        {
+          "value": "raw-materials",
+          "label": "Raw materials in glass jars"
+        },
+        {
+          "value": "mortar-petals",
+          "label": "Mortar with rose petals"
+        },
+        {
+          "value": "notebook-formula",
+          "label": "Formula notebook (portrait)"
+        },
+        {
+          "value": "notebook-writing",
+          "label": "Writing in a lab notebook (portrait)"
+        },
+        {
+          "value": "beaker-pour",
+          "label": "Beaker and bottle with glass rod"
+        },
+        {
+          "value": "scale-weighing",
+          "label": "Weighing on a digital scale"
+        },
+        {
+          "value": "funnel-bottle",
+          "label": "Funnel and amber bottle"
+        },
+        {
+          "value": "overhead-bottles",
+          "label": "Tagged bottles from above"
+        },
+        {
+          "value": "tags-twine",
+          "label": "Handwritten tags and twine"
+        },
+        {
+          "value": "label-bottle",
+          "label": "Labelling a bottle (portrait)"
+        },
+        {
+          "value": "marble-vials",
+          "label": "Vials on marble"
+        },
+        {
+          "value": "study-magnifier",
+          "label": "Studying at the bench"
+        },
+        {
+          "value": "tagged-row",
+          "label": "Row of tagged bottles"
+        },
+        {
+          "value": "pipette-vials",
+          "label": "Pipette above vials"
+        },
+        {
+          "value": "skin-test",
+          "label": "Testing on skin"
+        },
+        {
+          "value": "workspace-tags",
+          "label": "Workspace with tags and vials"
+        },
+        {
+          "value": "amber-tag",
+          "label": "Amber bottle with tag"
+        },
+        {
+          "value": "gloves-bottle",
+          "label": "Gloved hand with bottle"
+        }
+      ],
+      "default": "none"
+    },
+    {
       "type": "text",
       "id": "image_alt",
       "label": "Main image alt text"
@@ -254,6 +359,111 @@
       "type": "image_picker",
       "id": "image_2",
       "label": "Secondary detail image (optional)"
+    },
+    {
+      "type": "select",
+      "id": "image_2_stock",
+      "label": "Included photograph",
+      "info": "Used when no image is chosen above.",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "studio-overhead",
+          "label": "Studio bench from above"
+        },
+        {
+          "value": "bench-still-life",
+          "label": "Bench still life: amber bottles and jars"
+        },
+        {
+          "value": "pipette-hand",
+          "label": "Pipette in hand"
+        },
+        {
+          "value": "tagged-bottles",
+          "label": "Labelled amber bottles"
+        },
+        {
+          "value": "vials-botanicals",
+          "label": "Vials with botanicals"
+        },
+        {
+          "value": "raw-materials",
+          "label": "Raw materials in glass jars"
+        },
+        {
+          "value": "mortar-petals",
+          "label": "Mortar with rose petals"
+        },
+        {
+          "value": "notebook-formula",
+          "label": "Formula notebook (portrait)"
+        },
+        {
+          "value": "notebook-writing",
+          "label": "Writing in a lab notebook (portrait)"
+        },
+        {
+          "value": "beaker-pour",
+          "label": "Beaker and bottle with glass rod"
+        },
+        {
+          "value": "scale-weighing",
+          "label": "Weighing on a digital scale"
+        },
+        {
+          "value": "funnel-bottle",
+          "label": "Funnel and amber bottle"
+        },
+        {
+          "value": "overhead-bottles",
+          "label": "Tagged bottles from above"
+        },
+        {
+          "value": "tags-twine",
+          "label": "Handwritten tags and twine"
+        },
+        {
+          "value": "label-bottle",
+          "label": "Labelling a bottle (portrait)"
+        },
+        {
+          "value": "marble-vials",
+          "label": "Vials on marble"
+        },
+        {
+          "value": "study-magnifier",
+          "label": "Studying at the bench"
+        },
+        {
+          "value": "tagged-row",
+          "label": "Row of tagged bottles"
+        },
+        {
+          "value": "pipette-vials",
+          "label": "Pipette above vials"
+        },
+        {
+          "value": "skin-test",
+          "label": "Testing on skin"
+        },
+        {
+          "value": "workspace-tags",
+          "label": "Workspace with tags and vials"
+        },
+        {
+          "value": "amber-tag",
+          "label": "Amber bottle with tag"
+        },
+        {
+          "value": "gloves-bottle",
+          "label": "Gloved hand with bottle"
+        }
+      ],
+      "default": "none"
     },
     {
       "type": "text",
