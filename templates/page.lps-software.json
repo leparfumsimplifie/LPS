@@ -1,0 +1,272 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "lps-hero",
+      "settings": {
+        "layout": "split",
+        "content_alignment": "start",
+        "media_position": "right",
+        "ratio": "4 / 3",
+        "image": "shopify://shop_images/Minimalist_Laptop_Fragrance_Dashboard.png",
+        "image_alt": "The Le Parfum Simplifié perfumery software dashboard on a laptop",
+        "eyebrow": "Perfumery Software",
+        "heading": "A more organised approach to fragrance formulation.",
+        "heading_tag": "h1",
+        "text": "<p>Manage formulas, document materials and work through the formulation process with greater clarity.</p>",
+        "button_label": "Get the software",
+        "button_link": "shopify://products/perfumery-software",
+        "button_2_label": "See the features",
+        "button_2_link": "/pages/software#features",
+        "tone": "ivory",
+        "padding_top": 24,
+        "padding_bottom": 72
+      },
+      "blocks": {
+        "meta_01": {
+          "type": "meta",
+          "settings": {
+            "text": "One-time payment"
+          }
+        },
+        "meta_02": {
+          "type": "meta",
+          "settings": {
+            "text": "No subscription"
+          }
+        },
+        "meta_03": {
+          "type": "meta",
+          "settings": {
+            "text": "Formulas, materials and dilutions"
+          }
+        }
+      },
+      "block_order": [
+        "meta_01",
+        "meta_02",
+        "meta_03"
+      ]
+    },
+    "problem": {
+      "type": "lps-split",
+      "settings": {
+        "eyebrow": "Why it exists",
+        "heading": "No more formulas on scraps of paper.",
+        "text": "<p>Every formula you have ever lost to a scrap of paper. Every material you forgot you had. Every calculation you did twice. This fixes that.</p><p>The software saves every formula you create, keeps your material library organised with scent profiles, and handles the calculations, so you can spend your time evaluating rather than recalculating.</p>",
+        "image_stock": "notebook-writing",
+        "image_alt": "A formula being written by hand in a notebook",
+        "image_ratio": "4 / 5",
+        "image_2_stock": "scale-weighing",
+        "image_2_alt": "Weighing a material on a digital scale",
+        "media_position": "left",
+        "button_label": "Get the software",
+        "button_link": "shopify://products/perfumery-software",
+        "button_style": "primary",
+        "tone": "cream",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "features": {
+      "type": "lps-features",
+      "settings": {
+        "eyebrow": "Features",
+        "heading": "Everything in one workspace.",
+        "style": "cards",
+        "columns": 3,
+        "show_index": false,
+        "tone": "ivory",
+        "padding_top": 96,
+        "padding_bottom": 96,
+        "anchor": "features",
+        "footnote": "<p>Users remain responsible for formula accuracy, product safety, regulatory requirements and appropriate record keeping.</p>"
+      },
+      "blocks": {
+        "feature_01": {
+          "type": "feature",
+          "settings": {
+            "title": "Formula management",
+            "text": "<p>Organise compositions, ingredients and formula versions.</p>",
+            "image_stock": "notebook-formula",
+            "image_alt": "A formula in a notebook"
+          }
+        },
+        "feature_02": {
+          "type": "feature",
+          "settings": {
+            "title": "Raw material library",
+            "text": "<p>Keep material information and identifiers organised.</p>",
+            "image_stock": "raw-materials",
+            "image_alt": "Raw materials in glass jars"
+          }
+        },
+        "feature_03": {
+          "type": "feature",
+          "settings": {
+            "title": "Formula calculations",
+            "text": "<p>Percentages, formula totals and batch weights.</p>",
+            "image_stock": "scale-weighing",
+            "image_alt": "Weighing on a digital scale"
+          }
+        },
+        "feature_04": {
+          "type": "feature",
+          "settings": {
+            "title": "Dilution tracking",
+            "text": "<p>Record dilutions, distinguishing a supplied solution’s weight from its active material.</p>",
+            "image_stock": "beaker-pour",
+            "image_alt": "A beaker of diluted material"
+          }
+        },
+        "feature_05": {
+          "type": "feature",
+          "settings": {
+            "title": "IFRA support",
+            "text": "<p>Where implemented, assists with calculations and reference limits. It does not replace current official IFRA documentation, a safety assessment or a regulatory compliance review.</p>",
+            "image_stock": "amber-tag",
+            "image_alt": "A labelled amber bottle"
+          }
+        },
+        "feature_06": {
+          "type": "feature",
+          "settings": {
+            "title": "Material notes",
+            "text": "<p>Keep smelling notes and observations alongside each material.</p>",
+            "image_stock": "tagged-bottles",
+            "image_alt": "Labelled amber bottles",
+            "confirm_note": "Based on the dashboard screenshot (‘Smelling Notes’). Confirm this matches the current software."
+          }
+        }
+      },
+      "block_order": [
+        "feature_01",
+        "feature_02",
+        "feature_03",
+        "feature_04",
+        "feature_05",
+        "feature_06"
+      ]
+    },
+    "purchase": {
+      "type": "lps-purchase",
+      "settings": {
+        "product": "perfumery-software",
+        "eyebrow": "Perfumery Software",
+        "heading": "Organise your formulation work.",
+        "text": "<p>Pay once and keep using it. No subscription, no lock-in.</p>",
+        "one_time_label": "One-time payment",
+        "button_action": "product",
+        "button_label": "View the software",
+        "support_text": "<p><a href=\"/pages/contact\">Questions?</a> · <a href=\"/pages/refund-policy\">Refund policy</a></p>",
+        "image_stock": "studio-overhead",
+        "image_alt": "A perfumer’s bench from above",
+        "image_ratio": "4 / 3",
+        "tone": "sand",
+        "padding_top": 96,
+        "padding_bottom": 96,
+        "anchor": "buy"
+      },
+      "blocks": {
+        "benefit_01": {
+          "type": "benefit",
+          "settings": {
+            "text": "Formula management and versions"
+          }
+        },
+        "benefit_02": {
+          "type": "benefit",
+          "settings": {
+            "text": "Raw material library"
+          }
+        },
+        "benefit_03": {
+          "type": "benefit",
+          "settings": {
+            "text": "Percentages, totals and batch weights"
+          }
+        },
+        "benefit_04": {
+          "type": "benefit",
+          "settings": {
+            "text": "Dilution tracking"
+          }
+        },
+        "benefit_05": {
+          "type": "benefit",
+          "settings": {
+            "text": "IFRA reference support, where implemented"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_01",
+        "benefit_02",
+        "benefit_03",
+        "benefit_04",
+        "benefit_05"
+      ]
+    },
+    "more": {
+      "type": "lps-panels",
+      "settings": {
+        "eyebrow": "Also from Le Parfum Simplifié",
+        "heading": "Learn, or develop with us.",
+        "columns": 2,
+        "image_ratio": "4 / 3",
+        "stagger": false,
+        "show_index": false,
+        "scroll_mobile": true,
+        "tone": "ivory",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "panel_01": {
+          "type": "panel",
+          "settings": {
+            "title": "Premium Learning",
+            "text": "<p>Structured lessons, a formula library, practical exercises and a focused community.</p>",
+            "link_label": "View learning",
+            "link": "shopify://pages/premium-learning",
+            "product": "le-parfum-simplifie-membership",
+            "show_price": true,
+            "image_stock": "pipette-vials",
+            "image_alt": "A pipette above vials of fragrance materials"
+          }
+        },
+        "panel_02": {
+          "type": "panel",
+          "settings": {
+            "title": "Perfume development",
+            "text": "<p>Develop a fragrance with us. Tell us about your brand and the scent you are after.</p>",
+            "link_label": "Start a brief",
+            "link": "/pages/perfume-development#brief",
+            "show_price": false,
+            "image_stock": "tags-twine",
+            "image_alt": "Handwritten fragrance tags and twine"
+          }
+        }
+      },
+      "block_order": [
+        "panel_01",
+        "panel_02"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "problem",
+    "features",
+    "purchase",
+    "more"
+  ]
+}

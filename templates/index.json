@@ -220,9 +220,9 @@
           "type": "panel",
           "settings": {
             "title": "Bespoke fragrance development",
-            "text": "<p>Develop a fragrance with us. Share your concept and we will reply with how we could approach it.</p>",
-            "link_label": "Send a brief",
-            "link": "shopify://pages/perfume-development",
+            "text": "<p>Develop a fragrance with us. Tell us about your brand and the scent you are after.</p>",
+            "link_label": "Start a brief",
+            "link": "/pages/perfume-development#brief",
             "show_price": false,
             "image_brief": "A finished fragrance in an unlabelled glass bottle beside a brief, mood swatches and smelling strips.",
             "image_alt": "Handwritten fragrance tags and twine",

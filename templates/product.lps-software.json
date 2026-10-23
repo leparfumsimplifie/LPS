@@ -1,0 +1,492 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "product-information",
+      "blocks": {
+        "media-gallery": {
+          "type": "_product-media-gallery",
+          "static": true,
+          "settings": {
+            "media_presentation": "carousel",
+            "media_columns": "one",
+            "image_gap": 4,
+            "large_first_image": true,
+            "icons_style": "arrow",
+            "slideshow_controls_style": "counter",
+            "slideshow_mobile_controls_style": "dots",
+            "thumbnail_position": "right",
+            "thumbnail_width": 44,
+            "aspect_ratio": "adapt",
+            "constrain_to_viewport": true,
+            "media_fit": "contain",
+            "media_radius": 0,
+            "extend_media": false,
+            "zoom": true,
+            "video_loop": false,
+            "hide_variants": true,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "product-details": {
+          "type": "_product-details",
+          "static": true,
+          "settings": {
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "details_position": "flex-start",
+            "gap": 28,
+            "sticky_details_desktop": true,
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 24,
+            "padding-block-end": 24,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "group_icgrde": {
+              "type": "group",
+              "name": "t:names.header",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "text_eyebrow": {
+                  "type": "text",
+                  "name": "Eyebrow",
+                  "settings": {
+                    "text": "<p>Perfumery Software</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_size": "0.75rem",
+                    "line_height": "normal",
+                    "letter_spacing": "loose",
+                    "case": "uppercase",
+                    "wrap": "pretty",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_xpVMaM": {
+                  "type": "text",
+                  "name": "t:names.title",
+                  "settings": {
+                    "text": "<h1>{{ closest.product.title }}</h1>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h2",
+                    "font": "var(--font-heading--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "price_tVjtKg": {
+                  "type": "price",
+                  "settings": {
+                    "show_sale_price_first": true,
+                    "show_installments": true,
+                    "show_tax_info": true,
+                    "type_preset": "paragraph",
+                    "width": "100%",
+                    "alignment": "left",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "padding-block-start": 4,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_eyebrow",
+                "text_xpVMaM",
+                "price_tVjtKg"
+              ]
+            },
+            "divider_VJhene": {
+              "type": "_divider",
+              "name": "t:names.divider",
+              "settings": {
+                "thickness": 1,
+                "corner_radius": "square",
+                "divider_color": "{{ settings.color_palette.color3 }}",
+                "width_percent": 100,
+                "padding-block-start": 0,
+                "padding-block-end": 0
+              },
+              "blocks": {}
+            },
+            "variant_picker_R3rGDr": {
+              "type": "variant-picker",
+              "settings": {
+                "variant_style": "buttons",
+                "show_swatches": false,
+                "alignment": "left",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "buy_buttons_eYQEYi": {
+              "type": "buy-buttons",
+              "settings": {
+                "stacking": true,
+                "show_pickup_availability": false,
+                "gift_card_form": true,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "quantity": {
+                  "type": "quantity",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                },
+                "add-to-cart": {
+                  "type": "add-to-cart",
+                  "static": true,
+                  "settings": {
+                    "style_class": "button"
+                  },
+                  "blocks": {}
+                },
+                "accelerated-checkout": {
+                  "type": "accelerated-checkout",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            },
+            "text_aEtTtq": {
+              "type": "text",
+              "name": "Product description",
+              "settings": {
+                "text": "{{ closest.product.description }}",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_intro": {
+              "type": "text",
+              "name": "Introduction",
+              "settings": {
+                "text": "<p>A more organised approach to fragrance formulation. Manage formulas, document materials and work through the formulation process with greater clarity.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "lps_benefits": {
+              "type": "lps-benefits",
+              "settings": {
+                "title": "Includes",
+                "benefits": "Formula management and versions\nRaw material library\nPercentages, totals and batch weights\nDilution tracking\nIFRA reference support, where implemented",
+                "show_terms": true,
+                "one_time_label": "One-time payment — no subscription.",
+                "terms_text": "<p>Users remain responsible for formula accuracy, product safety and regulatory requirements. <a href=\"/pages/refund-policy\">Refund policy</a> · <a href=\"/pages/contact\">Questions?</a></p>",
+                "hide_quantity": true
+              }
+            }
+          },
+          "block_order": [
+            "group_icgrde",
+            "divider_VJhene",
+            "text_intro",
+            "lps_benefits",
+            "variant_picker_R3rGDr",
+            "buy_buttons_eYQEYi",
+            "text_aEtTtq"
+          ]
+        },
+        "disclosures": {
+          "type": "disclosures",
+          "settings": {
+            "padding-block-start": 0,
+            "padding-block-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "disclosures"
+      ],
+      "settings": {
+        "content_width": "content-center-aligned",
+        "desktop_media_position": "left",
+        "equal_columns": false,
+        "limit_details_width": false,
+        "gap": 48,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "problem": {
+      "type": "lps-split",
+      "settings": {
+        "eyebrow": "Why it exists",
+        "heading": "No more formulas on scraps of paper.",
+        "text": "<p>Every formula you have ever lost to a scrap of paper. Every material you forgot you had. Every calculation you did twice. This fixes that.</p><p>The software saves every formula you create, keeps your material library organised with scent profiles, and handles the calculations, so you can spend your time evaluating rather than recalculating.</p>",
+        "image_stock": "notebook-writing",
+        "image_alt": "A formula being written by hand in a notebook",
+        "image_ratio": "4 / 5",
+        "image_2_stock": "scale-weighing",
+        "image_2_alt": "Weighing a material on a digital scale",
+        "media_position": "left",
+        "button_label": "",
+        "button_link": "shopify://products/perfumery-software",
+        "button_style": "primary",
+        "tone": "cream",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "features": {
+      "type": "lps-features",
+      "settings": {
+        "eyebrow": "Features",
+        "heading": "Everything in one workspace.",
+        "style": "cards",
+        "columns": 3,
+        "show_index": false,
+        "tone": "ivory",
+        "padding_top": 96,
+        "padding_bottom": 96,
+        "anchor": "features",
+        "footnote": "<p>Users remain responsible for formula accuracy, product safety, regulatory requirements and appropriate record keeping.</p>"
+      },
+      "blocks": {
+        "feature_01": {
+          "type": "feature",
+          "settings": {
+            "title": "Formula management",
+            "text": "<p>Organise compositions, ingredients and formula versions.</p>",
+            "image_stock": "notebook-formula",
+            "image_alt": "A formula in a notebook"
+          }
+        },
+        "feature_02": {
+          "type": "feature",
+          "settings": {
+            "title": "Raw material library",
+            "text": "<p>Keep material information and identifiers organised.</p>",
+            "image_stock": "raw-materials",
+            "image_alt": "Raw materials in glass jars"
+          }
+        },
+        "feature_03": {
+          "type": "feature",
+          "settings": {
+            "title": "Formula calculations",
+            "text": "<p>Percentages, formula totals and batch weights.</p>",
+            "image_stock": "scale-weighing",
+            "image_alt": "Weighing on a digital scale"
+          }
+        },
+        "feature_04": {
+          "type": "feature",
+          "settings": {
+            "title": "Dilution tracking",
+            "text": "<p>Record dilutions, distinguishing a supplied solution’s weight from its active material.</p>",
+            "image_stock": "beaker-pour",
+            "image_alt": "A beaker of diluted material"
+          }
+        },
+        "feature_05": {
+          "type": "feature",
+          "settings": {
+            "title": "IFRA support",
+            "text": "<p>Where implemented, assists with calculations and reference limits. It does not replace current official IFRA documentation, a safety assessment or a regulatory compliance review.</p>",
+            "image_stock": "amber-tag",
+            "image_alt": "A labelled amber bottle"
+          }
+        },
+        "feature_06": {
+          "type": "feature",
+          "settings": {
+            "title": "Material notes",
+            "text": "<p>Keep smelling notes and observations alongside each material.</p>",
+            "image_stock": "tagged-bottles",
+            "image_alt": "Labelled amber bottles",
+            "confirm_note": "Based on the dashboard screenshot (‘Smelling Notes’). Confirm this matches the current software."
+          }
+        }
+      },
+      "block_order": [
+        "feature_01",
+        "feature_02",
+        "feature_03",
+        "feature_04",
+        "feature_05",
+        "feature_06"
+      ]
+    },
+    "more": {
+      "type": "lps-panels",
+      "settings": {
+        "eyebrow": "Also from Le Parfum Simplifié",
+        "heading": "Learn, or develop with us.",
+        "columns": 2,
+        "image_ratio": "4 / 3",
+        "stagger": false,
+        "show_index": false,
+        "scroll_mobile": true,
+        "tone": "sand",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "panel_01": {
+          "type": "panel",
+          "settings": {
+            "title": "Premium Learning",
+            "text": "<p>Structured lessons, a formula library, practical exercises and a focused community.</p>",
+            "link_label": "View learning",
+            "link": "shopify://pages/premium-learning",
+            "product": "le-parfum-simplifie-membership",
+            "show_price": true,
+            "image_stock": "pipette-vials",
+            "image_alt": "A pipette above vials of fragrance materials"
+          }
+        },
+        "panel_02": {
+          "type": "panel",
+          "settings": {
+            "title": "Perfume development",
+            "text": "<p>Develop a fragrance with us. Tell us about your brand and the scent you are after.</p>",
+            "link_label": "Start a brief",
+            "link": "/pages/perfume-development#brief",
+            "show_price": false,
+            "image_stock": "tags-twine",
+            "image_alt": "Handwritten fragrance tags and twine"
+          }
+        }
+      },
+      "block_order": [
+        "panel_01",
+        "panel_02"
+      ]
+    }
+  },
+  "order": [
+    "main",
+    "problem",
+    "features",
+    "more"
+  ]
+}

@@ -1,0 +1,530 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "lps-hero",
+      "settings": {
+        "layout": "split",
+        "content_alignment": "start",
+        "media_position": "right",
+        "ratio": "5 / 6",
+        "image_stock": "sphere-bottle",
+        "image_alt": "An amber bottle beside a stone sphere",
+        "eyebrow": "Perfume development",
+        "heading": "Bring a fragrance idea to life.",
+        "heading_tag": "h1",
+        "text": "<p>Share your concept, the audience and the direction, and we will review it and reply with how we could approach the project.</p>",
+        "button_label": "Start your brief",
+        "button_link": "/pages/perfume-development#brief",
+        "button_2_label": "How it works",
+        "button_2_link": "/pages/perfume-development#process",
+        "tone": "ivory",
+        "padding_top": 24,
+        "padding_bottom": 72
+      },
+      "blocks": {
+        "meta_01": {
+          "type": "meta",
+          "settings": {
+            "text": "Concept and brief"
+          }
+        },
+        "meta_02": {
+          "type": "meta",
+          "settings": {
+            "text": "Formulation"
+          }
+        },
+        "meta_03": {
+          "type": "meta",
+          "settings": {
+            "text": "Evaluation"
+          }
+        }
+      },
+      "block_order": [
+        "meta_01",
+        "meta_02",
+        "meta_03"
+      ]
+    },
+    "covers": {
+      "type": "lps-features",
+      "settings": {
+        "eyebrow": "What it can cover",
+        "heading": "From first idea to a refined formula.",
+        "style": "cards",
+        "columns": 3,
+        "show_index": false,
+        "tone": "cream",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "feature_01": {
+          "type": "feature",
+          "settings": {
+            "title": "Concept and brief",
+            "text": "<p>Define the idea, the audience and the direction of the fragrance.</p>",
+            "image_stock": "tags-twine",
+            "image_alt": "Handwritten fragrance tags and twine"
+          }
+        },
+        "feature_02": {
+          "type": "feature",
+          "settings": {
+            "title": "Formulation",
+            "text": "<p>Build and refine formulas through iterative evaluation.</p>",
+            "image_stock": "pipette-vials",
+            "image_alt": "A pipette above vials of fragrance materials"
+          }
+        },
+        "feature_03": {
+          "type": "feature",
+          "settings": {
+            "title": "Evaluation",
+            "text": "<p>Assess the results against the brief and refine them.</p>",
+            "image_stock": "skin-test",
+            "image_alt": "Evaluating a fragrance on the skin"
+          }
+        }
+      },
+      "block_order": [
+        "feature_01",
+        "feature_02",
+        "feature_03"
+      ]
+    },
+    "process": {
+      "type": "lps-steps",
+      "settings": {
+        "eyebrow": "How it works",
+        "heading": "Three simple steps.",
+        "tone": "ivory",
+        "padding_top": 96,
+        "padding_bottom": 96,
+        "anchor": "process"
+      },
+      "blocks": {
+        "step_01": {
+          "type": "step",
+          "settings": {
+            "title": "Send a brief",
+            "text": "<p>Tell us the concept, intended use and any references, using the questionnaire below.</p>",
+            "image_stock": "notebook-formula",
+            "image_alt": "A formula written in a notebook"
+          }
+        },
+        "step_02": {
+          "type": "step",
+          "settings": {
+            "title": "Review",
+            "text": "<p>We review your brief and reply with how we could approach it.</p>",
+            "image_stock": "study-magnifier",
+            "image_alt": "Reviewing notes at the bench"
+          }
+        },
+        "step_03": {
+          "type": "step",
+          "settings": {
+            "title": "Development",
+            "text": "<p>Formulation and iterative evaluation, working towards the brief.</p>",
+            "image_stock": "beaker-pour",
+            "image_alt": "Working with a beaker and glass rod"
+          }
+        }
+      },
+      "block_order": [
+        "step_01",
+        "step_02",
+        "step_03"
+      ]
+    },
+    "inspiration": {
+      "type": "lps-gallery",
+      "settings": {
+        "layout": "strip",
+        "eyebrow": "Inspiration",
+        "heading": "Every fragrance starts with a feeling.",
+        "text": "<p>A place, a memory, a material or a mood. The more you can tell us, the better we can understand what you are trying to create.</p>",
+        "footnote": "Photographs are illustrative.",
+        "align": "start",
+        "tone": "sand",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "photo_01": {
+          "type": "photo",
+          "settings": {
+            "image_stock": "rose-buds",
+            "image_alt": "Dried rose buds",
+            "caption": "Florals",
+            "shape": "small"
+          }
+        },
+        "photo_02": {
+          "type": "photo",
+          "settings": {
+            "image_stock": "spices-white",
+            "image_alt": "Cinnamon and star anise",
+            "caption": "Spice",
+            "shape": "small"
+          }
+        },
+        "photo_03": {
+          "type": "photo",
+          "settings": {
+            "image_stock": "lavender-vial",
+            "image_alt": "Lavender beside a glass vial",
+            "caption": "Aromatics",
+            "shape": "small"
+          }
+        },
+        "photo_04": {
+          "type": "photo",
+          "settings": {
+            "image_stock": "oil-bottle-flowers",
+            "image_alt": "A scent bottle with dried flowers",
+            "caption": "Soft and powdery",
+            "shape": "small"
+          }
+        }
+      },
+      "block_order": [
+        "photo_01",
+        "photo_02",
+        "photo_03",
+        "photo_04"
+      ]
+    },
+    "brief": {
+      "type": "lps-questionnaire",
+      "settings": {
+        "eyebrow": "Fragrance brief",
+        "heading": "Tell us about your brand and your scent.",
+        "text": "<p>This questionnaire takes about five minutes. There are no wrong answers. If you are unsure about anything, leave it blank and we can talk it through.</p>",
+        "image_stock": "workbench-jars",
+        "image_alt": "A perfumer’s workbench with jars and a mortar",
+        "form_name": "Fragrance development brief",
+        "submit_label": "Send my brief",
+        "next_label": "Continue",
+        "back_label": "Back",
+        "privacy_text": "<p>We use your answers only to review your project and reply to you. See our <a href=\"/policies/privacy-policy\">privacy policy</a>.</p>",
+        "success_heading": "Thank you. Your brief has been sent.",
+        "success_text": "<p>We will review it and reply by email with how we could approach your project.</p>",
+        "show_steps": true,
+        "tone": "cream",
+        "padding_top": 96,
+        "padding_bottom": 96,
+        "anchor": "brief"
+      },
+      "blocks": {
+        "step_01": {
+          "type": "step",
+          "settings": {
+            "title": "About you",
+            "intro": "So we know who we are talking to."
+          }
+        },
+        "question_02": {
+          "type": "question",
+          "settings": {
+            "label": "Your name",
+            "kind": "name",
+            "required": true,
+            "width": "half"
+          }
+        },
+        "question_03": {
+          "type": "question",
+          "settings": {
+            "label": "Email",
+            "kind": "email",
+            "required": true,
+            "width": "half"
+          }
+        },
+        "question_04": {
+          "type": "question",
+          "settings": {
+            "label": "Phone",
+            "kind": "phone",
+            "width": "half"
+          }
+        },
+        "question_05": {
+          "type": "question",
+          "settings": {
+            "label": "Brand or company name",
+            "kind": "text",
+            "width": "half",
+            "help": "Leave blank if you do not have one yet."
+          }
+        },
+        "question_06": {
+          "type": "question",
+          "settings": {
+            "label": "Website or Instagram",
+            "kind": "url",
+            "placeholder": "e.g. instagram.com/yourbrand"
+          }
+        },
+        "step_07": {
+          "type": "step",
+          "settings": {
+            "title": "Your brand and launch",
+            "intro": "Where you are now, and where you would like to be."
+          }
+        },
+        "question_08": {
+          "type": "question",
+          "settings": {
+            "label": "Where are you with your brand?",
+            "kind": "radio",
+            "required": true,
+            "options": "Just an idea\nBrand in development\nEstablished brand adding a fragrance\nPersonal or private project"
+          }
+        },
+        "question_09": {
+          "type": "question",
+          "settings": {
+            "label": "What would you like to create?",
+            "kind": "checkboxes",
+            "options": "Eau de parfum\nExtrait or perfume oil\nBody mist\nCandle or home fragrance\nReed diffuser\nNot sure yet"
+          }
+        },
+        "question_10": {
+          "type": "question",
+          "settings": {
+            "label": "Who is it for?",
+            "kind": "textarea",
+            "placeholder": "Describe your customer: age, lifestyle, where they shop, what they already wear."
+          }
+        },
+        "question_11": {
+          "type": "question",
+          "settings": {
+            "label": "When would you like to launch?",
+            "kind": "select",
+            "width": "half",
+            "options": "Within 3 months\n3 to 6 months\n6 to 12 months\nMore than 12 months\nNot sure yet"
+          }
+        },
+        "question_12": {
+          "type": "question",
+          "settings": {
+            "label": "Estimated first production quantity",
+            "kind": "select",
+            "width": "half",
+            "options": "Under 100 units\n100 to 500 units\n500 to 2,000 units\nMore than 2,000 units\nNot sure yet"
+          }
+        },
+        "question_13": {
+          "type": "question",
+          "settings": {
+            "label": "How would you position it?",
+            "kind": "radio",
+            "options": "Accessible\nMid-range\nPremium\nLuxury or niche\nNot sure yet"
+          }
+        },
+        "step_14": {
+          "type": "step",
+          "settings": {
+            "title": "The scent",
+            "intro": "Describe what you are after, in your own words."
+          }
+        },
+        "question_15": {
+          "type": "question",
+          "settings": {
+            "label": "Which fragrance families appeal to you?",
+            "kind": "checkboxes",
+            "options": "Citrus\nFresh and aquatic\nGreen\nFloral\nWhite floral\nFruity\nGourmand\nSpicy\nWoody\nAmber\nLeather\nMusky\nSmoky and incense\nAromatic and herbal",
+            "help": "Choose as many as you like."
+          }
+        },
+        "question_16": {
+          "type": "question",
+          "settings": {
+            "label": "How strong should it feel?",
+            "kind": "scale",
+            "options": "Soft, close to the skin\nModerate\nNoticeable\nBold and long-lasting"
+          }
+        },
+        "question_17": {
+          "type": "question",
+          "settings": {
+            "label": "Who is it designed for?",
+            "kind": "radio",
+            "options": "Feminine\nMasculine\nUnisex\nNo preference"
+          }
+        },
+        "question_18": {
+          "type": "question",
+          "settings": {
+            "label": "Describe the mood or story",
+            "kind": "textarea",
+            "required": true,
+            "placeholder": "The feeling, place, memory or person the fragrance should evoke."
+          }
+        },
+        "question_19": {
+          "type": "question",
+          "settings": {
+            "label": "Fragrances you love or want to reference",
+            "kind": "textarea",
+            "placeholder": "Any fragrances you like, and what you like about them."
+          }
+        },
+        "question_20": {
+          "type": "question",
+          "settings": {
+            "label": "Anything to avoid?",
+            "kind": "textarea",
+            "placeholder": "Notes, materials or styles you dislike, and any allergies or restrictions."
+          }
+        },
+        "question_21": {
+          "type": "question",
+          "settings": {
+            "label": "Moodboard or inspiration link",
+            "kind": "url",
+            "placeholder": "Pinterest, Google Drive, Instagram…"
+          }
+        },
+        "step_22": {
+          "type": "step",
+          "settings": {
+            "title": "Next steps",
+            "intro": "Help us understand how we can support you."
+          }
+        },
+        "question_23": {
+          "type": "question",
+          "settings": {
+            "label": "What support are you looking for?",
+            "kind": "checkboxes",
+            "options": "Concept and brief\nFormulation\nEvaluation and refinement\nNot sure yet"
+          }
+        },
+        "question_24": {
+          "type": "question",
+          "settings": {
+            "label": "Approximate development budget",
+            "kind": "select",
+            "width": "half",
+            "options": "Under £500\n£500 to £1,500\n£1,500 to £5,000\nMore than £5,000\nPrefer to discuss"
+          }
+        },
+        "question_25": {
+          "type": "question",
+          "settings": {
+            "label": "How did you hear about us?",
+            "kind": "select",
+            "width": "half",
+            "options": "Instagram\nTikTok\nGoogle\nDiscord\nRecommendation\nOther"
+          }
+        },
+        "question_26": {
+          "type": "question",
+          "settings": {
+            "label": "Anything else we should know?",
+            "kind": "textarea"
+          }
+        }
+      },
+      "block_order": [
+        "step_01",
+        "question_02",
+        "question_03",
+        "question_04",
+        "question_05",
+        "question_06",
+        "step_07",
+        "question_08",
+        "question_09",
+        "question_10",
+        "question_11",
+        "question_12",
+        "question_13",
+        "step_14",
+        "question_15",
+        "question_16",
+        "question_17",
+        "question_18",
+        "question_19",
+        "question_20",
+        "question_21",
+        "step_22",
+        "question_23",
+        "question_24",
+        "question_25",
+        "question_26"
+      ]
+    },
+    "learn": {
+      "type": "lps-panels",
+      "settings": {
+        "eyebrow": "Learn the craft",
+        "heading": "Prefer to learn it yourself?",
+        "columns": 2,
+        "image_ratio": "4 / 3",
+        "stagger": false,
+        "show_index": false,
+        "scroll_mobile": true,
+        "tone": "ivory",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "panel_01": {
+          "type": "panel",
+          "settings": {
+            "title": "Premium Learning",
+            "text": "<p>Structured lessons, a formula library, practical exercises and a focused community.</p>",
+            "link_label": "View learning",
+            "link": "shopify://pages/premium-learning",
+            "product": "le-parfum-simplifie-membership",
+            "show_price": true,
+            "image_stock": "pipette-vials",
+            "image_alt": "A pipette above vials of fragrance materials"
+          }
+        },
+        "panel_02": {
+          "type": "panel",
+          "settings": {
+            "title": "Perfumery Software",
+            "text": "<p>Manage formulas, materials and dilutions in one workspace.</p>",
+            "link_label": "View the software",
+            "link": "shopify://pages/software",
+            "product": "perfumery-software",
+            "show_price": true,
+            "image": "shopify://shop_images/Minimalist_Laptop_Fragrance_Dashboard.png",
+            "image_alt": "The Le Parfum Simplifié perfumery software dashboard on a laptop"
+          }
+        }
+      },
+      "block_order": [
+        "panel_01",
+        "panel_02"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "covers",
+    "process",
+    "inspiration",
+    "brief",
+    "learn"
+  ]
+}

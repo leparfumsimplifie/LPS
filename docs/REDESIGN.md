@@ -252,3 +252,25 @@ Still worth doing in Shopify admin:
   - Product page: "Real materials, real technique", 4 photographs.
 - The "Is this right for you?" section now uses photo cards.
 - `docs/upload/le-parfum-simplifie-photos.zip` holds every photograph at 2400px with a source list, for Shopify Files, social posts or emails.
+
+---
+
+## 8. Products on every relevant page, and the fragrance brief questionnaire (23 Oct 2026)
+
+### New templates
+| Template | Assign to | What it contains |
+|---|---|---|
+| `page.lps-perfume-development.json` | Page **Perfume development** (`/pages/perfume-development`) | Hero · What it can cover (concept, formulation, evaluation) · How it works (3 steps) · Inspiration photo row · **Fragrance brief questionnaire** (`#brief`) · Premium Learning and Software cards with live prices |
+| `page.lps-software.json` | Page **Software** (`/pages/software`) | Hero with the dashboard image · "No more formulas on scraps of paper" · 6 feature cards · Purchase box (live £30 price) · Premium Learning and Perfume development cards |
+| `product.lps-software.json` | Product **Perfumery Software** only | Horizon product section with benefits beside Add to cart · Why it exists · Features · Cross-sell cards |
+
+Cross-sell cards ("Tools and services for your practice") were added to the Premium Learning page and the membership product page. The homepage "Perfume development" card now links straight to the brief.
+
+**Assign page templates only after publishing**, as with the Premium Learning page. You can assign the product template at any time.
+
+### The questionnaire (`sections/lps-questionnaire.liquid`)
+- It uses **Shopify's built-in contact form**, so no app is needed and Shopify's own spam protection applies.
+- Each submission is emailed to your store's **sender email** (Settings → Notifications). It arrives as "Fragrance development brief" with every answer listed.
+- There are four steps, shown one at a time with a progress line: **About you** · **Your brand and launch** · **The scent** · **Next steps**. Required answers are checked before moving on. Without JavaScript, all questions show on one page.
+- Every question is a block in the theme editor. You can add, remove, reorder or reword questions, and choose the answer type: short text, long text, dropdown, choose one, choose any, scale, email, phone or link.
+- **To confirm:** the budget ranges (under £500 to more than £5,000) and production quantities are suggested ranges only. Edit them to match how you actually price and produce.

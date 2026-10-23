@@ -1,0 +1,620 @@
+{%- render 'lps-assets' -%}
+{%- liquid
+  assign s = section.settings
+  assign anchor = s.anchor | default: section.id | handleize
+  assign form_id = 'LpsBrief-' | append: section.id
+  assign has_media = false
+  if s.image != blank or s.image_stock != 'none'
+    assign has_media = true
+  endif
+-%}
+<section
+  id="{{ anchor }}"
+  class="lps lps-brief{% if has_media %} lps-brief--media{% endif %} lps-tone--{{ s.tone }}"
+  style="--lps-pt: {{ s.padding_top }}px; --lps-pb: {{ s.padding_bottom }}px;"
+>
+  <div class="lps-container">
+    <div class="lps-brief__grid">
+      <div class="lps-brief__aside">
+        {% render 'lps-intro', eyebrow: s.eyebrow, heading: s.heading, text: s.text %}
+        {%- if has_media -%}
+          <div class="lps-brief__media" data-lps-reveal>
+            {% render 'lps-media', image: s.image, stock: s.image_stock, alt: s.image_alt, ratio: '4 / 5', sizes: '(min-width: 990px) 33vw, 100vw' %}
+          </div>
+        {%- endif -%}
+      </div>
+
+      <div class="lps-brief__panel">
+        {%- form 'contact', id: form_id, class: 'lps-brief__form' -%}
+          {%- if form.posted_successfully? -%}
+            <div class="lps-brief__success" role="status" tabindex="-1" autofocus>
+              <p class="lps-heading lps-heading--md">{{ s.success_heading }}</p>
+              <div class="lps-rte">{{ s.success_text }}</div>
+            </div>
+          {%- else -%}
+            <input type="hidden" name="contact[Form]" value="{{ s.form_name | escape }}">
+
+            {%- if form.errors -%}
+              <div class="lps-brief__errors" role="alert">
+                <p><strong>Please check the following:</strong></p>
+                {{ form.errors | default_errors }}
+              </div>
+            {%- endif -%}
+
+            <lps-stepper{% if s.show_steps %} data-steps{% endif %}>
+              <p class="lps-brief__progress" data-progress hidden aria-live="polite"></p>
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'step' or forloop.first -%}
+                  {%- assign step_start = forloop.index0 -%}
+                  <fieldset class="lps-brief__step" data-step {{ block.shopify_attributes }}>
+                    {%- if block.type == 'step' -%}
+                      <legend class="lps-brief__legend">{{ block.settings.title }}</legend>
+                      {%- if block.settings.intro != blank -%}<p class="lps-brief__intro">{{ block.settings.intro }}</p>{%- endif -%}
+                    {%- endif -%}
+                    <div class="lps-brief__fields">
+                      {%- for q in section.blocks offset: step_start -%}
+                        {%- if forloop.first and q.type == 'step' -%}{%- continue -%}{%- endif -%}
+                        {%- if q.type == 'step' -%}{%- break -%}{%- endif -%}
+                        {%- assign b = q.settings -%}
+                    {%- liquid
+                      assign qid = 'q-' | append: q.id
+                      assign choices = b.options | newline_to_br | split: '<br />'
+                      case b.kind
+                        when 'name'
+                          assign field = 'contact[name]'
+                        when 'email'
+                          assign field = 'contact[email]'
+                        when 'phone'
+                          assign field = 'contact[phone]'
+                        else
+                          assign field = 'contact[' | append: b.label | append: ']'
+                      endcase
+                      assign value = ''
+                      if b.kind == 'email'
+                        assign value = form.email
+                      endif
+                    -%}
+                    <div class="lps-field lps-field--{{ b.width }} lps-field--{{ b.kind }}" {{ q.shopify_attributes }}>
+                      {%- case b.kind -%}
+                        {%- when 'radio', 'checkboxes', 'scale' -%}
+                          <fieldset class="lps-field__group">
+                            <legend class="lps-field__label">{{ b.label }}{% if b.required %} <span aria-hidden="true">*</span>{% endif %}</legend>
+                            {%- if b.help != blank -%}<p class="lps-field__help">{{ b.help }}</p>{%- endif -%}
+                            <div class="lps-choices{% if b.kind == 'scale' %} lps-choices--scale{% endif %}">
+                              {%- for raw_choice in choices -%}
+                                {%- assign choice = raw_choice | strip -%}
+                                {%- if choice == blank -%}{%- continue -%}{%- endif -%}
+                                {%- if b.kind == 'checkboxes' -%}
+                                  <label class="lps-choice">
+                                    <input type="checkbox" name="contact[{{ b.label | escape }}: {{ choice | escape }}]" value="Yes">
+                                    <span>{{ choice }}</span>
+                                  </label>
+                                {%- else -%}
+                                  <label class="lps-choice">
+                                    <input type="radio" name="{{ field | escape }}" value="{{ choice | escape }}"{% if b.required and forloop.first %} required{% endif %}>
+                                    <span>{{ choice }}</span>
+                                  </label>
+                                {%- endif -%}
+                              {%- endfor -%}
+                            </div>
+                          </fieldset>
+                        {%- when 'select' -%}
+                          <label class="lps-field__label" for="{{ qid }}">{{ b.label }}{% if b.required %} <span aria-hidden="true">*</span>{% endif %}</label>
+                          {%- if b.help != blank -%}<p class="lps-field__help" id="{{ qid }}-help">{{ b.help }}</p>{%- endif -%}
+                          <select class="lps-input" id="{{ qid }}" name="{{ field | escape }}"{% if b.required %} required{% endif %}{% if b.help != blank %} aria-describedby="{{ qid }}-help"{% endif %}>
+                            <option value="">{{ b.placeholder | default: 'Select' }}</option>
+                            {%- for raw_choice in choices -%}
+                              {%- assign choice = raw_choice | strip -%}
+                              {%- if choice != blank -%}<option value="{{ choice | escape }}">{{ choice }}</option>{%- endif -%}
+                            {%- endfor -%}
+                          </select>
+                        {%- when 'textarea' -%}
+                          <label class="lps-field__label" for="{{ qid }}">{{ b.label }}{% if b.required %} <span aria-hidden="true">*</span>{% endif %}</label>
+                          {%- if b.help != blank -%}<p class="lps-field__help" id="{{ qid }}-help">{{ b.help }}</p>{%- endif -%}
+                          <textarea class="lps-input" id="{{ qid }}" name="{{ field | escape }}" rows="4" placeholder="{{ b.placeholder | escape }}"{% if b.required %} required{% endif %}{% if b.help != blank %} aria-describedby="{{ qid }}-help"{% endif %}></textarea>
+                        {%- else -%}
+                          {%- liquid
+                            case b.kind
+                              when 'email'
+                                assign input_type = 'email'
+                                assign autocomplete = 'email'
+                              when 'phone'
+                                assign input_type = 'tel'
+                                assign autocomplete = 'tel'
+                              when 'name'
+                                assign input_type = 'text'
+                                assign autocomplete = 'name'
+                              when 'url'
+                                assign input_type = 'text'
+                                assign autocomplete = 'url'
+                              else
+                                assign input_type = 'text'
+                                assign autocomplete = 'off'
+                            endcase
+                          -%}
+                          <label class="lps-field__label" for="{{ qid }}">{{ b.label }}{% if b.required or b.kind == 'email' %} <span aria-hidden="true">*</span>{% endif %}</label>
+                          {%- if b.help != blank -%}<p class="lps-field__help" id="{{ qid }}-help">{{ b.help }}</p>{%- endif -%}
+                          <input class="lps-input" type="{{ input_type }}" id="{{ qid }}" name="{{ field | escape }}" autocomplete="{{ autocomplete }}" placeholder="{{ b.placeholder | escape }}"{% if b.required or b.kind == 'email' %} required{% endif %}{% if b.kind == 'email' and value != blank %} value="{{ value | escape }}"{% endif %}{% if b.help != blank %} aria-describedby="{{ qid }}-help"{% endif %}>
+                      {%- endcase -%}
+                    </div>
+                      {%- endfor -%}
+                    </div>
+                  </fieldset>
+                {%- endif -%}
+              {%- endfor -%}
+
+              <div class="lps-brief__nav">
+                <button type="button" class="lps-btn lps-btn--secondary" data-back hidden>{{ s.back_label }}</button>
+                <button type="button" class="lps-btn" data-next hidden>{{ s.next_label }}</button>
+                <button type="submit" class="lps-btn" data-submit>{{ s.submit_label }}</button>
+              </div>
+            </lps-stepper>
+
+            {%- if s.privacy_text != blank -%}
+              <div class="lps-brief__privacy lps-rte lps-rte--sm">{{ s.privacy_text }}</div>
+            {%- endif -%}
+          {%- endif -%}
+        {%- endform -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "LPS · Questionnaire",
+  "tag": "div",
+  "class": "lps-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Tell us about your fragrance"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "select",
+      "id": "image_stock",
+      "label": "Included photograph (beside the introduction)",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "studio-overhead",
+          "label": "Studio bench from above"
+        },
+        {
+          "value": "bench-still-life",
+          "label": "Bench still life: amber bottles and jars"
+        },
+        {
+          "value": "workbench-jars",
+          "label": "Workbench with jars and mortar (portrait)"
+        },
+        {
+          "value": "pipette-hand",
+          "label": "Pipette in hand"
+        },
+        {
+          "value": "tagged-bottles",
+          "label": "Labelled amber bottles"
+        },
+        {
+          "value": "vials-botanicals",
+          "label": "Vials with botanicals"
+        },
+        {
+          "value": "raw-materials",
+          "label": "Raw materials in glass jars"
+        },
+        {
+          "value": "mortar-petals",
+          "label": "Mortar with rose petals"
+        },
+        {
+          "value": "notebook-formula",
+          "label": "Formula notebook (portrait)"
+        },
+        {
+          "value": "notebook-writing",
+          "label": "Writing in a lab notebook (portrait)"
+        },
+        {
+          "value": "beaker-pour",
+          "label": "Beaker and bottle with glass rod"
+        },
+        {
+          "value": "scale-weighing",
+          "label": "Weighing on a digital scale"
+        },
+        {
+          "value": "funnel-bottle",
+          "label": "Funnel and amber bottle"
+        },
+        {
+          "value": "overhead-bottles",
+          "label": "Tagged bottles from above"
+        },
+        {
+          "value": "tags-twine",
+          "label": "Handwritten tags and twine"
+        },
+        {
+          "value": "label-bottle",
+          "label": "Labelling a bottle (portrait)"
+        },
+        {
+          "value": "marble-vials",
+          "label": "Vials on marble"
+        },
+        {
+          "value": "study-magnifier",
+          "label": "Studying at the bench"
+        },
+        {
+          "value": "tagged-row",
+          "label": "Row of tagged bottles"
+        },
+        {
+          "value": "pipette-vials",
+          "label": "Pipette above vials"
+        },
+        {
+          "value": "skin-test",
+          "label": "Testing on skin"
+        },
+        {
+          "value": "workspace-tags",
+          "label": "Workspace with tags and vials"
+        },
+        {
+          "value": "amber-tag",
+          "label": "Amber bottle with tag"
+        },
+        {
+          "value": "gloves-bottle",
+          "label": "Gloved hand with bottle"
+        },
+        {
+          "value": "spices-white",
+          "label": "Cinnamon and star anise (portrait)"
+        },
+        {
+          "value": "spices-bowls",
+          "label": "Spices in bowls"
+        },
+        {
+          "value": "rose-buds",
+          "label": "Dried rose buds (portrait)"
+        },
+        {
+          "value": "lavender-vial",
+          "label": "Lavender and glass vial"
+        },
+        {
+          "value": "amber-linen",
+          "label": "Amber bottles on linen"
+        },
+        {
+          "value": "amber-set-linen",
+          "label": "Amber bottle set on linen"
+        },
+        {
+          "value": "amber-mirror",
+          "label": "Amber bottle on mirror (portrait)"
+        },
+        {
+          "value": "oil-bottle-flowers",
+          "label": "Scent bottle with dried flowers (portrait)"
+        },
+        {
+          "value": "sphere-bottle",
+          "label": "Amber bottle and stone sphere (portrait)"
+        },
+        {
+          "value": "dropper-ceramic",
+          "label": "Dropper bottle on ceramic"
+        },
+        {
+          "value": "dropper-dried-flowers",
+          "label": "Dropper bottle with dried flowers (portrait)"
+        },
+        {
+          "value": "tray-flatlay",
+          "label": "Bottles on a wooden tray"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image (optional)"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Alt text"
+    },
+    {
+      "type": "text",
+      "id": "form_name",
+      "label": "Form name (shown in the email you receive)",
+      "default": "Fragrance development brief"
+    },
+    {
+      "type": "text",
+      "id": "submit_label",
+      "label": "Submit button label",
+      "default": "Send my brief"
+    },
+    {
+      "type": "text",
+      "id": "next_label",
+      "label": "Next button label",
+      "default": "Continue"
+    },
+    {
+      "type": "text",
+      "id": "back_label",
+      "label": "Back button label",
+      "default": "Back"
+    },
+    {
+      "type": "richtext",
+      "id": "privacy_text",
+      "label": "Note under the form",
+      "default": "<p>We use your answers only to review your project and reply to you.</p>"
+    },
+    {
+      "type": "text",
+      "id": "success_heading",
+      "label": "Thank-you heading",
+      "default": "Thank you — your brief has been sent."
+    },
+    {
+      "type": "richtext",
+      "id": "success_text",
+      "label": "Thank-you text",
+      "default": "<p>We will review it and reply by email with how we could approach your project.</p>"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_steps",
+      "label": "Show one step at a time",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "select",
+      "id": "tone",
+      "label": "Background",
+      "options": [
+        {
+          "value": "ivory",
+          "label": "Ivory"
+        },
+        {
+          "value": "cream",
+          "label": "Cream"
+        },
+        {
+          "value": "sand",
+          "label": "Sand"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "charcoal",
+          "label": "Charcoal"
+        }
+      ],
+      "default": "cream"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 200,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 200,
+      "step": 8,
+      "unit": "px",
+      "default": 96
+    },
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "Anchor ID",
+      "info": "Optional. Lets buttons link to this section, e.g. #brief"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step heading",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Step title",
+          "default": "About you"
+        },
+        {
+          "type": "textarea",
+          "id": "intro",
+          "label": "Step introduction"
+        }
+      ]
+    },
+    {
+      "type": "question",
+      "name": "Question",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Question",
+          "default": "Question"
+        },
+        {
+          "type": "select",
+          "id": "kind",
+          "label": "Answer type",
+          "options": [
+            {
+              "value": "text",
+              "label": "Short text"
+            },
+            {
+              "value": "textarea",
+              "label": "Long text"
+            },
+            {
+              "value": "name",
+              "label": "Name"
+            },
+            {
+              "value": "email",
+              "label": "Email (required by Shopify)"
+            },
+            {
+              "value": "phone",
+              "label": "Phone"
+            },
+            {
+              "value": "url",
+              "label": "Website or link"
+            },
+            {
+              "value": "select",
+              "label": "Dropdown"
+            },
+            {
+              "value": "radio",
+              "label": "Choose one"
+            },
+            {
+              "value": "checkboxes",
+              "label": "Choose any"
+            },
+            {
+              "value": "scale",
+              "label": "Scale"
+            }
+          ],
+          "default": "text"
+        },
+        {
+          "type": "textarea",
+          "id": "options",
+          "label": "Choices",
+          "info": "One per line. Used by Dropdown, Choose one, Choose any and Scale."
+        },
+        {
+          "type": "text",
+          "id": "placeholder",
+          "label": "Placeholder"
+        },
+        {
+          "type": "text",
+          "id": "help",
+          "label": "Help text"
+        },
+        {
+          "type": "checkbox",
+          "id": "required",
+          "label": "Required",
+          "default": false
+        },
+        {
+          "type": "select",
+          "id": "width",
+          "label": "Width",
+          "options": [
+            {
+              "value": "full",
+              "label": "Full"
+            },
+            {
+              "value": "half",
+              "label": "Half"
+            }
+          ],
+          "default": "full"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LPS · Questionnaire",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "title": "About you"
+          }
+        },
+        {
+          "type": "question",
+          "settings": {
+            "label": "Your name",
+            "kind": "name",
+            "required": true,
+            "width": "half"
+          }
+        },
+        {
+          "type": "question",
+          "settings": {
+            "label": "Email",
+            "kind": "email",
+            "required": true,
+            "width": "half"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Your fragrance"
+          }
+        },
+        {
+          "type": "question",
+          "settings": {
+            "label": "Describe the scent you have in mind",
+            "kind": "textarea"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

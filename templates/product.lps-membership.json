@@ -882,6 +882,52 @@
         "photo_03",
         "photo_04"
       ]
+    },
+    "more": {
+      "type": "lps-panels",
+      "settings": {
+        "eyebrow": "Also from Le Parfum Simplifié",
+        "heading": "Tools and services for your practice.",
+        "columns": 2,
+        "image_ratio": "4 / 3",
+        "stagger": false,
+        "show_index": false,
+        "scroll_mobile": true,
+        "tone": "sand",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "panel_01": {
+          "type": "panel",
+          "settings": {
+            "title": "Perfumery Software",
+            "text": "<p>Manage formulas, materials and dilutions in one workspace.</p>",
+            "link_label": "View the software",
+            "link": "shopify://pages/software",
+            "product": "perfumery-software",
+            "show_price": true,
+            "image": "shopify://shop_images/Minimalist_Laptop_Fragrance_Dashboard.png",
+            "image_alt": "The Le Parfum Simplifié perfumery software dashboard on a laptop"
+          }
+        },
+        "panel_02": {
+          "type": "panel",
+          "settings": {
+            "title": "Perfume development",
+            "text": "<p>Develop a fragrance with us. Tell us about your brand and the scent you are after.</p>",
+            "link_label": "Start a brief",
+            "link": "/pages/perfume-development#brief",
+            "show_price": false,
+            "image_stock": "tags-twine",
+            "image_alt": "Handwritten fragrance tags and twine"
+          }
+        }
+      },
+      "block_order": [
+        "panel_01",
+        "panel_02"
+      ]
     }
   },
   "order": [
@@ -894,6 +940,7 @@
     "compare",
     "purchase",
     "faq",
+    "more",
     "banner"
   ]
 }

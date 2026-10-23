@@ -3,6 +3,7 @@
  * Everything works without this file; it only adds:
  *  - click a screenshot ([data-lps-zoom-src]) to view it full size in a <dialog>
  *  - <lps-modules>: an "Expand all / Collapse all" control for the curriculum
+ *  - <lps-stepper>: shows a long questionnaire one step at a time, checking each step before moving on
  * Loaded as a module, so the browser executes it once however many sections include it.
  */
 
@@ -69,3 +70,48 @@ class LpsModules extends HTMLElement {
 }
 
 if (!customElements.get('lps-modules')) customElements.define('lps-modules', LpsModules);
+
+class LpsStepper extends HTMLElement {
+  connectedCallback() {
+    this.steps = [...this.querySelectorAll('[data-step]')];
+    if (!this.hasAttribute('data-steps') || this.steps.length < 2) return;
+    this.index = 0;
+    this.progress = this.querySelector('[data-progress]');
+    this.backButton = this.querySelector('[data-back]');
+    this.nextButton = this.querySelector('[data-next]');
+    this.submitButton = this.querySelector('[data-submit]');
+    this.backButton.addEventListener('click', () => this.#go(this.index - 1));
+    this.nextButton.addEventListener('click', () => {
+      if (this.#stepIsValid()) this.#go(this.index + 1);
+    });
+    this.#render(false);
+  }
+
+  #stepIsValid() {
+    const fields = [...this.steps[this.index].querySelectorAll('input, select, textarea')];
+    return fields.every((field) => field.reportValidity());
+  }
+
+  #go(index) {
+    this.index = Math.max(0, Math.min(index, this.steps.length - 1));
+    this.#render(true);
+  }
+
+  #render(moveFocus) {
+    const last = this.index === this.steps.length - 1;
+    this.steps.forEach((step, i) => (step.hidden = i !== this.index));
+    this.backButton.hidden = this.index === 0;
+    this.nextButton.hidden = last;
+    this.submitButton.hidden = !last;
+    const legend = this.steps[this.index].querySelector('legend');
+    this.progress.hidden = false;
+    this.progress.textContent = `Step ${this.index + 1} of ${this.steps.length}${legend ? ` — ${legend.textContent.trim()}` : ''}`;
+    if (moveFocus) {
+      this.progress.setAttribute('tabindex', '-1');
+      this.progress.focus({ preventScroll: true });
+      this.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+}
+
+if (!customElements.get('lps-stepper')) customElements.define('lps-stepper', LpsStepper);
