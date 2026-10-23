@@ -1,0 +1,148 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "form": {
+      "type": "lps-questionnaire",
+      "settings": {
+        "eyebrow": "Contact",
+        "heading": "Get in touch.",
+        "text": "<p>For questions, collaborations and enquiries, get in touch. For membership, account or software questions, please include the email address associated with your account.</p>",
+        "image_stock": "tags-twine",
+        "image_alt": "Handwritten fragrance tags and twine",
+        "form_name": "Website enquiry",
+        "submit_label": "Send message",
+        "show_steps": false,
+        "privacy_text": "<p>We use your details only to reply to your message. See our <a href=\"/policies/privacy-policy\">privacy policy</a>.</p>",
+        "success_heading": "Thank you. Your message has been sent.",
+        "success_text": "<p>We will reply by email as soon as we can.</p>",
+        "tone": "ivory",
+        "padding_top": 48,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "question_01": {
+          "type": "question",
+          "settings": {
+            "label": "Your name",
+            "kind": "name",
+            "required": true,
+            "width": "half"
+          }
+        },
+        "question_02": {
+          "type": "question",
+          "settings": {
+            "label": "Email",
+            "kind": "email",
+            "required": true,
+            "width": "half"
+          }
+        },
+        "question_03": {
+          "type": "question",
+          "settings": {
+            "label": "What is it about?",
+            "kind": "select",
+            "required": true,
+            "width": "half",
+            "options": "Premium Learning membership\nPerfumery Software\nPerfume development\nAn order or access\nCollaboration\nSomething else"
+          }
+        },
+        "question_04": {
+          "type": "question",
+          "settings": {
+            "label": "Order number",
+            "kind": "text",
+            "width": "half",
+            "help": "If your message is about an order."
+          }
+        },
+        "question_05": {
+          "type": "question",
+          "settings": {
+            "label": "Message",
+            "kind": "textarea",
+            "required": true
+          }
+        }
+      },
+      "block_order": [
+        "question_01",
+        "question_02",
+        "question_03",
+        "question_04",
+        "question_05"
+      ]
+    },
+    "shortcuts": {
+      "type": "lps-panels",
+      "settings": {
+        "eyebrow": "Quick links",
+        "heading": "You may find your answer here.",
+        "columns": 3,
+        "image_ratio": "4 / 3",
+        "stagger": false,
+        "show_index": false,
+        "scroll_mobile": true,
+        "tone": "cream",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "panel_01": {
+          "type": "panel",
+          "settings": {
+            "title": "Frequently asked questions",
+            "text": "<p>Membership, software, access and refunds.</p>",
+            "link_label": "Read the FAQ",
+            "link": "/pages/faq",
+            "show_price": false,
+            "image_stock": "study-magnifier",
+            "image_alt": "Studying at the bench"
+          }
+        },
+        "panel_02": {
+          "type": "panel",
+          "settings": {
+            "title": "Join the community",
+            "text": "<p>Ask questions and meet other learners in our free Discord.</p>",
+            "link_label": "Join Discord",
+            "link": "https://discord.gg/A6hWyT9w3e",
+            "show_price": false,
+            "image_stock": "workspace-tags",
+            "image_alt": "A shared perfumery workspace"
+          }
+        },
+        "panel_03": {
+          "type": "panel",
+          "settings": {
+            "title": "Start a fragrance brief",
+            "text": "<p>Thinking of developing a fragrance? Tell us about it.</p>",
+            "link_label": "Start a brief",
+            "link": "/pages/perfume-development#brief",
+            "show_price": false,
+            "image_stock": "tray-flatlay",
+            "image_alt": "Amber bottles on a wooden tray"
+          }
+        }
+      },
+      "block_order": [
+        "panel_01",
+        "panel_02",
+        "panel_03"
+      ]
+    }
+  },
+  "order": [
+    "form",
+    "shortcuts"
+  ]
+}

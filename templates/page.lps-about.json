@@ -1,0 +1,247 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "lps-hero",
+      "settings": {
+        "layout": "split",
+        "content_alignment": "start",
+        "media_position": "right",
+        "ratio": "5 / 6",
+        "image_stock": "amber-set-linen",
+        "image_alt": "A set of amber bottles on linen",
+        "eyebrow": "About Le Parfum Simplifié",
+        "heading": "Perfumery, simplified.",
+        "heading_tag": "h1",
+        "text": "<p>Le Parfum Simplifié was created by Harvey and Kristan with one simple goal: to make perfumery easier to understand.</p>",
+        "button_label": "Explore Learning",
+        "button_link": "shopify://pages/premium-learning",
+        "button_2_label": "Contact us",
+        "button_2_link": "shopify://pages/contact",
+        "tone": "ivory",
+        "padding_top": 24,
+        "padding_bottom": 72
+      }
+    },
+    "story": {
+      "type": "lps-split",
+      "settings": {
+        "eyebrow": "Our story",
+        "heading": "A clearer way into the world of fragrance.",
+        "text": "<p>We both saw how difficult it can be to enter the world of fragrance. Information is often scattered, overly complicated, or difficult to apply in practice. We wanted to create something different: a place where people can learn perfumery clearly, practically and at their own pace.</p><p>Le Parfum Simplifié brings together the things we wish were easier to access when starting out: education, formulas, raw material knowledge, practical tools, software and a community of people learning the craft together.</p>",
+        "closing_text": "<p>— <strong>Harvey &amp; Kristan</strong>, Founders of Le Parfum Simplifié</p>",
+        "image_stock": "notebook-writing",
+        "image_alt": "Notes being written in a lab notebook",
+        "image_ratio": "4 / 5",
+        "image_2_stock": "tags-twine",
+        "image_2_alt": "Handwritten fragrance tags and twine",
+        "media_position": "left",
+        "confirm_note": "A photograph of Harvey and Kristan at work would make this page far more personal. Upload one in the image picker.",
+        "tone": "cream",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "approach_text": {
+      "type": "lps-split",
+      "settings": {
+        "eyebrow": "Our approach",
+        "heading": "We explain why things work, not just what to use.",
+        "text": "<p>From understanding individual materials and building accords to developing complete fragrances, our aim is to make the creative and technical sides of perfumery feel approachable.</p><p>Everything we create is built around real-world perfumery and hands-on experience. Whether you are making your first formula or developing fragrances professionally, Le Parfum Simplifié is designed to give you the knowledge and tools to keep progressing.</p>",
+        "image_stock": "pipette-vials",
+        "image_alt": "A pipette above vials of fragrance materials",
+        "image_ratio": "4 / 3",
+        "media_position": "right",
+        "media_width": "wide",
+        "tone": "ivory",
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "values": {
+      "type": "lps-features",
+      "settings": {
+        "eyebrow": "What guides us",
+        "heading": "Four principles.",
+        "style": "cards",
+        "columns": "2",
+        "show_index": true,
+        "tone": "sand",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "feature_01": {
+          "type": "feature",
+          "settings": {
+            "title": "Practical knowledge",
+            "text": "<p>Learn through materials, formulas and exercises.</p>",
+            "image_stock": "scale-weighing",
+            "image_alt": "Weighing a material on a scale"
+          }
+        },
+        "feature_02": {
+          "type": "feature",
+          "settings": {
+            "title": "Independent exploration",
+            "text": "<p>Develop your own understanding and creative approach.</p>",
+            "image_stock": "lavender-vial",
+            "image_alt": "Lavender beside a glass vial"
+          }
+        },
+        "feature_03": {
+          "type": "feature",
+          "settings": {
+            "title": "Accessible education",
+            "text": "<p>Break down complex concepts into clear, useful lessons.</p>",
+            "image_stock": "study-magnifier",
+            "image_alt": "Studying at the bench"
+          }
+        },
+        "feature_04": {
+          "type": "feature",
+          "settings": {
+            "title": "Continuous development",
+            "text": "<p>Treat perfumery as a craft built through observation, experimentation and refinement.</p>",
+            "image_stock": "skin-test",
+            "image_alt": "Evaluating a material on the skin"
+          }
+        }
+      },
+      "block_order": [
+        "feature_01",
+        "feature_02",
+        "feature_03",
+        "feature_04"
+      ]
+    },
+    "mosaic": {
+      "type": "lps-gallery",
+      "settings": {
+        "layout": "mosaic",
+        "eyebrow": "The craft",
+        "heading": "The study of fragrance begins with curiosity.",
+        "align": "start",
+        "tone": "ivory",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "photo_01": {
+          "type": "photo",
+          "settings": {
+            "image_stock": "workbench-jars",
+            "image_alt": "A workbench with jars and a mortar",
+            "shape": "tall"
+          }
+        },
+        "photo_02": {
+          "type": "photo",
+          "settings": {
+            "image_stock": "tray-flatlay",
+            "image_alt": "Amber bottles on a wooden tray",
+            "shape": "large"
+          }
+        },
+        "photo_03": {
+          "type": "photo",
+          "settings": {
+            "image_stock": "rose-buds",
+            "image_alt": "Dried rose buds",
+            "shape": "small"
+          }
+        },
+        "photo_04": {
+          "type": "photo",
+          "settings": {
+            "image_stock": "sphere-bottle",
+            "image_alt": "An amber bottle beside a stone sphere",
+            "shape": "small"
+          }
+        }
+      },
+      "block_order": [
+        "photo_01",
+        "photo_02",
+        "photo_03",
+        "photo_04"
+      ]
+    },
+    "services": {
+      "type": "lps-panels",
+      "settings": {
+        "eyebrow": "What we offer",
+        "heading": "Ways to work with us.",
+        "columns": 3,
+        "image_ratio": "4 / 3",
+        "stagger": false,
+        "show_index": false,
+        "scroll_mobile": true,
+        "tone": "cream",
+        "padding_top": 96,
+        "padding_bottom": 96
+      },
+      "blocks": {
+        "panel_01": {
+          "type": "panel",
+          "settings": {
+            "title": "Premium Learning",
+            "text": "<p>Structured lessons, a formula library and a focused community.</p>",
+            "link_label": "View learning",
+            "link": "shopify://pages/premium-learning",
+            "product": "le-parfum-simplifie-membership",
+            "show_price": true,
+            "image_stock": "vials-botanicals",
+            "image_alt": "Vials with botanicals"
+          }
+        },
+        "panel_02": {
+          "type": "panel",
+          "settings": {
+            "title": "Perfumery Software",
+            "text": "<p>Manage formulas, materials and dilutions in one workspace.</p>",
+            "link_label": "View the software",
+            "link": "shopify://pages/software",
+            "product": "perfumery-software",
+            "show_price": true,
+            "image": "shopify://shop_images/Minimalist_Laptop_Fragrance_Dashboard.png",
+            "image_alt": "The perfumery software dashboard on a laptop"
+          }
+        },
+        "panel_03": {
+          "type": "panel",
+          "settings": {
+            "title": "Perfume development",
+            "text": "<p>Develop a fragrance with us. Tell us about your brand and the scent you are after.</p>",
+            "link_label": "Start a brief",
+            "link": "/pages/perfume-development#brief",
+            "show_price": false,
+            "image_stock": "tags-twine",
+            "image_alt": "Handwritten fragrance tags"
+          }
+        }
+      },
+      "block_order": [
+        "panel_01",
+        "panel_02",
+        "panel_03"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "story",
+    "approach_text",
+    "values",
+    "mosaic",
+    "services"
+  ]
+}

@@ -277,3 +277,20 @@ Cross-sell cards ("Tools and services for your practice") were added to the Prem
 
 ### Fix (23 Oct 2026): page and product templates missing after upload
 Shopify rejected `sections/lps-features.liquid` during the zip upload. Its "Columns" slider (2–3) offered only two values, and Shopify requires sliders to offer at least three. Theme Check does not flag this. Because every page and product template uses that section, Shopify rejected those templates as well; only the homepage imported. "Columns" is now a dropdown, and all sliders were checked against the rule.
+
+---
+
+## 9. About, Contact, FAQ and information pages (23 Oct 2026)
+
+| Template | Use for | Notes |
+|---|---|---|
+| `page.lps-about.json` | About (`/pages/about-1`) | Your founders' own wording, the four principles, a photo mosaic and service cards. Edit the text in Customize. |
+| `page.lps-contact.json` | Contact (`/pages/contact`) | Shopify contact form with a topic picker, an optional order number, and quick links to the FAQ, Discord and the brief. |
+| `page.lps-faq.json` | New page **FAQ** (`/pages/faq`) | Four groups: membership, software, development, and orders and refunds. |
+| `page.lps-policy.json` | Refund policy, Delivery and access, Membership terms | Shows the page's own text with a side menu of every information page. |
+
+New section: `sections/lps-page-content.liquid`.
+
+`docs/page-content/` holds **draft** text to paste into Shopify: `membership-terms.html`, `delivery-and-access.html` and `terms-of-service.html` (the last goes in Settings → Policies). It also holds `HOW-TO-SET-UP-PAGES.txt`. Replace every [BRACKETED PLACEHOLDER] and have the terms reviewed before publishing.
+
+The site now links "membership terms" (FAQ answers and the included-resources card) to `/pages/membership-terms`.

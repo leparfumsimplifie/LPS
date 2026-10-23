@@ -749,7 +749,7 @@
           "type": "feature",
           "settings": {
             "title": "Educational resources",
-            "text": "<p>Selected bases and raw-material learning resources, subject to the published membership terms.</p>",
+            "text": "<p>Selected bases and raw-material learning resources, subject to the published <a href=\"/pages/membership-terms\">membership terms</a>.</p>",
             "status": "available",
             "image_brief": "Macro of raw materials: resin tears, a vial of essential oil and crystals of an aroma chemical on a stone surface.",
             "image_alt": "Rose petals in a mortar",
@@ -927,7 +927,7 @@
           "type": "question",
           "settings": {
             "question": "How long will I have access?",
-            "answer": "<p>Please see the membership terms for details of access.</p>",
+            "answer": "<p>Please see the <a href=\"/pages/membership-terms\">membership terms</a> for details of access.</p>",
             "include_in_search": false,
             "confirm_note": "Access duration is not stated anywhere on the current site. Add the confirmed duration (for example lifetime or 12 months) and link the membership terms."
           }

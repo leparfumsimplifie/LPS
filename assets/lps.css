@@ -1758,3 +1758,76 @@ select.lps-input {
 @media (max-width: 989px) {
   .lps-brief__media .lps-media { --lps-ratio: 16 / 9 !important; }
 }
+
+/* ---------------------------------------------------------------------------
+ * Long-form pages (policies, terms)
+ * ------------------------------------------------------------------------ */
+.lps-page__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 96px);
+}
+
+@media (min-width: 990px) {
+  .lps-page__grid { grid-template-columns: minmax(0, 3fr) minmax(0, 8fr); }
+  .lps-page__aside { position: sticky; top: calc(var(--header-height, 64px) + 24px); align-self: start; order: 0; }
+}
+
+@media (max-width: 989px) {
+  .lps-page__aside { order: 2; }
+}
+
+.lps-page__aside { display: grid; gap: 2rem; align-content: start; }
+.lps-page__nav ul { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--lps-line); }
+.lps-page__nav li { border-bottom: 1px solid var(--lps-line); }
+.lps-page__nav a {
+  display: block;
+  padding: 0.8rem 0;
+  color: var(--lps-fg-muted);
+  font-size: 0.92rem;
+  text-decoration: none;
+}
+.lps-page__nav a:hover,
+.lps-page__nav a[aria-current="page"] { color: var(--lps-fg); }
+.lps-page__nav a[aria-current="page"] { font-weight: 500; }
+
+.lps-page__help { padding: 1.25rem; border: 1px solid var(--lps-line); background: var(--lps-surface); }
+
+.lps-page__body { display: grid; gap: 1.25rem; align-content: start; max-width: 46rem; }
+.lps-page__body > .lps-eyebrow { margin: 0; }
+.lps-page__intro { font-size: 1.1rem; }
+
+.lps-prose {
+  margin-top: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--lps-line);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--lps-fg-muted);
+}
+
+.lps-prose > :first-child { margin-top: 0; }
+.lps-prose h2,
+.lps-prose h3,
+.lps-prose h4 {
+  margin: 2.25em 0 0.6em;
+  font-family: var(--lps-font-heading);
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--lps-fg);
+}
+.lps-prose h2 { font-size: 1.6rem; }
+.lps-prose h3 { font-size: 1.25rem; }
+.lps-prose h4 { font-size: 1.05rem; font-family: var(--lps-font-body); font-weight: 600; }
+.lps-prose p,
+.lps-prose ul,
+.lps-prose ol { margin: 0 0 1em; }
+.lps-prose ul,
+.lps-prose ol { padding-left: 1.25em; }
+.lps-prose li + li { margin-top: 0.35em; }
+.lps-prose strong { color: var(--lps-fg); font-weight: 600; }
+.lps-prose a { color: var(--lps-fg); text-underline-offset: 0.2em; }
+.lps-prose hr { margin: 2.5em 0; border: 0; border-top: 1px solid var(--lps-line); }
+.lps-prose table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.lps-prose th,
+.lps-prose td { padding: 0.6rem 0.5rem; border-bottom: 1px solid var(--lps-line); text-align: left; vertical-align: top; }
