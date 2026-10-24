@@ -35,8 +35,8 @@
       "type": "lps-split",
       "settings": {
         "eyebrow": "Our story",
-        "heading": "A clearer way into the world of fragrance.",
-        "text": "<p>We both saw how difficult it can be to enter the world of fragrance. Information is often scattered, overly complicated, or difficult to apply in practice. We wanted to create something different: a place where people can learn perfumery clearly, practically and at their own pace.</p><p>Le Parfum Simplifié brings together the things we wish were easier to access when starting out: education, formulas, raw material knowledge, practical tools, software and a community of people learning the craft together.</p>",
+        "heading": "Why we started",
+        "text": "<p>Learning perfumery was harder than it should be. Information was scattered and hard to use. So we built one clear place to learn, practise and create.</p>",
         "closing_text": "<p>— <strong>Harvey &amp; Kristan</strong>, Founders of Le Parfum Simplifié</p>",
         "image_stock": "notebook-writing",
         "image_alt": "Notes being written in a lab notebook",
@@ -50,27 +50,11 @@
         "padding_bottom": 96
       }
     },
-    "approach_text": {
-      "type": "lps-split",
-      "settings": {
-        "eyebrow": "Our approach",
-        "heading": "We explain why things work, not just what to use.",
-        "text": "<p>From understanding individual materials and building accords to developing complete fragrances, our aim is to make the creative and technical sides of perfumery feel approachable.</p><p>Everything we create is built around real-world perfumery and hands-on experience. Whether you are making your first formula or developing fragrances professionally, Le Parfum Simplifié is designed to give you the knowledge and tools to keep progressing.</p>",
-        "image_stock": "pipette-vials",
-        "image_alt": "A pipette above vials of fragrance materials",
-        "image_ratio": "4 / 3",
-        "media_position": "right",
-        "media_width": "wide",
-        "tone": "ivory",
-        "padding_top": 96,
-        "padding_bottom": 96
-      }
-    },
     "values": {
       "type": "lps-features",
       "settings": {
-        "eyebrow": "What guides us",
-        "heading": "Four principles.",
+        "eyebrow": "",
+        "heading": "What we believe",
         "style": "cards",
         "columns": "2",
         "show_index": true,
@@ -83,7 +67,7 @@
           "type": "feature",
           "settings": {
             "title": "Practical knowledge",
-            "text": "<p>Learn through materials, formulas and exercises.</p>",
+            "text": "<p>Learn by doing.</p>",
             "image_stock": "scale-weighing",
             "image_alt": "Weighing a material on a scale"
           }
@@ -92,7 +76,7 @@
           "type": "feature",
           "settings": {
             "title": "Independent exploration",
-            "text": "<p>Develop your own understanding and creative approach.</p>",
+            "text": "<p>Find your own style.</p>",
             "image_stock": "lavender-vial",
             "image_alt": "Lavender beside a glass vial"
           }
@@ -101,7 +85,7 @@
           "type": "feature",
           "settings": {
             "title": "Accessible education",
-            "text": "<p>Break down complex concepts into clear, useful lessons.</p>",
+            "text": "<p>Keep it clear and simple.</p>",
             "image_stock": "study-magnifier",
             "image_alt": "Studying at the bench"
           }
@@ -110,7 +94,7 @@
           "type": "feature",
           "settings": {
             "title": "Continuous development",
-            "text": "<p>Treat perfumery as a craft built through observation, experimentation and refinement.</p>",
+            "text": "<p>Keep refining.</p>",
             "image_stock": "skin-test",
             "image_alt": "Evaluating a material on the skin"
           }
@@ -123,63 +107,11 @@
         "feature_04"
       ]
     },
-    "mosaic": {
-      "type": "lps-gallery",
-      "settings": {
-        "layout": "mosaic",
-        "eyebrow": "The craft",
-        "heading": "The study of fragrance begins with curiosity.",
-        "align": "start",
-        "tone": "ivory",
-        "padding_top": 96,
-        "padding_bottom": 96
-      },
-      "blocks": {
-        "photo_01": {
-          "type": "photo",
-          "settings": {
-            "image_stock": "workbench-jars",
-            "image_alt": "A workbench with jars and a mortar",
-            "shape": "tall"
-          }
-        },
-        "photo_02": {
-          "type": "photo",
-          "settings": {
-            "image_stock": "tray-flatlay",
-            "image_alt": "Amber bottles on a wooden tray",
-            "shape": "large"
-          }
-        },
-        "photo_03": {
-          "type": "photo",
-          "settings": {
-            "image_stock": "rose-buds",
-            "image_alt": "Dried rose buds",
-            "shape": "small"
-          }
-        },
-        "photo_04": {
-          "type": "photo",
-          "settings": {
-            "image_stock": "sphere-bottle",
-            "image_alt": "An amber bottle beside a stone sphere",
-            "shape": "small"
-          }
-        }
-      },
-      "block_order": [
-        "photo_01",
-        "photo_02",
-        "photo_03",
-        "photo_04"
-      ]
-    },
     "services": {
       "type": "lps-panels",
       "settings": {
-        "eyebrow": "What we offer",
-        "heading": "Ways to work with us.",
+        "eyebrow": "",
+        "heading": "Work with us",
         "columns": 3,
         "image_ratio": "4 / 3",
         "stagger": false,
@@ -239,9 +171,7 @@
   "order": [
     "hero",
     "story",
-    "approach_text",
     "values",
-    "mosaic",
     "services"
   ]
 }

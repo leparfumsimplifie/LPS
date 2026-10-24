@@ -21,93 +21,21 @@
         "eyebrow": "Perfume development",
         "heading": "Bring a fragrance idea to life.",
         "heading_tag": "h1",
-        "text": "<p>Share your concept, the audience and the direction, and we will review it and reply with how we could approach the project.</p>",
+        "text": "<p>Tell us your idea and we’ll help you create it.</p>",
         "button_label": "Start your brief",
         "button_link": "/pages/perfume-development#brief",
-        "button_2_label": "How it works",
+        "button_2_label": "",
         "button_2_link": "/pages/perfume-development#process",
         "tone": "ivory",
         "padding_top": 24,
         "padding_bottom": 72
-      },
-      "blocks": {
-        "meta_01": {
-          "type": "meta",
-          "settings": {
-            "text": "Concept and brief"
-          }
-        },
-        "meta_02": {
-          "type": "meta",
-          "settings": {
-            "text": "Formulation"
-          }
-        },
-        "meta_03": {
-          "type": "meta",
-          "settings": {
-            "text": "Evaluation"
-          }
-        }
-      },
-      "block_order": [
-        "meta_01",
-        "meta_02",
-        "meta_03"
-      ]
-    },
-    "covers": {
-      "type": "lps-features",
-      "settings": {
-        "eyebrow": "What it can cover",
-        "heading": "From first idea to a refined formula.",
-        "style": "cards",
-        "columns": "3",
-        "show_index": false,
-        "tone": "cream",
-        "padding_top": 96,
-        "padding_bottom": 96
-      },
-      "blocks": {
-        "feature_01": {
-          "type": "feature",
-          "settings": {
-            "title": "Concept and brief",
-            "text": "<p>Define the idea, the audience and the direction of the fragrance.</p>",
-            "image_stock": "tags-twine",
-            "image_alt": "Handwritten fragrance tags and twine"
-          }
-        },
-        "feature_02": {
-          "type": "feature",
-          "settings": {
-            "title": "Formulation",
-            "text": "<p>Build and refine formulas through iterative evaluation.</p>",
-            "image_stock": "pipette-vials",
-            "image_alt": "A pipette above vials of fragrance materials"
-          }
-        },
-        "feature_03": {
-          "type": "feature",
-          "settings": {
-            "title": "Evaluation",
-            "text": "<p>Assess the results against the brief and refine them.</p>",
-            "image_stock": "skin-test",
-            "image_alt": "Evaluating a fragrance on the skin"
-          }
-        }
-      },
-      "block_order": [
-        "feature_01",
-        "feature_02",
-        "feature_03"
-      ]
+      }
     },
     "process": {
       "type": "lps-steps",
       "settings": {
-        "eyebrow": "How it works",
-        "heading": "Three simple steps.",
+        "eyebrow": "",
+        "heading": "How it works",
         "tone": "ivory",
         "padding_top": 96,
         "padding_bottom": 96,
@@ -118,7 +46,7 @@
           "type": "step",
           "settings": {
             "title": "Send a brief",
-            "text": "<p>Tell us the concept, intended use and any references, using the questionnaire below.</p>",
+            "text": "<p>Fill in the questionnaire below.</p>",
             "image_stock": "notebook-formula",
             "image_alt": "A formula written in a notebook"
           }
@@ -127,7 +55,7 @@
           "type": "step",
           "settings": {
             "title": "Review",
-            "text": "<p>We review your brief and reply with how we could approach it.</p>",
+            "text": "<p>We read it and reply by email.</p>",
             "image_stock": "study-magnifier",
             "image_alt": "Reviewing notes at the bench"
           }
@@ -136,7 +64,7 @@
           "type": "step",
           "settings": {
             "title": "Development",
-            "text": "<p>Formulation and iterative evaluation, working towards the brief.</p>",
+            "text": "<p>We create and refine your fragrance.</p>",
             "image_stock": "beaker-pour",
             "image_alt": "Working with a beaker and glass rod"
           }
@@ -148,70 +76,12 @@
         "step_03"
       ]
     },
-    "inspiration": {
-      "type": "lps-gallery",
-      "settings": {
-        "layout": "strip",
-        "eyebrow": "Inspiration",
-        "heading": "Every fragrance starts with a feeling.",
-        "text": "<p>A place, a memory, a material or a mood. The more you can tell us, the better we can understand what you are trying to create.</p>",
-        "footnote": "Photographs are illustrative.",
-        "align": "start",
-        "tone": "sand",
-        "padding_top": 96,
-        "padding_bottom": 96
-      },
-      "blocks": {
-        "photo_01": {
-          "type": "photo",
-          "settings": {
-            "image_stock": "rose-buds",
-            "image_alt": "Dried rose buds",
-            "caption": "Florals",
-            "shape": "small"
-          }
-        },
-        "photo_02": {
-          "type": "photo",
-          "settings": {
-            "image_stock": "spices-white",
-            "image_alt": "Cinnamon and star anise",
-            "caption": "Spice",
-            "shape": "small"
-          }
-        },
-        "photo_03": {
-          "type": "photo",
-          "settings": {
-            "image_stock": "lavender-vial",
-            "image_alt": "Lavender beside a glass vial",
-            "caption": "Aromatics",
-            "shape": "small"
-          }
-        },
-        "photo_04": {
-          "type": "photo",
-          "settings": {
-            "image_stock": "oil-bottle-flowers",
-            "image_alt": "A scent bottle with dried flowers",
-            "caption": "Soft and powdery",
-            "shape": "small"
-          }
-        }
-      },
-      "block_order": [
-        "photo_01",
-        "photo_02",
-        "photo_03",
-        "photo_04"
-      ]
-    },
     "brief": {
       "type": "lps-questionnaire",
       "settings": {
-        "eyebrow": "Fragrance brief",
-        "heading": "Tell us about your brand and your scent.",
-        "text": "<p>This questionnaire takes about five minutes. There are no wrong answers. If you are unsure about anything, leave it blank and we can talk it through.</p>",
+        "eyebrow": "",
+        "heading": "Your fragrance brief",
+        "text": "<p>About 5 minutes. Skip anything you’re unsure of.</p>",
         "image_stock": "workbench-jars",
         "image_alt": "A perfumer’s workbench with jars and a mortar",
         "form_name": "Fragrance development brief",
@@ -231,8 +101,7 @@
         "step_01": {
           "type": "step",
           "settings": {
-            "title": "About you",
-            "intro": "So we know who we are talking to."
+            "title": "About you"
           }
         },
         "question_02": {
@@ -281,8 +150,7 @@
         "step_07": {
           "type": "step",
           "settings": {
-            "title": "Your brand and launch",
-            "intro": "Where you are now, and where you would like to be."
+            "title": "Your brand and launch"
           }
         },
         "question_08": {
@@ -339,8 +207,7 @@
         "step_14": {
           "type": "step",
           "settings": {
-            "title": "The scent",
-            "intro": "Describe what you are after, in your own words."
+            "title": "The scent"
           }
         },
         "question_15": {
@@ -404,8 +271,7 @@
         "step_22": {
           "type": "step",
           "settings": {
-            "title": "Next steps",
-            "intro": "Help us understand how we can support you."
+            "title": "Next steps"
           }
         },
         "question_23": {
@@ -470,61 +336,11 @@
         "question_25",
         "question_26"
       ]
-    },
-    "learn": {
-      "type": "lps-panels",
-      "settings": {
-        "eyebrow": "Learn the craft",
-        "heading": "Prefer to learn it yourself?",
-        "columns": 2,
-        "image_ratio": "4 / 3",
-        "stagger": false,
-        "show_index": false,
-        "scroll_mobile": true,
-        "tone": "ivory",
-        "padding_top": 96,
-        "padding_bottom": 96
-      },
-      "blocks": {
-        "panel_01": {
-          "type": "panel",
-          "settings": {
-            "title": "Premium Learning",
-            "text": "<p>Structured lessons, a formula library, practical exercises and a focused community.</p>",
-            "link_label": "View learning",
-            "link": "shopify://pages/premium-learning",
-            "product": "le-parfum-simplifie-membership",
-            "show_price": true,
-            "image_stock": "pipette-vials",
-            "image_alt": "A pipette above vials of fragrance materials"
-          }
-        },
-        "panel_02": {
-          "type": "panel",
-          "settings": {
-            "title": "Perfumery Software",
-            "text": "<p>Manage formulas, materials and dilutions in one workspace.</p>",
-            "link_label": "View the software",
-            "link": "shopify://pages/software",
-            "product": "perfumery-software",
-            "show_price": true,
-            "image": "shopify://shop_images/Minimalist_Laptop_Fragrance_Dashboard.png",
-            "image_alt": "The Le Parfum Simplifié perfumery software dashboard on a laptop"
-          }
-        }
-      },
-      "block_order": [
-        "panel_01",
-        "panel_02"
-      ]
     }
   },
   "order": [
     "hero",
-    "covers",
     "process",
-    "inspiration",
-    "brief",
-    "learn"
+    "brief"
   ]
 }

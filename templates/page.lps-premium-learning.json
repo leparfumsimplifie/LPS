@@ -19,9 +19,9 @@
         "image_brief": "Hero photograph — a working perfumery bench in soft daylight: analytical balance, a rack of labelled amber dilution bottles, glass pipettes, a beaker and a fan of smelling strips beside an open lab notebook. Warm neutral palette, shallow depth of field. Portrait crop, minimum 2000 × 2400px.",
         "image_alt": "A perfumery bench with amber bottles, jars of raw materials and glassware",
         "eyebrow": "Premium Learning",
-        "heading": "From understanding materials to creating your own fragrances.",
+        "heading": "Learn to create your own fragrances.",
         "heading_tag": "h1",
-        "text": "<p>Premium Learning is a structured education in perfumery. Rather than handing you recipes to follow, it teaches the principles behind them — how raw materials smell and behave, how they combine into accords, and how a complete formula is built, evaluated and refined.</p>",
+        "text": "<p>Learn the principles behind fragrance, not just recipes.</p>",
         "button_label": "Explore premium access",
         "button_link": "shopify://products/le-parfum-simplifie-membership",
         "button_2_label": "View the curriculum",
@@ -31,49 +31,16 @@
         "padding_top": 24,
         "padding_bottom": 72,
         "image_stock": "bench-still-life"
-      },
-      "blocks": {
-        "meta_01": {
-          "type": "meta",
-          "settings": {
-            "text": "Approximately 10 hours of video"
-          }
-        },
-        "meta_02": {
-          "type": "meta",
-          "settings": {
-            "text": "Formula library"
-          }
-        },
-        "meta_03": {
-          "type": "meta",
-          "settings": {
-            "text": "Premium community"
-          }
-        },
-        "meta_04": {
-          "type": "meta",
-          "settings": {
-            "text": "Live learning sessions"
-          }
-        }
-      },
-      "block_order": [
-        "meta_01",
-        "meta_02",
-        "meta_03",
-        "meta_04"
-      ]
+      }
     },
     "why": {
       "type": "lps-split",
       "settings": {
-        "index": "02",
-        "eyebrow": "Why learn perfumery",
-        "heading": "Perfumery rewards understanding, not memorisation.",
-        "text": "<p>Most people begin with enthusiasm and a handful of materials, then meet the same obstacles. A recipe can produce one fragrance; it cannot tell you why it works, or what to change when it doesn’t. These are the questions beginners most often struggle with:</p>",
+        "index": "",
+        "eyebrow": "Why learn with us",
+        "heading": "Understand how fragrance works.",
+        "text": "<p>Most beginners struggle with the same five things. The course teaches each one.</p>",
         "list_style": "numbered",
-        "closing_text": "<p>Structured study turns each of these into a skill you can practise. Lessons are sequenced so that every new idea builds on the last — first the materials, then dilution and evaluation, then accords and finally complete compositions — so you always understand the reasoning behind a formula, not just its ingredients.</p>",
         "image_brief": "Close-up of a formulation in progress: a pipette releasing a single drop into an amber bottle on the balance pan, the display reading a weight in grams. Natural side light. Portrait crop.",
         "image_alt": "A glass pipette held above a bench",
         "image_ratio": "4 / 5",
@@ -83,47 +50,42 @@
         "media_width": "equal",
         "sticky_media": true,
         "bleed_mobile": true,
-        "caption": "Weighing, diluting and labelling: the everyday habits the course teaches from the start.",
         "tone": "cream",
         "padding_top": 96,
         "padding_bottom": 96,
         "image_stock": "pipette-hand",
-        "image_2_stock": "tagged-bottles"
+        "image_2_stock": "tagged-bottles",
+        "button_label": ""
       },
       "blocks": {
         "item_01": {
           "type": "item",
           "settings": {
-            "title": "Understanding what materials actually smell like",
-            "text": "Many materials smell quite different in dilution, on a strip after an hour, or alongside other ingredients."
+            "title": "Understanding what materials actually smell like"
           }
         },
         "item_02": {
           "type": "item",
           "settings": {
-            "title": "Learning how materials interact",
-            "text": "Some materials lift and brighten, others soften, fix or overwhelm. Interactions are rarely obvious from a description."
+            "title": "Learning how materials interact"
           }
         },
         "item_03": {
           "type": "item",
           "settings": {
-            "title": "Building balanced accords",
-            "text": "Knowing which materials to combine — and in what proportion — to create a coherent impression."
+            "title": "Building balanced accords"
           }
         },
         "item_04": {
           "type": "item",
           "settings": {
-            "title": "Understanding dilutions and concentrations",
-            "text": "Working accurately with weights, percentages and dilutions so results can be repeated and adjusted."
+            "title": "Understanding dilutions and concentrations"
           }
         },
         "item_05": {
           "type": "item",
           "settings": {
-            "title": "Developing and evaluating complete formulas",
-            "text": "Assessing a composition over time, diagnosing what isn’t working and modifying it with intent."
+            "title": "Developing and evaluating complete formulas"
           }
         }
       },
@@ -138,17 +100,15 @@
     "curriculum": {
       "type": "lps-curriculum",
       "settings": {
-        "index": "03",
-        "eyebrow": "The curriculum",
-        "heading": "A clear route through the craft.",
-        "text": "<p>The course moves from foundations to finished fragrances. Early modules cover the materials, equipment and laboratory habits every formulator relies on; later modules apply them to accords, complete formulas, evaluation and modification. Guided exercises and formula studies run throughout.</p>",
+        "index": "",
+        "eyebrow": "Curriculum",
+        "heading": "13 modules, from basics to brand.",
+        "text": "<p>Foundations first, then accords, formulas and evaluation.</p>",
         "image": "shopify://shop_images/PerfumeryCourseLaptopStillLife_40f908b4-a4a3-4965-ad6c-e3bf3fbd401b.png",
         "image_alt": "The Premium Learning course roadmap displayed on a laptop, listing the course modules",
         "image_brief": "Screenshot of the course roadmap or module list.",
-        "caption": "The course roadmap, as it appears inside Premium Learning.",
         "button_label": "Explore premium access",
         "button_link": "shopify://products/le-parfum-simplifie-membership",
-        "footnote": "Module titles reflect the current course roadmap. Content is added and refined over time.",
         "confirm_note": "Module list copied from the course roadmap image on the product page (13 modules, numbered 00–12, with 03.1 and 03.2). Please check numbering, titles and one-line summaries against the live course, and mark any unpublished module as ‘In development’. If the roadmap image itself is a mock-up rather than a screenshot, replace it with a real screenshot of the course navigation.",
         "tone": "ivory",
         "padding_top": 96,
@@ -172,9 +132,8 @@
             "number": "01",
             "title": "Perfumery basics",
             "summary": "Fragrance structure, olfaction, volatility and the roles of ingredients.",
-            "content": "<p>The foundations: how a fragrance is structured, how we perceive smell, and how volatility shapes the way a composition unfolds over time.</p>",
             "status": "available",
-            "open": true
+            "open": false
           }
         },
         "module_03": {
@@ -183,7 +142,6 @@
             "number": "02",
             "title": "Equipment",
             "summary": "The tools of a working perfumery bench and how to use them.",
-            "content": "<p>What you need to start formulating accurately — from scales and pipettes to glassware, bottles and smelling strips.</p>",
             "status": "available",
             "open": false
           }
@@ -194,7 +152,6 @@
             "number": "03",
             "title": "What to order",
             "summary": "Choosing a sensible first collection of materials.",
-            "content": "<p>How to approach buying materials so that each one teaches you something, without overspending at the start.</p>",
             "status": "available",
             "open": false
           }
@@ -205,7 +162,6 @@
             "number": "03.1",
             "title": "Raw materials — naturals",
             "summary": "Recognising and evaluating natural ingredients.",
-            "content": "<p>Essential oils, absolutes and other natural materials: how they smell, how they behave and where they are used.</p>",
             "status": "available",
             "open": false
           }
@@ -216,7 +172,6 @@
             "number": "03.2",
             "title": "Raw materials — synthetics",
             "summary": "Recognising and evaluating aroma chemicals.",
-            "content": "<p>The synthetic materials that underpin modern perfumery, studied individually and in context.</p>",
             "status": "available",
             "open": false
           }
@@ -227,7 +182,6 @@
             "number": "04",
             "title": "How to dilute",
             "summary": "Good laboratory habits and accurate dilutions.",
-            "content": "<p>Preparing, labelling and recording dilutions so your work is accurate and repeatable.</p>",
             "status": "available",
             "open": false
           }
@@ -238,7 +192,6 @@
             "number": "05",
             "title": "Training your nose",
             "summary": "Accurate assessment and olfactory memory.",
-            "content": "<p>Methods for evaluating materials systematically and building a reliable vocabulary of smell.</p>",
             "status": "available",
             "open": false
           }
@@ -249,7 +202,6 @@
             "number": "06",
             "title": "Building accords",
             "summary": "How ingredients interact and build coherent structures.",
-            "content": "<p>Combining materials into accords — the building blocks of a fragrance — and adjusting their balance.</p>",
             "status": "available",
             "open": false
           }
@@ -260,7 +212,6 @@
             "number": "07",
             "title": "Formula construction",
             "summary": "Composing complete formulas with intention.",
-            "content": "<p>Bringing accords and individual materials together into a structured, complete formula.</p>",
             "status": "available",
             "open": false
           }
@@ -271,7 +222,6 @@
             "number": "08",
             "title": "Evaluating and developing",
             "summary": "Formulation, modification and iterative evaluation.",
-            "content": "<p>Assessing a formula over time, identifying what to change and refining it through successive versions.</p>",
             "status": "available",
             "open": false
           }
@@ -282,7 +232,6 @@
             "number": "09",
             "title": "Alcohol and compounding",
             "summary": "From concentrate to finished fragrance.",
-            "content": "<p>Working with perfumer’s alcohol and preparing a concentrate for a finished fragrance.</p>",
             "status": "available",
             "open": false
           }
@@ -293,7 +242,6 @@
             "number": "10",
             "title": "Maturation and maceration",
             "summary": "How fragrances change as they rest.",
-            "content": "<p>What happens to a fragrance as it matures and macerates, and how to account for it.</p>",
             "status": "available",
             "open": false
           }
@@ -304,7 +252,6 @@
             "number": "11",
             "title": "Compliance",
             "summary": "An introduction to safety and regulatory considerations.",
-            "content": "<p>An overview of the safety and regulatory points to understand before sharing or selling fragrance.</p>",
             "status": "available",
             "open": false
           }
@@ -315,7 +262,6 @@
             "number": "12",
             "title": "Starting a brand",
             "summary": "Considerations for taking your work further.",
-            "content": "<p>An introduction to the practical considerations of developing your own fragrance brand. It is educational guidance, not a guarantee of commercial success.</p>",
             "status": "available",
             "open": false
           }
@@ -339,107 +285,15 @@
         "module_15"
       ]
     },
-    "classroom": {
-      "type": "lps-showcase",
-      "settings": {
-        "layout": "alternating",
-        "index": "04",
-        "eyebrow": "Inside the classroom",
-        "heading": "How you will learn.",
-        "text": "<p>Premium Learning combines recorded lessons, written resources, formula studies and a community space, each designed to support practical work at the bench.</p>",
-        "align": "start",
-        "footnote": "Photographs are illustrative. Screenshots of the platform will be added here.",
-        "tone": "sand",
-        "padding_top": 96,
-        "padding_bottom": 96
-      },
-      "blocks": {
-        "shot_01": {
-          "type": "shot",
-          "settings": {
-            "frame": "none",
-            "ratio": "4 / 3",
-            "eyebrow": "Video lessons",
-            "title": "Lessons you can pause, replay and return to",
-            "text": "<p>Each topic is taught through recorded video — approximately ten hours in total — so you can work at your own pace and revisit a lesson whenever you return to a material or technique.</p>",
-            "image_brief": "Genuine screenshot: a video lesson mid-playback, ideally showing a material being evaluated or a formula being weighed, with the lesson title visible. 1920 × 1080px.",
-            "image_alt": "A glass rod and beaker of fragrance concentrate",
-            "confirm_note": "Confirm the platform used to host lessons and the current total video duration (the existing page says approximately 10 hours).",
-            "image_stock": "beaker-pour"
-          }
-        },
-        "shot_02": {
-          "type": "shot",
-          "settings": {
-            "frame": "none",
-            "ratio": "4 / 3",
-            "wide": true,
-            "eyebrow": "Course navigation",
-            "title": "A clear structure, module by module",
-            "text": "<p>The course is organised into numbered modules that follow the order a perfumer learns in: foundations and materials first, then dilution and evaluation, accords, formula construction and development.</p>",
-            "image_brief": "Genuine full-width screenshot of the course navigation or module list, showing module titles and progress. 2400 × 1500px.",
-            "image_alt": "Studying a reference book at the bench",
-            "image_stock": "study-magnifier"
-          }
-        },
-        "shot_03": {
-          "type": "shot",
-          "settings": {
-            "frame": "none",
-            "ratio": "4 / 3",
-            "eyebrow": "Formula resources",
-            "title": "Formula studies to examine and learn from",
-            "text": "<p>Formula studies show how materials are combined and in what proportions, so you can trace a composition’s structure and test your understanding at the bench.</p>",
-            "image_brief": "Genuine screenshot of a formula resource as students see it. Hide or blur quantities if you prefer not to show them publicly.",
-            "image_alt": "A formula written in a perfumer’s notebook",
-            "image_stock": "notebook-formula"
-          }
-        },
-        "shot_04": {
-          "type": "shot",
-          "settings": {
-            "frame": "none",
-            "ratio": "4 / 3",
-            "eyebrow": "Learning materials",
-            "title": "Reference material for the bench",
-            "text": "<p>Written resources and raw-material notes support the video lessons, giving you something to refer to while you work.</p>",
-            "image_brief": "Genuine mobile screenshot of a learning resource or material note, as students access it. 1170 × 2532px.",
-            "image_alt": "Labelling an amber bottle",
-            "confirm_note": "Confirm which written resources are currently included and in what format (PDF, web page, Discord post).",
-            "image_stock": "label-bottle"
-          }
-        },
-        "shot_05": {
-          "type": "shot",
-          "settings": {
-            "frame": "none",
-            "ratio": "4 / 3",
-            "eyebrow": "The Discord learning environment",
-            "title": "A place to ask, share and discuss",
-            "text": "<p>Premium members have access to the premium learning community on Discord, where questions, formulations and progress are discussed alongside other students.</p>",
-            "image_brief": "Genuine Discord screenshot showing the premium channels list and a helpful discussion thread. Blur usernames and avatars of members who have not given permission.",
-            "image_alt": "A row of labelled amber bottles",
-            "image_stock": "tagged-row"
-          }
-        }
-      },
-      "block_order": [
-        "shot_01",
-        "shot_02",
-        "shot_03",
-        "shot_04",
-        "shot_05"
-      ]
-    },
     "formulas": {
       "type": "lps-formula-library",
       "settings": {
-        "index": "05",
+        "index": "",
         "eyebrow": "The formula library",
-        "heading": "Learn composition by studying how formulas are built.",
-        "text": "<p>Reading a formula is one of the fastest ways to understand composition. The library gives you a large collection of educational formula studies to examine: which materials sit at the heart of a structure, which play supporting roles, and how small proportions of a powerful material can change the whole.</p><p>Studied alongside the lessons — and, where you have the materials, rebuilt at the bench — they show how theory becomes a finished fragrance.</p>",
-        "note": "<p><strong>A note on formulas.</strong> The formulas included are educational formula studies, distinct from commercially validated, production-ready fragrance formulas.</p>",
-        "button_label": "See everything included",
+        "heading": "The formula library",
+        "text": "<p>Study real formula structures to understand how fragrances are built.</p>",
+        "note": "<p>Formulas are for learning, not ready-made products to sell.</p>",
+        "button_label": "",
         "button_link": "/pages/premium-learning#included",
         "sheet_title": "Eau de Cologne — structure study",
         "sheet_meta": "Illustrative",
@@ -454,14 +308,6 @@
         "detail_image_stock": "notebook-writing"
       },
       "blocks": {
-        "stat_01": {
-          "type": "stat",
-          "settings": {
-            "value": "100+",
-            "label": "Educational formula studies",
-            "confirm_note": "The current site says 100+. Please count the formulas available today before publishing this figure."
-          }
-        },
         "row_02": {
           "type": "row",
           "settings": {
@@ -501,112 +347,25 @@
             "family": "Aromatic",
             "role": "Aromatic contrast"
           }
-        },
-        "row_07": {
-          "type": "row",
-          "settings": {
-            "material": "Rosemary",
-            "family": "Herbal",
-            "role": "Herbal accent"
-          }
-        },
-        "row_08": {
-          "type": "row",
-          "settings": {
-            "material": "Musk",
-            "family": "Soft, clean",
-            "role": "Gentle base and diffusion"
-          }
         }
       },
       "block_order": [
-        "stat_01",
         "row_02",
         "row_03",
         "row_04",
         "row_05",
-        "row_06",
-        "row_07",
-        "row_08"
-      ]
-    },
-    "practice": {
-      "type": "lps-split",
-      "settings": {
-        "index": "06",
-        "eyebrow": "Learn by doing",
-        "heading": "Perfumery is learned at the bench.",
-        "text": "<p>Understanding comes from smelling, weighing and adjusting. The course is built around practical work that follows the way a perfumer develops:</p>",
-        "list_style": "numbered",
-        "closing_text": "<p>Each stage builds the judgement for the next. By the time you compose a full formula, you know your materials well enough to make deliberate choices.</p>",
-        "image_brief": "Wide editorial photograph: hands in a lab coat drawing a material into a glass pipette above a row of amber bottles, a balance and a beaker in soft focus. Landscape, minimum 2400px wide.",
-        "image_alt": "A glass funnel in an amber bottle on a perfumery bench",
-        "image_ratio": "4 / 3",
-        "image_2_brief": "Macro: a single blotter dipped in an amber bottle, droplet visible on the tip.",
-        "image_2_alt": "A pipette above vials",
-        "media_position": "right",
-        "media_width": "wide",
-        "bleed_mobile": true,
-        "tone": "ivory",
-        "padding_top": 96,
-        "padding_bottom": 96,
-        "image_stock": "funnel-bottle",
-        "image_2_stock": "pipette-vials"
-      },
-      "blocks": {
-        "item_01": {
-          "type": "item",
-          "settings": {
-            "title": "Evaluate individual materials",
-            "text": "Smell each material on a strip, in dilution and over time, and record what you notice."
-          }
-        },
-        "item_02": {
-          "type": "item",
-          "settings": {
-            "title": "Prepare accurate dilutions",
-            "text": "Weigh, dilute and label materials so your observations and formulas are consistent."
-          }
-        },
-        "item_03": {
-          "type": "item",
-          "settings": {
-            "title": "Build accords",
-            "text": "Combine small groups of materials and adjust proportions to create a coherent effect."
-          }
-        },
-        "item_04": {
-          "type": "item",
-          "settings": {
-            "title": "Compose complete formulas",
-            "text": "Bring accords and materials together into a structured composition."
-          }
-        },
-        "item_05": {
-          "type": "item",
-          "settings": {
-            "title": "Evaluate and modify",
-            "text": "Assess the result as it develops and make deliberate changes, version by version."
-          }
-        }
-      },
-      "block_order": [
-        "item_01",
-        "item_02",
-        "item_03",
-        "item_04",
-        "item_05"
+        "row_06"
       ]
     },
     "community": {
       "type": "lps-split",
       "settings": {
-        "index": "07",
+        "index": "",
         "eyebrow": "The community",
-        "heading": "Learn alongside other perfumers.",
-        "text": "<p>Perfumery can be a solitary practice. Our Discord brings together beginners, hobbyists and independent creators who share an interest in how fragrance is made.</p><p><strong>The free community</strong> is open to anyone and is a good place to meet other enthusiasts and follow what we do. <strong>Premium members</strong> also have access to the premium learning community, where discussion is focused on the course material and formulation practice.</p>",
+        "heading": "Learn with others.",
+        "text": "<p>Join our free Discord. Premium members get the premium area too.</p>",
         "list_style": "plain",
-        "closing_text": "<p>Community members are asked to be respectful, constructive and generous with their experience.</p>",
+        "closing_text": "",
         "button_label": "Join the free Discord",
         "button_link": "https://discord.gg/A6hWyT9w3e",
         "button_style": "secondary",
@@ -623,65 +382,20 @@
         "padding_bottom": 96,
         "image_stock": "workspace-tags"
       },
-      "blocks": {
-        "item_01": {
-          "type": "item",
-          "settings": {
-            "title": "Ask questions",
-            "text": "Raise questions about materials, techniques or lessons as you work through the course."
-          }
-        },
-        "item_02": {
-          "type": "item",
-          "settings": {
-            "title": "Share your formulations",
-            "text": "Post your accords and formulas and discuss them with other members."
-          }
-        },
-        "item_03": {
-          "type": "item",
-          "settings": {
-            "title": "Follow premium learning opportunities",
-            "text": "Premium members see announcements for live sessions and new learning material."
-          }
-        }
-      },
-      "block_order": [
-        "item_01",
-        "item_02",
-        "item_03"
-      ]
-    },
-    "live": {
-      "type": "lps-split",
-      "settings": {
-        "index": "08",
-        "eyebrow": "Live learning",
-        "heading": "Learning in real time.",
-        "text": "<p>Alongside the recorded course, Premium members can join live learning sessions. A session typically focuses on a single theme — a family of materials, an accord, or the evaluation of a formula — with time for members to ask questions and discuss their own work.</p><p>Sessions take place according to the published schedule, which is shared with members in advance.</p>",
-        "image_brief": "Authentic photograph or screenshot from a live session: the presenter at the bench with materials and smelling strips, or a video-call frame with the session in progress. Landscape.",
-        "image_alt": "Evaluating a material on the skin",
-        "image_ratio": "4 / 3",
-        "media_position": "right",
-        "media_width": "equal",
-        "confirm_note": "Confirm the format of live sessions (Discord stage, video call, in person), whether recordings are made available, and that no fixed frequency is promised.",
-        "tone": "ivory",
-        "padding_top": 96,
-        "padding_bottom": 96,
-        "image_stock": "skin-test"
-      }
+      "blocks": {},
+      "block_order": []
     },
     "included": {
       "type": "lps-features",
       "settings": {
-        "index": "09",
+        "index": "",
         "eyebrow": "What is included",
-        "heading": "Everything in Premium Learning.",
-        "text": "<p>One membership gives you access to the full set of learning resources below.</p>",
+        "heading": "What’s included",
+        "text": "",
         "style": "cards",
         "columns": "3",
         "show_index": false,
-        "footnote": "<p>Badges show what is available today. Anything marked ‘In development’ is planned and not part of the current offer.</p>",
+        "footnote": "",
         "tone": "sand",
         "padding_top": 96,
         "padding_bottom": 96,
@@ -692,7 +406,7 @@
           "type": "feature",
           "settings": {
             "title": "Video education",
-            "text": "<p>Approximately ten hours of structured video lessons, from foundations to complete formulas.</p>",
+            "text": "<p>About 10 hours of lessons.</p>",
             "status": "available",
             "image_brief": "Close-up of a laptop on a bench playing a lesson, amber bottles softly out of focus.",
             "image_alt": "Vials of fragrance materials",
@@ -703,7 +417,7 @@
           "type": "feature",
           "settings": {
             "title": "Formula library",
-            "text": "<p>A library of educational formula studies and learning resources to examine and rebuild.</p>",
+            "text": "<p>Formula studies to learn from.</p>",
             "status": "available",
             "image_brief": "Overhead: printed formula sheets with a pencil, a smelling strip and an amber bottle.",
             "image_alt": "An amber bottle with a handwritten tag",
@@ -715,7 +429,7 @@
           "type": "feature",
           "settings": {
             "title": "Practical exercises",
-            "text": "<p>Guided exercises and formula studies that take you from single materials to finished compositions.</p>",
+            "text": "<p>Hands-on tasks at the bench.</p>",
             "status": "available",
             "image_brief": "Hands weighing a material into a beaker on an analytical balance.",
             "image_alt": "Weighing on a digital scale",
@@ -726,7 +440,7 @@
           "type": "feature",
           "settings": {
             "title": "Premium community",
-            "text": "<p>Access to the premium learning community on Discord.</p>",
+            "text": "<p>The premium Discord area.</p>",
             "status": "available",
             "image_brief": "Cropped Discord screenshot of the premium channels list (no personal details).",
             "image_alt": "A gloved hand holding a labelled bottle",
@@ -738,7 +452,7 @@
           "type": "feature",
           "settings": {
             "title": "Live sessions",
-            "text": "<p>Live learning sessions, according to the published schedule.</p>",
+            "text": "<p>Live sessions when scheduled.</p>",
             "status": "available",
             "image_brief": "Presenter at the bench mid-session, smelling strips in hand.",
             "image_alt": "Studying at the bench",
@@ -749,7 +463,7 @@
           "type": "feature",
           "settings": {
             "title": "Educational resources",
-            "text": "<p>Selected bases and raw-material learning resources, subject to the published <a href=\"/pages/membership-terms\">membership terms</a>.</p>",
+            "text": "<p>Notes and material guides.</p>",
             "status": "available",
             "image_brief": "Macro of raw materials: resin tears, a vial of essential oil and crystals of an aroma chemical on a stone surface.",
             "image_alt": "Rose petals in a mortar",
@@ -767,92 +481,13 @@
         "feature_06"
       ]
     },
-    "audience": {
-      "type": "lps-features",
-      "settings": {
-        "index": "10",
-        "eyebrow": "Is this right for you?",
-        "heading": "Written for anyone who wants to understand fragrance.",
-        "text": "<p>The course starts from first principles and goes deep, so it suits a wide range of experience.</p>",
-        "style": "cards",
-        "columns": "3",
-        "show_index": true,
-        "tone": "ivory",
-        "padding_top": 96,
-        "padding_bottom": 96
-      },
-      "blocks": {
-        "feature_01": {
-          "type": "feature",
-          "settings": {
-            "title": "Complete beginners",
-            "text": "<p>No prior knowledge is assumed. The course begins with how fragrance is structured and how to work safely and accurately.</p>",
-            "image_stock": "oil-bottle-flowers",
-            "image_alt": "A scent bottle with dried flowers"
-          }
-        },
-        "feature_02": {
-          "type": "feature",
-          "settings": {
-            "title": "Fragrance enthusiasts",
-            "text": "<p>For those who love perfume and want to understand what they are smelling and how it was made.</p>",
-            "image_stock": "amber-mirror",
-            "image_alt": "An amber bottle on a mirror"
-          }
-        },
-        "feature_03": {
-          "type": "feature",
-          "settings": {
-            "title": "Hobbyist formulators",
-            "text": "<p>For people already mixing at home who want structure, method and a deeper understanding of their materials.</p>",
-            "image_stock": "dropper-ceramic",
-            "image_alt": "A dropper bottle on ceramic"
-          }
-        },
-        "feature_04": {
-          "type": "feature",
-          "settings": {
-            "title": "Independent perfume creators",
-            "text": "<p>For creators developing their own fragrances who want to strengthen their technique and evaluation.</p>",
-            "image_stock": "tray-flatlay",
-            "image_alt": "Bottles on a wooden tray"
-          }
-        },
-        "feature_05": {
-          "type": "feature",
-          "settings": {
-            "title": "Aspiring professional perfumers",
-            "text": "<p>For those considering perfumery more seriously and looking for a thorough grounding in the craft.</p>",
-            "image_stock": "workbench-jars",
-            "image_alt": "A perfumer’s workbench"
-          }
-        },
-        "feature_06": {
-          "type": "feature",
-          "settings": {
-            "title": "What it is not",
-            "text": "<p>Premium Learning is an educational course. It does not award a professional qualification or accreditation, and it cannot promise employment or commercial success.</p>",
-            "image_stock": "sphere-bottle",
-            "image_alt": "An amber bottle beside a stone sphere"
-          }
-        }
-      },
-      "block_order": [
-        "feature_01",
-        "feature_02",
-        "feature_03",
-        "feature_04",
-        "feature_05",
-        "feature_06"
-      ]
-    },
     "faq": {
       "type": "lps-faq",
       "settings": {
-        "index": "11",
-        "eyebrow": "Questions",
-        "heading": "Frequently asked questions",
-        "support_text": "<p>Can’t find what you’re looking for? Contact us and include the email address associated with your order or account.</p>",
+        "index": "",
+        "eyebrow": "",
+        "heading": "Questions",
+        "support_text": "",
         "button_label": "Contact us",
         "button_link": "shopify://pages/contact",
         "structured_data": true,
@@ -869,33 +504,6 @@
             "include_in_search": true
           }
         },
-        "question_02": {
-          "type": "question",
-          "settings": {
-            "question": "Do I need to own raw materials?",
-            "answer": "<p>Not to start. But you'll learn faster with a few materials, and the course shows you what to buy first.</p>",
-            "include_in_search": false,
-            "confirm_note": "Confirm whether any materials or bases are supplied with the membership."
-          }
-        },
-        "question_03": {
-          "type": "question",
-          "settings": {
-            "question": "What equipment should I start with?",
-            "answer": "<p>A digital scale (0.01 g), glass pipettes, small beakers, amber bottles, smelling strips, perfumer's alcohol, labels and gloves. The Equipment module explains each one.</p>",
-            "include_in_search": false,
-            "confirm_note": "Check this list matches the course’s own equipment recommendations."
-          }
-        },
-        "question_04": {
-          "type": "question",
-          "settings": {
-            "question": "What is the difference between Free and Premium?",
-            "answer": "<p>Free gets you into our Discord community. Premium adds the full course: video lessons, the formula library, exercises, live sessions and the premium community.</p>",
-            "include_in_search": false,
-            "confirm_note": "Confirm exactly what free members can access."
-          }
-        },
         "question_05": {
           "type": "question",
           "settings": {
@@ -903,24 +511,6 @@
             "answer": "<p>We email your access details after you buy.</p>",
             "include_in_search": false,
             "confirm_note": "Describe the real access process: which platform hosts the lessons, whether a login is created automatically, and how quickly access is granted."
-          }
-        },
-        "question_06": {
-          "type": "question",
-          "settings": {
-            "question": "How does Discord work?",
-            "answer": "<p>Discord is a free chat app for phone and computer. Create a free account, join our server, and Premium members get access to the premium area.</p>",
-            "include_in_search": false,
-            "confirm_note": "Confirm how premium access on Discord is granted (for example, a role assigned after purchase) and how long it takes."
-          }
-        },
-        "question_07": {
-          "type": "question",
-          "settings": {
-            "question": "Are the formulas commercially usable?",
-            "answer": "<p>They are for learning, not ready-made products to sell. Use what you learn in your own work, but don't copy or sell the formulas themselves.</p>",
-            "include_in_search": true,
-            "confirm_note": "Confirm whether members may adapt formulas for products they sell, and add any licence terms."
           }
         },
         "question_08": {
@@ -952,14 +542,9 @@
       },
       "block_order": [
         "question_01",
-        "question_02",
-        "question_03",
-        "question_04",
         "question_05",
-        "question_06",
-        "question_07",
-        "question_08",
         "question_09",
+        "question_08",
         "question_10"
       ]
     },
@@ -968,8 +553,8 @@
       "settings": {
         "product": "le-parfum-simplifie-membership",
         "eyebrow": "Premium Learning",
-        "heading": "Begin your study of perfumery.",
-        "text": "<p>One membership, with everything you need to learn how fragrance is composed — at your own pace.</p>",
+        "heading": "Start learning today.",
+        "text": "",
         "one_time_label": "One-time payment",
         "button_action": "product",
         "button_label": "View membership",
@@ -987,31 +572,31 @@
         "benefit_01": {
           "type": "benefit",
           "settings": {
-            "text": "Approximately 10 hours of structured video lessons"
+            "text": "10 hours of video lessons"
           }
         },
         "benefit_02": {
           "type": "benefit",
           "settings": {
-            "text": "The educational formula library"
+            "text": "Formula library"
           }
         },
         "benefit_03": {
           "type": "benefit",
           "settings": {
-            "text": "Guided practical exercises and formula studies"
+            "text": "Practical exercises"
           }
         },
         "benefit_04": {
           "type": "benefit",
           "settings": {
-            "text": "The premium learning community on Discord"
+            "text": "Premium Discord community"
           }
         },
         "benefit_05": {
           "type": "benefit",
           "settings": {
-            "text": "Live learning sessions, according to the published schedule"
+            "text": "Live sessions"
           }
         }
       },
@@ -1023,79 +608,11 @@
         "benefit_05"
       ]
     },
-    "materials": {
-      "type": "lps-gallery",
-      "settings": {
-        "layout": "strip",
-        "eyebrow": "Raw materials",
-        "heading": "The materials you will study.",
-        "align": "start",
-        "tone": "ivory",
-        "padding_top": 24,
-        "padding_bottom": 96,
-        "text": "<p>From spices and florals to resins and aroma chemicals, you learn each material on its own before combining it with others.</p>",
-        "footnote": "Photographs are illustrative."
-      },
-      "blocks": {
-        "photo_01": {
-          "type": "photo",
-          "settings": {
-            "image_stock": "spices-white",
-            "image_alt": "Cinnamon sticks and star anise",
-            "shape": "small",
-            "caption": "Spices: cinnamon and star anise"
-          }
-        },
-        "photo_02": {
-          "type": "photo",
-          "settings": {
-            "image_stock": "rose-buds",
-            "image_alt": "Dried rose buds",
-            "shape": "small",
-            "caption": "Florals: rose"
-          }
-        },
-        "photo_03": {
-          "type": "photo",
-          "settings": {
-            "image_stock": "lavender-vial",
-            "image_alt": "Lavender beside a glass vial",
-            "shape": "small",
-            "caption": "Aromatics: lavender"
-          }
-        },
-        "photo_04": {
-          "type": "photo",
-          "settings": {
-            "image_stock": "spices-bowls",
-            "image_alt": "Spices and seeds in small bowls",
-            "shape": "small",
-            "caption": "Seeds, roots and resins"
-          }
-        },
-        "photo_05": {
-          "type": "photo",
-          "settings": {
-            "image_stock": "mortar-petals",
-            "image_alt": "Rose petals in a mortar",
-            "shape": "small",
-            "caption": "Preparing natural materials"
-          }
-        }
-      },
-      "block_order": [
-        "photo_01",
-        "photo_02",
-        "photo_03",
-        "photo_04",
-        "photo_05"
-      ]
-    },
     "more": {
       "type": "lps-panels",
       "settings": {
         "eyebrow": "Also from Le Parfum Simplifié",
-        "heading": "Tools and services for your practice.",
+        "heading": "Also from us.",
         "columns": 2,
         "image_ratio": "4 / 3",
         "stagger": false,
@@ -1142,16 +659,11 @@
     "hero",
     "why",
     "curriculum",
-    "classroom",
     "formulas",
-    "practice",
-    "materials",
     "community",
-    "live",
     "included",
-    "audience",
     "faq",
-    "more",
-    "purchase"
+    "purchase",
+    "more"
   ]
 }

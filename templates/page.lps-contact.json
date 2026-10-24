@@ -14,7 +14,7 @@
       "settings": {
         "eyebrow": "Contact",
         "heading": "Get in touch.",
-        "text": "<p>For questions, collaborations and enquiries, get in touch. For membership, account or software questions, please include the email address associated with your account.</p>",
+        "text": "<p>We’ll reply by email. Include your order email if it’s about a purchase.</p>",
         "image_stock": "tags-twine",
         "image_alt": "Handwritten fragrance tags and twine",
         "form_name": "Website enquiry",
@@ -85,8 +85,8 @@
     "shortcuts": {
       "type": "lps-panels",
       "settings": {
-        "eyebrow": "Quick links",
-        "heading": "You may find your answer here.",
+        "eyebrow": "",
+        "heading": "Quick links",
         "columns": 3,
         "image_ratio": "4 / 3",
         "stagger": false,
@@ -101,7 +101,7 @@
           "type": "panel",
           "settings": {
             "title": "Frequently asked questions",
-            "text": "<p>Membership, software, access and refunds.</p>",
+            "text": "",
             "link_label": "Read the FAQ",
             "link": "/pages/faq",
             "show_price": false,
@@ -113,7 +113,7 @@
           "type": "panel",
           "settings": {
             "title": "Join the community",
-            "text": "<p>Ask questions and meet other learners in our free Discord.</p>",
+            "text": "",
             "link_label": "Join Discord",
             "link": "https://discord.gg/A6hWyT9w3e",
             "show_price": false,
@@ -125,7 +125,7 @@
           "type": "panel",
           "settings": {
             "title": "Start a fragrance brief",
-            "text": "<p>Thinking of developing a fragrance? Tell us about it.</p>",
+            "text": "",
             "link_label": "Start a brief",
             "link": "/pages/perfume-development#brief",
             "show_price": false,

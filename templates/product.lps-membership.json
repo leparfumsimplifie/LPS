@@ -271,7 +271,7 @@
               "type": "text",
               "name": "Introduction",
               "settings": {
-                "text": "<p>A structured education in perfumery — from understanding individual raw materials to composing, evaluating and refining your own formulas.</p><p>Membership brings together video lessons, an educational formula library, practical exercises, a premium learning community and live learning sessions.</p>",
+                "text": "<p>A structured online course in perfumery: from raw materials to your own formulas.</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -295,11 +295,11 @@
             "lps_benefits": {
               "type": "lps-benefits",
               "settings": {
-                "title": "Your membership includes",
-                "benefits": "Approximately 10 hours of structured video lessons\nThe educational formula library\nGuided practical exercises and formula studies\nThe premium learning community on Discord\nLive learning sessions, according to the published schedule",
+                "title": "Includes",
+                "benefits": "10 hours of video lessons\nFormula library\nPractical exercises\nPremium Discord community\nLive sessions",
                 "show_terms": true,
-                "one_time_label": "One-time payment — no recurring charge.",
-                "terms_text": "<p>Immediate access to digital content. See our <a href=\"/pages/refund-policy\">refund policy</a> · <a href=\"/pages/contact\">Questions?</a></p>",
+                "one_time_label": "One payment. No subscription.",
+                "terms_text": "<p><a href=\"/pages/refund-policy\">Refund policy</a> · <a href=\"/pages/contact\">Questions?</a></p>",
                 "hide_quantity": true
               }
             }
@@ -336,36 +336,15 @@
         "padding-block-end": 0
       }
     },
-    "intro": {
-      "type": "lps-split",
-      "settings": {
-        "eyebrow": "About the membership",
-        "heading": "Learn the principles, not just the recipes.",
-        "heading_size": "md",
-        "text": "<p>Premium Learning is designed for people who want to understand how fragrance works. You will study raw materials individually and in combination, learn the laboratory habits that make results accurate and repeatable, and develop the judgement to compose and refine your own formulas.</p><p>Lessons are recorded, so you can learn at your own pace and return to any topic as your practice develops. Alongside them, formula studies, exercises, live sessions and a focused community help you put each idea into practice.</p>",
-        "list_style": "plain",
-        "button_label": "Read the full learning overview",
-        "button_link": "shopify://pages/premium-learning",
-        "button_style": "link",
-        "image_brief": "Editorial photograph: a student at a bench evaluating a smelling strip, a laptop showing a lesson beside a rack of amber dilutions. Portrait.",
-        "image_alt": "A perfumery bench with amber bottles and jars of raw materials",
-        "media_position": "left",
-        "media_width": "equal",
-        "tone": "ivory",
-        "padding_top": 96,
-        "padding_bottom": 96,
-        "image_stock": "bench-still-life"
-      }
-    },
     "included": {
       "type": "lps-features",
       "settings": {
-        "eyebrow": "Everything included",
-        "heading": "What your membership gives you.",
+        "eyebrow": "",
+        "heading": "What’s included",
         "style": "cards",
         "columns": "3",
         "show_index": false,
-        "footnote": "<p>Badges show what is available today. Anything marked ‘In development’ is planned and not part of the current offer.</p>",
+        "footnote": "",
         "tone": "cream",
         "padding_top": 96,
         "padding_bottom": 96
@@ -375,7 +354,7 @@
           "type": "feature",
           "settings": {
             "title": "Video education",
-            "text": "<p>Approximately ten hours of structured lessons covering foundations, raw materials, dilution, accords, formula construction and evaluation.</p>",
+            "text": "<p>About 10 hours of lessons.</p>",
             "status": "available",
             "image_brief": "Close-up of a laptop playing a lesson on a perfumery bench.",
             "image_alt": "Vials of fragrance materials",
@@ -386,7 +365,7 @@
           "type": "feature",
           "settings": {
             "title": "Formula library",
-            "text": "<p>Educational formula studies to examine, compare and rebuild — the clearest way to understand how compositions are structured.</p>",
+            "text": "<p>Formula studies to learn from.</p>",
             "status": "available",
             "image_brief": "Overhead: formula sheets, pencil and smelling strips.",
             "image_alt": "An amber bottle with a handwritten tag",
@@ -398,7 +377,7 @@
           "type": "feature",
           "settings": {
             "title": "Practical exercises",
-            "text": "<p>Guided exercises that move from evaluating single materials to building accords and modifying complete formulas.</p>",
+            "text": "<p>Hands-on tasks at the bench.</p>",
             "status": "available",
             "image_brief": "Hands pipetting into a beaker on a balance.",
             "image_alt": "Weighing on a digital scale",
@@ -409,7 +388,7 @@
           "type": "feature",
           "settings": {
             "title": "Premium community",
-            "text": "<p>Access to the premium learning community on Discord to ask questions and discuss your work.</p>",
+            "text": "<p>The premium Discord area.</p>",
             "status": "available",
             "image_brief": "Cropped Discord screenshot of premium channels (no personal details).",
             "image_alt": "A gloved hand holding a labelled bottle",
@@ -421,7 +400,7 @@
           "type": "feature",
           "settings": {
             "title": "Live sessions",
-            "text": "<p>Live learning sessions, according to the published schedule.</p>",
+            "text": "<p>Live sessions when scheduled.</p>",
             "status": "available",
             "image_brief": "Presenter at the bench during a live session.",
             "image_alt": "Studying at the bench",
@@ -432,7 +411,7 @@
           "type": "feature",
           "settings": {
             "title": "Educational resources",
-            "text": "<p>Selected bases and raw-material learning resources, subject to the published <a href=\"/pages/membership-terms\">membership terms</a>.</p>",
+            "text": "<p>Notes and material guides.</p>",
             "status": "available",
             "image_brief": "Macro of natural and synthetic raw materials on stone.",
             "image_alt": "Rose petals in a mortar",
@@ -450,91 +429,12 @@
         "feature_06"
       ]
     },
-    "gallery": {
-      "type": "lps-showcase",
-      "settings": {
-        "layout": "grid",
-        "eyebrow": "The learning experience",
-        "heading": "A look inside Premium Learning.",
-        "text": "<p>Select any image to view it full size.</p>",
-        "footnote": "Screenshots show the platform as it is today. Community members’ details are obscured for privacy.",
-        "tone": "ivory",
-        "padding_top": 96,
-        "padding_bottom": 96
-      },
-      "blocks": {
-        "shot_01": {
-          "type": "shot",
-          "settings": {
-            "frame": "browser",
-            "ratio": "16 / 10",
-            "wide": true,
-            "title": "Course modules",
-            "text": "<p>The numbered module structure, from foundations to finished fragrances.</p>",
-            "image_brief": "Genuine screenshot of the course module list. 2400 × 1500px.",
-            "image_alt": "The course module list"
-          }
-        },
-        "shot_02": {
-          "type": "shot",
-          "settings": {
-            "frame": "browser",
-            "ratio": "16 / 9",
-            "title": "Video lessons",
-            "text": "<p>Recorded lessons you can pause, replay and revisit.</p>",
-            "image_brief": "Genuine screenshot of a lesson mid-playback.",
-            "image_alt": "A video lesson in progress"
-          }
-        },
-        "shot_03": {
-          "type": "shot",
-          "settings": {
-            "frame": "browser",
-            "ratio": "16 / 10",
-            "title": "Formula studies",
-            "text": "<p>Formula resources as students see them (quantities hidden here).</p>",
-            "image_brief": "Genuine screenshot of a formula study with quantities blurred.",
-            "image_alt": "A formula study with quantities hidden"
-          }
-        },
-        "shot_04": {
-          "type": "shot",
-          "settings": {
-            "frame": "browser",
-            "ratio": "16 / 10",
-            "title": "Learning resources",
-            "text": "<p>Written notes and raw-material resources that support the lessons.</p>",
-            "image_brief": "Genuine screenshot of a written learning resource.",
-            "image_alt": "A written learning resource"
-          }
-        },
-        "shot_05": {
-          "type": "shot",
-          "settings": {
-            "frame": "browser",
-            "ratio": "16 / 10",
-            "title": "The premium community",
-            "text": "<p>Discussion and support on Discord.</p>",
-            "image_brief": "Genuine Discord screenshot of a premium channel, usernames blurred.",
-            "image_alt": "A premium Discord channel"
-          }
-        }
-      },
-      "block_order": [
-        "shot_01",
-        "shot_02",
-        "shot_03",
-        "shot_04",
-        "shot_05"
-      ],
-      "disabled": true
-    },
     "access": {
       "type": "lps-steps",
       "settings": {
         "eyebrow": "How access works",
-        "heading": "From checkout to your first lesson.",
-        "footnote": "<p>If you have not received your access details, check your spam folder, then <a href=\"/pages/contact\">contact us</a> with the email address used for your order.</p>",
+        "heading": "How it works",
+        "footnote": "",
         "tone": "sand",
         "padding_top": 96,
         "padding_bottom": 96
@@ -543,47 +443,38 @@
         "step_01": {
           "type": "step",
           "settings": {
-            "title": "Complete your purchase",
-            "text": "<p>Add the membership to your cart and check out securely through Shopify. You will be asked to confirm that you want immediate access to digital content.</p>"
+            "title": "Buy",
+            "text": "<p>Check out securely.</p>"
           }
         },
         "step_02": {
           "type": "step",
           "settings": {
-            "title": "Receive your confirmation",
-            "text": "<p>An order confirmation is sent to the email address you used at checkout.</p>"
+            "title": "Check your email",
+            "text": "<p>We send your access details.</p>"
           }
         },
         "step_03": {
           "type": "step",
           "settings": {
-            "title": "Access the lessons",
-            "text": "<p>Follow the access instructions to reach the Premium Learning lessons and resources.</p>",
+            "title": "Start learning",
+            "text": "<p>Open the lessons and join Discord.</p>",
             "confirm_note": "Describe the real step: the platform used, whether an account is created automatically, and how quickly access is granted."
-          }
-        },
-        "step_04": {
-          "type": "step",
-          "settings": {
-            "title": "Join the premium community",
-            "text": "<p>Connect your Discord account to join the premium learning community and hear about live sessions.</p>",
-            "confirm_note": "Confirm how the premium Discord role is granted after purchase."
           }
         }
       },
       "block_order": [
         "step_01",
         "step_02",
-        "step_03",
-        "step_04"
+        "step_03"
       ]
     },
     "compare": {
       "type": "lps-comparison",
       "settings": {
         "eyebrow": "Free and Premium",
-        "heading": "What Premium adds.",
-        "text": "<p>Anyone can join our free Discord community. Premium Learning adds the structured course and its resources.</p>",
+        "heading": "Free vs Premium",
+        "text": "",
         "free_title": "Free community",
         "free_subtitle": "No charge",
         "premium_title": "Premium Learning",
@@ -660,68 +551,12 @@
         "row_06"
       ]
     },
-    "purchase": {
-      "type": "lps-purchase",
-      "settings": {
-        "product": "le-parfum-simplifie-membership",
-        "eyebrow": "Premium Learning",
-        "heading": "Ready to begin?",
-        "text": "<p>Everything above, in a single membership.</p>",
-        "one_time_label": "One-time payment",
-        "button_action": "cart",
-        "button_label": "Add membership to cart",
-        "support_text": "<p><a href=\"/pages/refund-policy\">Refund policy</a> · <a href=\"/pages/contact\">Contact us</a></p>",
-        "tone": "cream",
-        "padding_top": 96,
-        "padding_bottom": 96,
-        "anchor": "membership"
-      },
-      "blocks": {
-        "benefit_01": {
-          "type": "benefit",
-          "settings": {
-            "text": "Approximately 10 hours of structured video lessons"
-          }
-        },
-        "benefit_02": {
-          "type": "benefit",
-          "settings": {
-            "text": "The educational formula library"
-          }
-        },
-        "benefit_03": {
-          "type": "benefit",
-          "settings": {
-            "text": "Guided practical exercises and formula studies"
-          }
-        },
-        "benefit_04": {
-          "type": "benefit",
-          "settings": {
-            "text": "The premium learning community on Discord"
-          }
-        },
-        "benefit_05": {
-          "type": "benefit",
-          "settings": {
-            "text": "Live learning sessions, according to the published schedule"
-          }
-        }
-      },
-      "block_order": [
-        "benefit_01",
-        "benefit_02",
-        "benefit_03",
-        "benefit_04",
-        "benefit_05"
-      ]
-    },
     "faq": {
       "type": "lps-faq",
       "settings": {
-        "eyebrow": "Questions",
-        "heading": "Before you buy",
-        "support_text": "<p>For help with an order, membership or access, contact us with the email address associated with your order.</p>",
+        "eyebrow": "",
+        "heading": "Questions",
+        "support_text": "",
         "button_label": "Contact us",
         "button_link": "shopify://pages/contact",
         "structured_data": true,
@@ -756,46 +591,11 @@
             "confirm_note": "Add the confirmed access duration and link the membership terms."
           }
         },
-        "question_04": {
-          "type": "question",
-          "settings": {
-            "question": "How do I access the lessons after buying?",
-            "answer": "<p>We email your access details after you buy.</p>",
-            "include_in_search": false,
-            "confirm_note": "Describe the real access process."
-          }
-        },
-        "question_05": {
-          "type": "question",
-          "settings": {
-            "question": "Do I need my own raw materials?",
-            "answer": "<p>Not to start. But you'll learn faster with a few materials, and the course shows you what to buy first.</p>",
-            "include_in_search": false,
-            "confirm_note": "Confirm whether any materials are supplied."
-          }
-        },
-        "question_06": {
-          "type": "question",
-          "settings": {
-            "question": "Are the formulas commercially usable?",
-            "answer": "<p>They are for learning, not ready-made products to sell. Use what you learn in your own work, but don't copy or sell the formulas themselves.</p>",
-            "include_in_search": true,
-            "confirm_note": "Confirm any licence terms for adapting formulas."
-          }
-        },
         "question_07": {
           "type": "question",
           "settings": {
             "question": "What is your refund policy?",
             "answer": "<p>You get access straight away, so refunds aren't usually possible once you've started. If something doesn't work, we'll fix it. <a href=\"/pages/refund-policy\">Refund policy</a>.</p>",
-            "include_in_search": true
-          }
-        },
-        "question_08": {
-          "type": "question",
-          "settings": {
-            "question": "Who can I contact with questions?",
-            "answer": "<p><a href=\"/pages/contact\">Contact us</a> and include your order email.</p>",
             "include_in_search": true
           }
         }
@@ -804,83 +604,7 @@
         "question_01",
         "question_02",
         "question_03",
-        "question_04",
-        "question_05",
-        "question_06",
-        "question_07",
-        "question_08"
-      ]
-    },
-    "banner": {
-      "type": "lps-banner",
-      "settings": {
-        "image_brief": "Atmospheric wide photograph of the studio bench at dusk: amber bottles back-lit by a window, a balance and glassware in silhouette. Landscape, minimum 2400px wide.",
-        "image_alt": "A perfumer’s bench from above",
-        "overlay_opacity": 50,
-        "height": 60,
-        "align": "center",
-        "eyebrow": "Le Parfum Simplifié",
-        "heading": "Understand fragrance. Master formulation.",
-        "product": "le-parfum-simplifie-membership",
-        "show_price": true,
-        "one_time_label": "One-time payment",
-        "button_label": "Get Premium access",
-        "button_link": "/products/le-parfum-simplifie-membership#membership",
-        "tone": "charcoal",
-        "image_stock": "studio-overhead"
-      }
-    },
-    "materials": {
-      "type": "lps-gallery",
-      "settings": {
-        "layout": "strip",
-        "eyebrow": "Learn by doing",
-        "heading": "Real materials, real technique.",
-        "align": "start",
-        "tone": "ivory",
-        "padding_top": 24,
-        "padding_bottom": 96,
-        "footnote": "Photographs are illustrative."
-      },
-      "blocks": {
-        "photo_01": {
-          "type": "photo",
-          "settings": {
-            "image_stock": "amber-linen",
-            "image_alt": "Amber bottles on linen",
-            "shape": "small"
-          }
-        },
-        "photo_02": {
-          "type": "photo",
-          "settings": {
-            "image_stock": "pipette-hand",
-            "image_alt": "A glass pipette in hand",
-            "shape": "small"
-          }
-        },
-        "photo_03": {
-          "type": "photo",
-          "settings": {
-            "image_stock": "spices-bowls",
-            "image_alt": "Spices and seeds in bowls",
-            "shape": "small"
-          }
-        },
-        "photo_04": {
-          "type": "photo",
-          "settings": {
-            "image_stock": "dropper-dried-flowers",
-            "image_alt": "A dropper bottle with dried flowers",
-            "shape": "small"
-          }
-        }
-      },
-      "block_order": [
-        "photo_01",
-        "photo_02",
-        "photo_03",
-        "photo_04"
+        "question_07"
       ]
     },
     "more": {
@@ -932,15 +656,10 @@
   },
   "order": [
     "main",
-    "intro",
-    "materials",
     "included",
-    "gallery",
     "access",
     "compare",
-    "purchase",
     "faq",
-    "more",
-    "banner"
+    "more"
   ]
 }
