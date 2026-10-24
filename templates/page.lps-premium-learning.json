@@ -19,12 +19,12 @@
         "image_brief": "Hero photograph — a working perfumery bench in soft daylight: analytical balance, a rack of labelled amber dilution bottles, glass pipettes, a beaker and a fan of smelling strips beside an open lab notebook. Warm neutral palette, shallow depth of field. Portrait crop, minimum 2000 × 2400px.",
         "image_alt": "A perfumery bench with amber bottles, jars of raw materials and glassware",
         "eyebrow": "Premium Learning",
-        "heading": "Learn to create your own fragrances.",
+        "heading": "Learn to make perfume.",
         "heading_tag": "h1",
-        "text": "<p>Learn the principles behind fragrance, not just recipes.</p>",
-        "button_label": "Explore premium access",
-        "button_link": "shopify://products/le-parfum-simplifie-membership",
-        "button_2_label": "View the curriculum",
+        "text": "<p>An online course, from your first material to your own formulas.</p>",
+        "button_label": "Join for £120",
+        "button_link": "/pages/premium-learning#membership",
+        "button_2_label": "",
         "button_2_link": "/pages/premium-learning#curriculum",
         "confirm_note": "Uses an included licensed photograph. Replace it with a photograph of your own workstation when you have one.",
         "tone": "ivory",
@@ -33,87 +33,23 @@
         "image_stock": "bench-still-life"
       }
     },
-    "why": {
-      "type": "lps-split",
-      "settings": {
-        "index": "",
-        "eyebrow": "Why learn with us",
-        "heading": "Understand how fragrance works.",
-        "text": "<p>Most beginners struggle with the same five things. The course teaches each one.</p>",
-        "list_style": "numbered",
-        "image_brief": "Close-up of a formulation in progress: a pipette releasing a single drop into an amber bottle on the balance pan, the display reading a weight in grams. Natural side light. Portrait crop.",
-        "image_alt": "A glass pipette held above a bench",
-        "image_ratio": "4 / 5",
-        "image_2_brief": "Macro: three labelled smelling strips fanned in a holder, handwritten material names and times.",
-        "image_2_alt": "Labelled amber bottles",
-        "media_position": "left",
-        "media_width": "equal",
-        "sticky_media": true,
-        "bleed_mobile": true,
-        "tone": "cream",
-        "padding_top": 96,
-        "padding_bottom": 96,
-        "image_stock": "pipette-hand",
-        "image_2_stock": "tagged-bottles",
-        "button_label": ""
-      },
-      "blocks": {
-        "item_01": {
-          "type": "item",
-          "settings": {
-            "title": "Understanding what materials actually smell like"
-          }
-        },
-        "item_02": {
-          "type": "item",
-          "settings": {
-            "title": "Learning how materials interact"
-          }
-        },
-        "item_03": {
-          "type": "item",
-          "settings": {
-            "title": "Building balanced accords"
-          }
-        },
-        "item_04": {
-          "type": "item",
-          "settings": {
-            "title": "Understanding dilutions and concentrations"
-          }
-        },
-        "item_05": {
-          "type": "item",
-          "settings": {
-            "title": "Developing and evaluating complete formulas"
-          }
-        }
-      },
-      "block_order": [
-        "item_01",
-        "item_02",
-        "item_03",
-        "item_04",
-        "item_05"
-      ]
-    },
     "curriculum": {
       "type": "lps-curriculum",
       "settings": {
         "index": "",
-        "eyebrow": "Curriculum",
-        "heading": "13 modules, from basics to brand.",
-        "text": "<p>Foundations first, then accords, formulas and evaluation.</p>",
-        "image": "shopify://shop_images/PerfumeryCourseLaptopStillLife_40f908b4-a4a3-4965-ad6c-e3bf3fbd401b.png",
+        "eyebrow": "",
+        "heading": "What you’ll learn",
+        "text": "<p>13 modules, step by step.</p>",
         "image_alt": "The Premium Learning course roadmap displayed on a laptop, listing the course modules",
-        "image_brief": "Screenshot of the course roadmap or module list.",
-        "button_label": "Explore premium access",
+        "image_brief": "",
+        "button_label": "",
         "button_link": "shopify://products/le-parfum-simplifie-membership",
         "confirm_note": "Module list copied from the course roadmap image on the product page (13 modules, numbered 00–12, with 03.1 and 03.2). Please check numbering, titles and one-line summaries against the live course, and mark any unpublished module as ‘In development’. If the roadmap image itself is a mock-up rather than a screenshot, replace it with a real screenshot of the course navigation.",
         "tone": "ivory",
         "padding_top": 96,
         "padding_bottom": 96,
-        "anchor": "curriculum"
+        "anchor": "curriculum",
+        "image_stock": "none"
       },
       "blocks": {
         "module_01": {
@@ -121,7 +57,6 @@
           "settings": {
             "number": "00",
             "title": "Introduction",
-            "summary": "How the course is organised and how to get the most from it.",
             "status": "available",
             "open": false
           }
@@ -131,7 +66,6 @@
           "settings": {
             "number": "01",
             "title": "Perfumery basics",
-            "summary": "Fragrance structure, olfaction, volatility and the roles of ingredients.",
             "status": "available",
             "open": false
           }
@@ -141,7 +75,6 @@
           "settings": {
             "number": "02",
             "title": "Equipment",
-            "summary": "The tools of a working perfumery bench and how to use them.",
             "status": "available",
             "open": false
           }
@@ -151,7 +84,6 @@
           "settings": {
             "number": "03",
             "title": "What to order",
-            "summary": "Choosing a sensible first collection of materials.",
             "status": "available",
             "open": false
           }
@@ -161,7 +93,6 @@
           "settings": {
             "number": "03.1",
             "title": "Raw materials — naturals",
-            "summary": "Recognising and evaluating natural ingredients.",
             "status": "available",
             "open": false
           }
@@ -171,7 +102,6 @@
           "settings": {
             "number": "03.2",
             "title": "Raw materials — synthetics",
-            "summary": "Recognising and evaluating aroma chemicals.",
             "status": "available",
             "open": false
           }
@@ -181,7 +111,6 @@
           "settings": {
             "number": "04",
             "title": "How to dilute",
-            "summary": "Good laboratory habits and accurate dilutions.",
             "status": "available",
             "open": false
           }
@@ -191,7 +120,6 @@
           "settings": {
             "number": "05",
             "title": "Training your nose",
-            "summary": "Accurate assessment and olfactory memory.",
             "status": "available",
             "open": false
           }
@@ -201,7 +129,6 @@
           "settings": {
             "number": "06",
             "title": "Building accords",
-            "summary": "How ingredients interact and build coherent structures.",
             "status": "available",
             "open": false
           }
@@ -211,7 +138,6 @@
           "settings": {
             "number": "07",
             "title": "Formula construction",
-            "summary": "Composing complete formulas with intention.",
             "status": "available",
             "open": false
           }
@@ -221,7 +147,6 @@
           "settings": {
             "number": "08",
             "title": "Evaluating and developing",
-            "summary": "Formulation, modification and iterative evaluation.",
             "status": "available",
             "open": false
           }
@@ -231,7 +156,6 @@
           "settings": {
             "number": "09",
             "title": "Alcohol and compounding",
-            "summary": "From concentrate to finished fragrance.",
             "status": "available",
             "open": false
           }
@@ -241,7 +165,6 @@
           "settings": {
             "number": "10",
             "title": "Maturation and maceration",
-            "summary": "How fragrances change as they rest.",
             "status": "available",
             "open": false
           }
@@ -251,7 +174,6 @@
           "settings": {
             "number": "11",
             "title": "Compliance",
-            "summary": "An introduction to safety and regulatory considerations.",
             "status": "available",
             "open": false
           }
@@ -261,7 +183,6 @@
           "settings": {
             "number": "12",
             "title": "Starting a brand",
-            "summary": "Considerations for taking your work further.",
             "status": "available",
             "open": false
           }
@@ -285,112 +206,12 @@
         "module_15"
       ]
     },
-    "formulas": {
-      "type": "lps-formula-library",
-      "settings": {
-        "index": "",
-        "eyebrow": "The formula library",
-        "heading": "The formula library",
-        "text": "<p>Study real formula structures to understand how fragrances are built.</p>",
-        "note": "<p>Formulas are for learning, not ready-made products to sell.</p>",
-        "button_label": "",
-        "button_link": "/pages/premium-learning#included",
-        "sheet_title": "Eau de Cologne — structure study",
-        "sheet_meta": "Illustrative",
-        "sheet_footer": "Example layout — not a library formula",
-        "sheet_position": "right",
-        "detail_brief": "Macro photograph: a page of a handwritten lab notebook with a formula in progress, a pencil and a smelling strip resting across it.",
-        "detail_image_alt": "Writing notes in a lab notebook",
-        "confirm_note": "The formula sheet is an illustrative cologne structure with no quantities, labelled as an example. Replace it with a screenshot of a real library formula (quantities hidden) or with rows from a real formula, then update the sheet footer.",
-        "tone": "charcoal",
-        "padding_top": 96,
-        "padding_bottom": 96,
-        "detail_image_stock": "notebook-writing"
-      },
-      "blocks": {
-        "row_02": {
-          "type": "row",
-          "settings": {
-            "material": "Bergamot oil",
-            "family": "Citrus",
-            "role": "Bright, sparkling opening"
-          }
-        },
-        "row_03": {
-          "type": "row",
-          "settings": {
-            "material": "Lemon oil",
-            "family": "Citrus",
-            "role": "Lift and freshness"
-          }
-        },
-        "row_04": {
-          "type": "row",
-          "settings": {
-            "material": "Petitgrain",
-            "family": "Green, woody citrus",
-            "role": "Bridges citrus to the heart"
-          }
-        },
-        "row_05": {
-          "type": "row",
-          "settings": {
-            "material": "Neroli",
-            "family": "Floral",
-            "role": "Floral heart"
-          }
-        },
-        "row_06": {
-          "type": "row",
-          "settings": {
-            "material": "Lavender",
-            "family": "Aromatic",
-            "role": "Aromatic contrast"
-          }
-        }
-      },
-      "block_order": [
-        "row_02",
-        "row_03",
-        "row_04",
-        "row_05",
-        "row_06"
-      ]
-    },
-    "community": {
-      "type": "lps-split",
-      "settings": {
-        "index": "",
-        "eyebrow": "The community",
-        "heading": "Learn with others.",
-        "text": "<p>Join our free Discord. Premium members get the premium area too.</p>",
-        "list_style": "plain",
-        "closing_text": "",
-        "button_label": "Join the free Discord",
-        "button_link": "https://discord.gg/A6hWyT9w3e",
-        "button_style": "secondary",
-        "image_brief": "Genuine Discord screenshot of the community: channel list on the left and a constructive formula discussion on the right. Blur usernames and avatars unless members have agreed to appear.",
-        "image_alt": "A shared perfumery workspace with labelled bottles and vials",
-        "placeholder_label": "Screenshot required",
-        "image_ratio": "4 / 3",
-        "zoom": false,
-        "media_position": "left",
-        "media_width": "wide",
-        "confirm_note": "Confirm what the free Discord includes and which channels or activities are premium-only, and that members can share formulations for feedback in the premium area.",
-        "tone": "cream",
-        "padding_top": 96,
-        "padding_bottom": 96,
-        "image_stock": "workspace-tags"
-      },
-      "blocks": {},
-      "block_order": []
-    },
     "included": {
       "type": "lps-features",
       "settings": {
         "index": "",
-        "eyebrow": "What is included",
-        "heading": "What’s included",
+        "eyebrow": "",
+        "heading": "What you get",
         "text": "",
         "style": "cards",
         "columns": "3",
@@ -407,7 +228,7 @@
           "settings": {
             "title": "Video education",
             "text": "<p>About 10 hours of lessons.</p>",
-            "status": "available",
+            "status": "none",
             "image_brief": "Close-up of a laptop on a bench playing a lesson, amber bottles softly out of focus.",
             "image_alt": "Vials of fragrance materials",
             "image_stock": "marble-vials"
@@ -418,7 +239,7 @@
           "settings": {
             "title": "Formula library",
             "text": "<p>Formula studies to learn from.</p>",
-            "status": "available",
+            "status": "none",
             "image_brief": "Overhead: printed formula sheets with a pencil, a smelling strip and an amber bottle.",
             "image_alt": "An amber bottle with a handwritten tag",
             "confirm_note": "Confirm the number of formulas currently available.",
@@ -430,7 +251,7 @@
           "settings": {
             "title": "Practical exercises",
             "text": "<p>Hands-on tasks at the bench.</p>",
-            "status": "available",
+            "status": "none",
             "image_brief": "Hands weighing a material into a beaker on an analytical balance.",
             "image_alt": "Weighing on a digital scale",
             "image_stock": "scale-weighing"
@@ -441,7 +262,7 @@
           "settings": {
             "title": "Premium community",
             "text": "<p>The premium Discord area.</p>",
-            "status": "available",
+            "status": "none",
             "image_brief": "Cropped Discord screenshot of the premium channels list (no personal details).",
             "image_alt": "A gloved hand holding a labelled bottle",
             "placeholder_label": "Screenshot required",
@@ -453,7 +274,7 @@
           "settings": {
             "title": "Live sessions",
             "text": "<p>Live sessions when scheduled.</p>",
-            "status": "available",
+            "status": "none",
             "image_brief": "Presenter at the bench mid-session, smelling strips in hand.",
             "image_alt": "Studying at the bench",
             "image_stock": "study-magnifier"
@@ -464,7 +285,7 @@
           "settings": {
             "title": "Educational resources",
             "text": "<p>Notes and material guides.</p>",
-            "status": "available",
+            "status": "none",
             "image_brief": "Macro of raw materials: resin tears, a vial of essential oil and crystals of an aroma chemical on a stone surface.",
             "image_alt": "Rose petals in a mortar",
             "confirm_note": "Clarify what ‘selected bases and raw-material resources’ means today and link the membership terms it refers to.",
@@ -488,8 +309,8 @@
         "eyebrow": "",
         "heading": "Questions",
         "support_text": "",
-        "button_label": "Contact us",
-        "button_link": "shopify://pages/contact",
+        "button_label": "More questions",
+        "button_link": "/pages/faq",
         "structured_data": true,
         "tone": "cream",
         "padding_top": 96,
@@ -502,24 +323,6 @@
             "question": "Do I need prior experience?",
             "answer": "<p>No. We start from the basics.</p>",
             "include_in_search": true
-          }
-        },
-        "question_05": {
-          "type": "question",
-          "settings": {
-            "question": "How do I access the lessons?",
-            "answer": "<p>We email your access details after you buy.</p>",
-            "include_in_search": false,
-            "confirm_note": "Describe the real access process: which platform hosts the lessons, whether a login is created automatically, and how quickly access is granted."
-          }
-        },
-        "question_08": {
-          "type": "question",
-          "settings": {
-            "question": "How long will I have access?",
-            "answer": "<p>There is no fixed end date. If anything ever changes, we'll email you first. See the <a href=\"/pages/membership-terms\">membership terms</a>.</p>",
-            "include_in_search": false,
-            "confirm_note": "Access duration is not stated anywhere on the current site. Add the confirmed duration (for example lifetime or 12 months) and link the membership terms."
           }
         },
         "question_09": {
@@ -542,9 +345,7 @@
       },
       "block_order": [
         "question_01",
-        "question_05",
         "question_09",
-        "question_08",
         "question_10"
       ]
     },
@@ -552,12 +353,12 @@
       "type": "lps-purchase",
       "settings": {
         "product": "le-parfum-simplifie-membership",
-        "eyebrow": "Premium Learning",
-        "heading": "Start learning today.",
+        "eyebrow": "",
+        "heading": "Join Premium Learning",
         "text": "",
         "one_time_label": "One-time payment",
         "button_action": "product",
-        "button_label": "View membership",
+        "button_label": "Join now",
         "support_text": "<p>Questions? <a href=\"/pages/contact\">Contact us</a> · <a href=\"/pages/refund-policy\">Refund policy</a></p>",
         "image_brief": "Still life: an amber bottle, a fan of smelling strips and an open lab notebook on a pale stone surface, morning light. Portrait.",
         "image_alt": "Tagged amber bottles seen from above",
@@ -607,63 +408,13 @@
         "benefit_04",
         "benefit_05"
       ]
-    },
-    "more": {
-      "type": "lps-panels",
-      "settings": {
-        "eyebrow": "Also from Le Parfum Simplifié",
-        "heading": "Also from us.",
-        "columns": 2,
-        "image_ratio": "4 / 3",
-        "stagger": false,
-        "show_index": false,
-        "scroll_mobile": true,
-        "tone": "sand",
-        "padding_top": 96,
-        "padding_bottom": 96
-      },
-      "blocks": {
-        "panel_01": {
-          "type": "panel",
-          "settings": {
-            "title": "Perfumery Software",
-            "text": "<p>Manage formulas, materials and dilutions in one workspace.</p>",
-            "link_label": "View the software",
-            "link": "shopify://pages/software",
-            "product": "perfumery-software",
-            "show_price": true,
-            "image": "shopify://shop_images/Minimalist_Laptop_Fragrance_Dashboard.png",
-            "image_alt": "The Le Parfum Simplifié perfumery software dashboard on a laptop"
-          }
-        },
-        "panel_02": {
-          "type": "panel",
-          "settings": {
-            "title": "Perfume development",
-            "text": "<p>Develop a fragrance with us. Tell us about your brand and the scent you are after.</p>",
-            "link_label": "Start a brief",
-            "link": "/pages/perfume-development#brief",
-            "show_price": false,
-            "image_stock": "tags-twine",
-            "image_alt": "Handwritten fragrance tags and twine"
-          }
-        }
-      },
-      "block_order": [
-        "panel_01",
-        "panel_02"
-      ]
     }
   },
   "order": [
     "hero",
-    "why",
-    "curriculum",
-    "formulas",
-    "community",
     "included",
-    "faq",
+    "curriculum",
     "purchase",
-    "more"
+    "faq"
   ]
 }

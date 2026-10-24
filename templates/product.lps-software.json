@@ -340,15 +340,15 @@
       "type": "lps-features",
       "settings": {
         "eyebrow": "",
-        "heading": "Features",
+        "heading": "What it does",
         "style": "cards",
-        "columns": "3",
+        "columns": "2",
         "show_index": false,
         "tone": "ivory",
         "padding_top": 96,
         "padding_bottom": 96,
         "anchor": "features",
-        "footnote": "<p>Users remain responsible for formula accuracy, product safety, regulatory requirements and appropriate record keeping.</p>"
+        "footnote": "<p>Helps with IFRA limits, but doesn’t replace official IFRA documents or a safety assessment.</p>"
       },
       "blocks": {
         "feature_01": {
@@ -364,7 +364,7 @@
           "type": "feature",
           "settings": {
             "title": "Raw material library",
-            "text": "<p>Keep all your materials organised.</p>",
+            "text": "<p>All your materials in one place.</p>",
             "image_stock": "raw-materials",
             "image_alt": "Raw materials in glass jars"
           }
@@ -382,28 +382,9 @@
           "type": "feature",
           "settings": {
             "title": "Dilution tracking",
-            "text": "<p>Record every dilution accurately.</p>",
+            "text": "<p>Record every dilution.</p>",
             "image_stock": "beaker-pour",
             "image_alt": "A beaker of diluted material"
-          }
-        },
-        "feature_05": {
-          "type": "feature",
-          "settings": {
-            "title": "IFRA support",
-            "text": "<p>Helps with IFRA limits. Not a substitute for official documents.</p>",
-            "image_stock": "amber-tag",
-            "image_alt": "A labelled amber bottle"
-          }
-        },
-        "feature_06": {
-          "type": "feature",
-          "settings": {
-            "title": "Material notes",
-            "text": "<p>Keep smelling notes for each material.</p>",
-            "image_stock": "tagged-bottles",
-            "image_alt": "Labelled amber bottles",
-            "confirm_note": "Based on the dashboard screenshot (‘Smelling Notes’). Confirm this matches the current software."
           }
         }
       },
@@ -411,9 +392,7 @@
         "feature_01",
         "feature_02",
         "feature_03",
-        "feature_04",
-        "feature_05",
-        "feature_06"
+        "feature_04"
       ]
     }
   },

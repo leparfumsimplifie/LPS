@@ -29,7 +29,15 @@
       </div>
 
       <lps-modules class="lps-curriculum__modules">
-        {%- if section.blocks.size > 1 -%}
+        {%- liquid
+          assign expandable = 0
+          for block in section.blocks
+            if block.settings.content != blank
+              assign expandable = expandable | plus: 1
+            endif
+          endfor
+        -%}
+        {%- if expandable > 1 -%}
           <div class="lps-modules__tools">
             <button
               type="button"
@@ -47,27 +55,35 @@
         <div class="lps-modules">
           {%- for block in section.blocks -%}
             {%- assign b = block.settings -%}
-            <details class="lps-details" {% if b.open %}open{% endif %} {{ block.shopify_attributes }}>
-              <summary>
-                <span class="lps-details__index">{{ b.number | default: forloop.index }}</span>
-                <span>
-                  <span class="lps-details__title">{{ b.title }}</span>
-                  {%- if b.status == 'soon' -%}
-                    <span class="lps-badge lps-badge--soon lps-tag">{{ s.soon_label }}</span>
-                  {%- endif -%}
-                  {%- if b.summary != blank -%}
-                    <span class="lps-details__summary-text">{{ b.summary }}</span>
-                  {%- endif -%}
-                </span>
-                <span class="lps-details__icon" aria-hidden="true"></span>
-              </summary>
-              {%- if b.content != blank or b.confirm_note != blank -%}
+            {%- capture module_heading -%}
+              <span class="lps-details__index">{{ b.number | default: forloop.index }}</span>
+              <span>
+                <span class="lps-details__title">{{ b.title }}</span>
+                {%- if b.status == 'soon' -%}
+                  <span class="lps-badge lps-badge--soon lps-tag">{{ s.soon_label }}</span>
+                {%- endif -%}
+                {%- if b.summary != blank -%}
+                  <span class="lps-details__summary-text">{{ b.summary }}</span>
+                {%- endif -%}
+              </span>
+            {%- endcapture -%}
+            {%- if b.content != blank -%}
+              <details class="lps-details" {% if b.open %}open{% endif %} {{ block.shopify_attributes }}>
+                <summary>
+                  {{ module_heading }}
+                  <span class="lps-details__icon" aria-hidden="true"></span>
+                </summary>
                 <div class="lps-details__content">
                   <div class="lps-rte">{{ b.content }}</div>
                   {% render 'lps-confirm', note: b.confirm_note %}
                 </div>
-              {%- endif -%}
-            </details>
+              </details>
+            {%- else -%}
+              <div class="lps-details lps-details--static" {{ block.shopify_attributes }}>
+                <div class="lps-details__row">{{ module_heading }}</div>
+                {% render 'lps-confirm', note: b.confirm_note %}
+              </div>
+            {%- endif -%}
           {%- endfor -%}
         </div>
         {%- if s.footnote != blank -%}
