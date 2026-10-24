@@ -865,7 +865,7 @@
           "type": "question",
           "settings": {
             "question": "Do I need prior experience?",
-            "answer": "<p>No. The course begins with the foundations of fragrance structure, olfaction and laboratory practice, and builds gradually from there.</p>",
+            "answer": "<p>No. We start from the basics.</p>",
             "include_in_search": true
           }
         },
@@ -873,7 +873,7 @@
           "type": "question",
           "settings": {
             "question": "Do I need to own raw materials?",
-            "answer": "<p>You can begin the lessons without materials, but perfumery is practical and you will learn far more by smelling and weighing as you go. The course includes guidance on equipment and on choosing a sensible first collection of materials.</p>",
+            "answer": "<p>Not to start. But you'll learn faster with a few materials, and the course shows you what to buy first.</p>",
             "include_in_search": false,
             "confirm_note": "Confirm whether any materials or bases are supplied with the membership."
           }
@@ -882,7 +882,7 @@
           "type": "question",
           "settings": {
             "question": "What equipment should I start with?",
-            "answer": "<p>A typical starting bench includes a digital scale accurate to at least 0.01 g, glass pipettes, small glass beakers, amber bottles with secure caps, smelling strips, perfumer’s alcohol for dilutions, labels and gloves. The Equipment module covers each item in more detail.</p>",
+            "answer": "<p>A digital scale (0.01 g), glass pipettes, small beakers, amber bottles, smelling strips, perfumer's alcohol, labels and gloves. The Equipment module explains each one.</p>",
             "include_in_search": false,
             "confirm_note": "Check this list matches the course’s own equipment recommendations."
           }
@@ -891,7 +891,7 @@
           "type": "question",
           "settings": {
             "question": "What is the difference between Free and Premium?",
-            "answer": "<p>The free Discord community is open to everyone. Premium Learning adds the structured video course, the formula library, practical exercises, the premium learning community and live learning sessions.</p>",
+            "answer": "<p>Free gets you into our Discord community. Premium adds the full course: video lessons, the formula library, exercises, live sessions and the premium community.</p>",
             "include_in_search": false,
             "confirm_note": "Confirm exactly what free members can access."
           }
@@ -900,7 +900,7 @@
           "type": "question",
           "settings": {
             "question": "How do I access the lessons?",
-            "answer": "<p>After purchase, you will receive access details by email at the address used for your order. Lessons are available online, so you can study at your own pace.</p>",
+            "answer": "<p>We email your access details after you buy.</p>",
             "include_in_search": false,
             "confirm_note": "Describe the real access process: which platform hosts the lessons, whether a login is created automatically, and how quickly access is granted."
           }
@@ -909,7 +909,7 @@
           "type": "question",
           "settings": {
             "question": "How does Discord work?",
-            "answer": "<p>Discord is a free community app for desktop and mobile. You will need a free Discord account to join our server. Premium members are given access to the premium learning community within it.</p>",
+            "answer": "<p>Discord is a free chat app for phone and computer. Create a free account, join our server, and Premium members get access to the premium area.</p>",
             "include_in_search": false,
             "confirm_note": "Confirm how premium access on Discord is granted (for example, a role assigned after purchase) and how long it takes."
           }
@@ -918,7 +918,7 @@
           "type": "question",
           "settings": {
             "question": "Are the formulas commercially usable?",
-            "answer": "<p>The formulas included are educational formula studies, distinct from commercially validated, production-ready fragrance formulas. Anyone making or selling fragrance remains responsible for product safety and regulatory compliance.</p>",
+            "answer": "<p>They are for learning, not ready-made products to sell. Use what you learn in your own work, but don't copy or sell the formulas themselves.</p>",
             "include_in_search": true,
             "confirm_note": "Confirm whether members may adapt formulas for products they sell, and add any licence terms."
           }
@@ -927,7 +927,7 @@
           "type": "question",
           "settings": {
             "question": "How long will I have access?",
-            "answer": "<p>Please see the <a href=\"/pages/membership-terms\">membership terms</a> for details of access.</p>",
+            "answer": "<p>There is no fixed end date. If anything ever changes, we'll email you first. See the <a href=\"/pages/membership-terms\">membership terms</a>.</p>",
             "include_in_search": false,
             "confirm_note": "Access duration is not stated anywhere on the current site. Add the confirmed duration (for example lifetime or 12 months) and link the membership terms."
           }
@@ -936,7 +936,7 @@
           "type": "question",
           "settings": {
             "question": "Is this a subscription or a one-time purchase?",
-            "answer": "<p>Premium Learning is a one-time payment. There is no recurring charge at checkout.</p>",
+            "answer": "<p>One payment. No subscription.</p>",
             "include_in_search": true,
             "confirm_note": "This reflects the Shopify product (no subscription option). Confirm there are no renewal fees for continued access."
           }
@@ -945,7 +945,7 @@
           "type": "question",
           "settings": {
             "question": "Can I get a refund?",
-            "answer": "<p>Membership gives immediate access to digital content. Where you request immediate access and give the required consent at checkout, refunds are generally not available once access has begun. If a technical problem prevents you from accessing what you bought, contact us and we will help. Your statutory rights are not affected. <a href=\"/pages/refund-policy\">Read the refund policy</a>.</p>",
+            "answer": "<p>You get access straight away, so refunds aren't usually possible once you've started. If something doesn't work, we'll fix it. <a href=\"/pages/refund-policy\">Refund policy</a>.</p>",
             "include_in_search": true
           }
         }

@@ -1,71 +1,34 @@
-LE PARFUM SIMPLIFIÉ: SETTING UP YOUR PAGES
-==========================================
+SETTING UP YOUR PAGES (about 15 minutes)
+=========================================
 
-Page text lives in Shopify admin (Online Store → Pages); the design comes from the theme.
-Pick the template shown below for each page. The templates appear in the dropdown once the
-new theme is published (or preview them first via Customize → top dropdown → Pages).
+1. UPLOAD THE THEME
+   Online Store → Themes → Add theme → Upload zip file → Publish.
 
-ABOUT THE TEXT
-  • All details are filled in (business name: Leparfumsimplifie, trading as Le Parfum Simplifié).
-  • The terms are plain-English drafts based on what your site already says. They are not
-    legal advice; it is worth having them checked.
-  • New pages automatically use the information-page layout (it is now the default page
-    template), so you do not need to pick a template for them.
+2. MAKE 4 NEW PAGES
+   Online Store → Pages → Add page.
+   For each: type the title, click "<>" in the text box, paste the file, click Save.
 
-------------------------------------------------------------------
-PAGES THAT ALREADY EXIST: just change the template
-------------------------------------------------------------------
-1. About            (/pages/about-1)          → Template: lps-about
-   The new About layout writes its own text (from your current About page), so the
-   page's existing body text is not shown. Edit the wording in Customize.
-2. Contact          (/pages/contact)          → Template: lps-contact
-3. Refund policy    (/pages/refund-policy)    → Template: lps-policy   (keeps your existing text)
-4. Premium Learning (/pages/premium-learning) → Template: lps-premium-learning
-5. Perfume development (/pages/perfume-development) → Template: lps-perfume-development
-6. Software         (/pages/software)         → Template: lps-software
+   Title                 Paste this file
+   --------------------  ------------------------------
+   Membership terms      membership-terms.html
+   Delivery and access   delivery-and-access.html
+   Terms of service      terms-of-service.html
+   FAQ                   (leave empty)
 
-------------------------------------------------------------------
-NEW PAGES TO CREATE: Online Store → Pages → Add page
-------------------------------------------------------------------
-For each one: type the Title, then click the "<>" (Show HTML) button in the content editor,
-paste the contents of the matching .html file, switch back, and check it reads correctly.
-Under "Search engine listing", check the URL handle matches the one below exactly.
+   For FAQ only: set Template to "lps-faq".
 
-7. Title: FAQ
-   URL handle: faq
-   Content: leave empty (the FAQ layout has its own questions; edit them in Customize)
-   Template: lps-faq
+3. SIMPLER REFUND POLICY (optional)
+   Pages → Refund policy → "<>" → replace with refund-policy-simple.html → Save.
 
-8. Title: Delivery and access
-   URL handle: delivery-and-access
-   Content: delivery-and-access.html
-   Template: (default, nothing to choose)
+4. PICK THE NEW LAYOUTS
+   Open each one and set the Template:
 
-9. Title: Membership terms
-   URL handle: membership-terms
-   Content: membership-terms.html
-   Template: (default, nothing to choose)
+   Pages → About                → lps-about
+   Pages → Contact              → lps-contact
+   Pages → Premium Learning     → lps-premium-learning
+   Pages → Perfume development  → lps-perfume-development
+   Pages → Software             → lps-software
+   Products → Le Parfum Simplifie Access → lps-membership
+   Products → Perfumery Software        → lps-software
 
-10. Title: Terms of service
-    URL handle: terms-of-service
-    Content: terms-of-service.html
-    Template: (default, nothing to choose)
-    Optional: also paste the same text into Settings → Policies → Terms of service so it is
-    linked at checkout. While there, fill in "Contact information" with your business
-    address: UK law expects online sellers to show a postal address.
-
-------------------------------------------------------------------
-PRODUCTS: Products → choose product → Theme template
-------------------------------------------------------------------
-11. Le Parfum Simplifie Access → lps-membership
-12. Perfumery Software          → lps-software
-
-------------------------------------------------------------------
-MENUS: Online Store → Navigation
-------------------------------------------------------------------
-Footer menu (shown under "Community" in the new footer): add
-   Join our Discord · FAQ · Contact
-Main menu: keep Home · Learning · Perfume development · Software · About · Contact
-Consider a third footer menu called "Information" with:
-   Delivery and access · Refund policy · Membership terms · Terms of service · Privacy policy
-(Customize → Footer → add a "Menu" block → choose that menu.)
+Done. Or send me an access key and I'll do all of this for you.

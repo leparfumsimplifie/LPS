@@ -46,7 +46,7 @@
           "type": "question",
           "settings": {
             "question": "Do I need prior experience?",
-            "answer": "<p>No. The course begins with the foundations of fragrance structure, olfaction and laboratory practice, and builds gradually from there.</p>",
+            "answer": "<p>No. We start from the basics.</p>",
             "include_in_search": true
           }
         },
@@ -54,7 +54,7 @@
           "type": "question",
           "settings": {
             "question": "Do I need to own raw materials?",
-            "answer": "<p>You can begin the lessons without materials, but perfumery is practical and you will learn far more by smelling and weighing as you go. The course includes guidance on equipment and on choosing a sensible first collection of materials.</p>",
+            "answer": "<p>Not to start. But you'll learn faster with a few materials, and the course shows you what to buy first.</p>",
             "include_in_search": false,
             "confirm_note": "Confirm whether any materials or bases are supplied with the membership."
           }
@@ -63,7 +63,7 @@
           "type": "question",
           "settings": {
             "question": "What equipment should I start with?",
-            "answer": "<p>A typical starting bench includes a digital scale accurate to at least 0.01 g, glass pipettes, small glass beakers, amber bottles with secure caps, smelling strips, perfumer’s alcohol for dilutions, labels and gloves. The Equipment module covers each item in more detail.</p>",
+            "answer": "<p>A digital scale (0.01 g), glass pipettes, small beakers, amber bottles, smelling strips, perfumer's alcohol, labels and gloves. The Equipment module explains each one.</p>",
             "include_in_search": false,
             "confirm_note": "Check this list matches the course’s own equipment recommendations."
           }
@@ -72,7 +72,7 @@
           "type": "question",
           "settings": {
             "question": "What is the difference between Free and Premium?",
-            "answer": "<p>The free Discord community is open to everyone. Premium Learning adds the structured video course, the formula library, practical exercises, the premium learning community and live learning sessions.</p>",
+            "answer": "<p>Free gets you into our Discord community. Premium adds the full course: video lessons, the formula library, exercises, live sessions and the premium community.</p>",
             "include_in_search": false,
             "confirm_note": "Confirm exactly what free members can access."
           }
@@ -81,7 +81,7 @@
           "type": "question",
           "settings": {
             "question": "How do I access the lessons?",
-            "answer": "<p>After purchase, you will receive access details by email at the address used for your order. Lessons are available online, so you can study at your own pace.</p>",
+            "answer": "<p>We email your access details after you buy.</p>",
             "include_in_search": false,
             "confirm_note": "Describe the real access process: which platform hosts the lessons, whether a login is created automatically, and how quickly access is granted."
           }
@@ -90,7 +90,7 @@
           "type": "question",
           "settings": {
             "question": "How does Discord work?",
-            "answer": "<p>Discord is a free community app for desktop and mobile. You will need a free Discord account to join our server. Premium members are given access to the premium learning community within it.</p>",
+            "answer": "<p>Discord is a free chat app for phone and computer. Create a free account, join our server, and Premium members get access to the premium area.</p>",
             "include_in_search": false,
             "confirm_note": "Confirm how premium access on Discord is granted (for example, a role assigned after purchase) and how long it takes."
           }
@@ -99,7 +99,7 @@
           "type": "question",
           "settings": {
             "question": "Are the formulas commercially usable?",
-            "answer": "<p>The formulas included are educational formula studies, distinct from commercially validated, production-ready fragrance formulas. Anyone making or selling fragrance remains responsible for product safety and regulatory compliance.</p>",
+            "answer": "<p>They are for learning, not ready-made products to sell. Use what you learn in your own work, but don't copy or sell the formulas themselves.</p>",
             "include_in_search": true,
             "confirm_note": "Confirm whether members may adapt formulas for products they sell, and add any licence terms."
           }
@@ -108,7 +108,7 @@
           "type": "question",
           "settings": {
             "question": "How long will I have access?",
-            "answer": "<p>Please see the <a href=\"/pages/membership-terms\">membership terms</a> for details of access.</p>",
+            "answer": "<p>There is no fixed end date. If anything ever changes, we'll email you first. See the <a href=\"/pages/membership-terms\">membership terms</a>.</p>",
             "include_in_search": false,
             "confirm_note": "Access duration is not stated anywhere on the current site. Add the confirmed duration (for example lifetime or 12 months) and link the membership terms."
           }
@@ -117,7 +117,7 @@
           "type": "question",
           "settings": {
             "question": "Is this a subscription or a one-time purchase?",
-            "answer": "<p>Premium Learning is a one-time payment. There is no recurring charge at checkout.</p>",
+            "answer": "<p>One payment. No subscription.</p>",
             "include_in_search": true,
             "confirm_note": "This reflects the Shopify product (no subscription option). Confirm there are no renewal fees for continued access."
           }
@@ -152,7 +152,7 @@
           "type": "question",
           "settings": {
             "question": "Is the software a subscription?",
-            "answer": "<p>No. Perfumery Software is a one-time payment of £30. No subscription, no lock-in.</p>",
+            "answer": "<p>No. £30, once.</p>",
             "include_in_search": false,
             "confirm_note": "Confirm how customers access the software after purchase and on how many devices."
           }
@@ -161,7 +161,7 @@
           "type": "question",
           "settings": {
             "question": "What does it do?",
-            "answer": "<p>It helps you manage formulas and versions, keep a raw material library, calculate percentages, totals and batch weights, and record dilutions.</p>",
+            "answer": "<p>It keeps your formulas, materials and dilutions in one place, and does the maths for you.</p>",
             "include_in_search": false
           }
         },
@@ -169,7 +169,7 @@
           "type": "question",
           "settings": {
             "question": "Does it handle IFRA compliance?",
-            "answer": "<p>Where implemented, it assists with calculations and reference limits. It does not replace current official IFRA documentation, a safety assessment or a regulatory compliance review. Users remain responsible for formula accuracy, product safety, regulatory requirements and appropriate record keeping.</p>",
+            "answer": "<p>It helps with IFRA limits where available, but it doesn't replace official IFRA documents or a safety assessment.</p>",
             "include_in_search": false
           }
         }
@@ -197,7 +197,7 @@
           "type": "question",
           "settings": {
             "question": "How does perfume development work?",
-            "answer": "<p>Send a brief describing your concept, intended use and any references. We review it and reply with how we could approach the project. Development then involves formulation and iterative evaluation, working towards the brief.</p>",
+            "answer": "<p>Send us a brief. We read it and reply with how we could help. Then we develop and refine the fragrance with you.</p>",
             "include_in_search": false
           }
         },
@@ -205,7 +205,7 @@
           "type": "question",
           "settings": {
             "question": "How do I send a brief?",
-            "answer": "<p>Complete the <a href=\"/pages/perfume-development#brief\">fragrance brief questionnaire</a>. It takes about five minutes.</p>",
+            "answer": "<p>Fill in our <a href=\"/pages/perfume-development#brief\">fragrance brief</a>. It takes about five minutes.</p>",
             "include_in_search": false
           }
         },
@@ -213,7 +213,7 @@
           "type": "question",
           "settings": {
             "question": "How much does it cost?",
-            "answer": "<p>Every project is different. Once we have reviewed your brief, we reply with how we could approach it.</p>",
+            "answer": "<p>Every project is different. Send a brief and we'll reply with how we could approach it.</p>",
             "include_in_search": false,
             "confirm_note": "Add your pricing approach if you would like to share it publicly."
           }
@@ -242,7 +242,7 @@
           "type": "question",
           "settings": {
             "question": "How are digital products delivered?",
-            "answer": "<p>Premium Learning and the Perfumery Software are digital products, so nothing is posted. Access details are sent to the email address used at checkout. See <a href=\"/pages/delivery-and-access\">delivery and access</a>.</p>",
+            "answer": "<p>By email. Nothing is posted. <a href=\"/pages/delivery-and-access\">Delivery and access</a>.</p>",
             "include_in_search": false
           }
         },
@@ -250,7 +250,7 @@
           "type": "question",
           "settings": {
             "question": "Can I get a refund?",
-            "answer": "<p>Digital content gives immediate access. Where you request immediate access and give the required consent at checkout, refunds are generally not available once access has begun. If a technical problem prevents access, contact us and we will help. Your statutory rights are not affected. <a href=\"/pages/refund-policy\">Read the refund policy</a>.</p>",
+            "answer": "<p>You get access straight away, so refunds aren't usually possible once you've started. If something doesn't work, we'll fix it. <a href=\"/pages/refund-policy\">Refund policy</a>.</p>",
             "include_in_search": true
           }
         },
@@ -258,7 +258,7 @@
           "type": "question",
           "settings": {
             "question": "I have not received my access details",
-            "answer": "<p>Check your spam folder first, then <a href=\"/pages/contact\">contact us</a> with the email address used for your order.</p>",
+            "answer": "<p>Check your spam folder. Still nothing? <a href=\"/pages/contact\">Contact us</a> with your order email.</p>",
             "include_in_search": true
           }
         }

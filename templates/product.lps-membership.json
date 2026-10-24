@@ -734,7 +734,7 @@
           "type": "question",
           "settings": {
             "question": "Do I need prior experience?",
-            "answer": "<p>No. The course starts from the foundations and builds gradually.</p>",
+            "answer": "<p>No. We start from the basics.</p>",
             "include_in_search": true
           }
         },
@@ -742,7 +742,7 @@
           "type": "question",
           "settings": {
             "question": "Is this a subscription?",
-            "answer": "<p>No. Premium Learning is a one-time payment, with no recurring charge at checkout.</p>",
+            "answer": "<p>No. One payment, no subscription.</p>",
             "include_in_search": true,
             "confirm_note": "Confirm there are no renewal fees for continued access."
           }
@@ -751,7 +751,7 @@
           "type": "question",
           "settings": {
             "question": "How long will I have access?",
-            "answer": "<p>Please see the <a href=\"/pages/membership-terms\">membership terms</a> for details of access.</p>",
+            "answer": "<p>There is no fixed end date. If anything ever changes, we'll email you first. See the <a href=\"/pages/membership-terms\">membership terms</a>.</p>",
             "include_in_search": false,
             "confirm_note": "Add the confirmed access duration and link the membership terms."
           }
@@ -760,7 +760,7 @@
           "type": "question",
           "settings": {
             "question": "How do I access the lessons after buying?",
-            "answer": "<p>Access details are sent to the email address used for your order. See ‘How access works’ above.</p>",
+            "answer": "<p>We email your access details after you buy.</p>",
             "include_in_search": false,
             "confirm_note": "Describe the real access process."
           }
@@ -769,7 +769,7 @@
           "type": "question",
           "settings": {
             "question": "Do I need my own raw materials?",
-            "answer": "<p>You can start the lessons without them, but practical work is central to learning perfumery. The course includes guidance on equipment and a first collection of materials.</p>",
+            "answer": "<p>Not to start. But you'll learn faster with a few materials, and the course shows you what to buy first.</p>",
             "include_in_search": false,
             "confirm_note": "Confirm whether any materials are supplied."
           }
@@ -778,7 +778,7 @@
           "type": "question",
           "settings": {
             "question": "Are the formulas commercially usable?",
-            "answer": "<p>The formulas included are educational formula studies, distinct from commercially validated, production-ready fragrance formulas.</p>",
+            "answer": "<p>They are for learning, not ready-made products to sell. Use what you learn in your own work, but don't copy or sell the formulas themselves.</p>",
             "include_in_search": true,
             "confirm_note": "Confirm any licence terms for adapting formulas."
           }
@@ -787,7 +787,7 @@
           "type": "question",
           "settings": {
             "question": "What is your refund policy?",
-            "answer": "<p>Membership gives immediate access to digital content. Where you request immediate access and give the required consent at checkout, refunds are generally not available once access has begun. If a technical problem prevents access, contact us and we will help. Your statutory rights are not affected. <a href=\"/pages/refund-policy\">Read the full refund policy</a>.</p>",
+            "answer": "<p>You get access straight away, so refunds aren't usually possible once you've started. If something doesn't work, we'll fix it. <a href=\"/pages/refund-policy\">Refund policy</a>.</p>",
             "include_in_search": true
           }
         },
@@ -795,7 +795,7 @@
           "type": "question",
           "settings": {
             "question": "Who can I contact with questions?",
-            "answer": "<p>Use our <a href=\"/pages/contact\">contact page</a> and include the email address associated with your order or account.</p>",
+            "answer": "<p><a href=\"/pages/contact\">Contact us</a> and include your order email.</p>",
             "include_in_search": true
           }
         }
